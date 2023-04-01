@@ -29,7 +29,7 @@
 ### Github 活跃度
 
 [![](https://activity-graph.herokuapp.com/graph?username=hkiceflow&theme=dracula)](https://github.com/ashutosh00710/github-readme-activity-graph)
-![Minori-ty's github stats](https://github-readme-stats.vercel.app/api?username=hkiceflow&show_icons=true&theme=vue)
+![hkiceflow's github stats](https://github-readme-stats.vercel.app/api?username=hkiceflow&show_icons=true&theme=vue)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=hkiceflow&langs_count=6)
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=hkiceflow&layout=compact&langs_count=6)
