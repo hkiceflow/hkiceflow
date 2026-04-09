@@ -18,7 +18,7 @@
 
 ![Modern C++ template][github-sub-title:img]
 
-[![bilibili](https://img.shields.io/badge/%E7%9F%A5%E4%B9%8E-mq%E7%99%BD-yello)](https://space.bilibili.com/368780828)
+[![bilibili](https://img.shields.io/badge/bilibili-hkiceflow-yello)](https://space.bilibili.com/368780828)
 [![youtube](https://img.shields.io/badge/video-YouTube-red)](https://www.youtube.com/channel/UCey35Do4RGewqr-6EiaCJrg)
 
 [![modern cpp](https://img.shields.io/badge/code-Modern%20C++-blue)](https://learn.microsoft.com/zh-cn/cpp/cpp/welcome-back-to-cpp-modern-cpp) 
