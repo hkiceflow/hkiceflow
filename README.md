@@ -12,14 +12,12 @@
 -   <a href="https://juejin.cn/user/1214304985296439/posts"><code><img height="20" width="50" src="./images/juejin.png"></code></a>：VR软硬件开发工程师，测试工程师，交互设计师。
 
 ## 逐步成长
-![hkiceflow's Github stats](https://github-readme-stats.vercel.app/api?username=hkiceflow&show_icons=true&theme=radical)
 
 <div id="title" align=center>
 
 ![Modern C++ template][github-sub-title:img]
 
 [![bilibili](https://img.shields.io/badge/bilibili-hkiceflow-pink)](https://space.bilibili.com/368780828)
-
 [![MPV](https://img.shields.io/badge/code-MPV-blue)](https://www.bilibili.com/video/BV1am421M7rH) 
 
 ![](https://img.shields.io/badge/专注-学习-yellow) 
