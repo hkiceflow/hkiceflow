@@ -36,6 +36,6 @@ Obviously, I am Chinese. :sunglasses:
 | **技能/证书**          |                                                     |
 
 
-![youtube](https://img.shields.io/badge/youtube-red)
-[!youtube](https://img.shields.io/badge/youtube-red?logo=youtube)]
+![youtube](https://img.shields.io/badge/youtube-red?logo=youtube)
+
 
