@@ -28,7 +28,7 @@
 
 </div>
 
-![头像](image/头像.jpg)
+![头像](image/1.jpg)
 
 [github-sub-title:img]: https://readme-typing-svg.herokuapp.com?font=Segoe+Script&center=true&lines=hkiceflow.
 
