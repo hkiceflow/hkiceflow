@@ -12,7 +12,7 @@
 -   <a href="https://juejin.cn/user/1214304985296439/posts"><code><img height="20" width="50" src="./images/juejin.png"></code></a>：VR软硬件开发工程师，测试工程师，交互设计师。
 
 ## 逐步成长
-！[hkiceflow's Github stats](https://github-readme-stats.vercel.app/api?username=hkiceflow&show_icons=true&theme=radical)
+![hkiceflow's Github stats](https://github-readme-stats.vercel.app/api?username=hkiceflow&show_icons=true&theme=radical)
 
 
 ### **技术栈:**
