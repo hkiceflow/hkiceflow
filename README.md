@@ -35,7 +35,7 @@ Obviously, I am Chinese. :sunglasses:
 | **辅助类工具**         | ![ChatGPT](https://img.shields.io/badge/-ChatGPT-444444?style=flat&logo=ChatGPT)&nbsp;  [![](https://img.shields.io/badge/-VS_Code_Plugins-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com) ima，Chatbox，                |
 | **技能/证书**          |                                                     |
 
-mindline
-![mindline](https://img.shields.io/badge/mindline-white)
 
+![youtube](https://img.shields.io/badge/youtube-red)
+[!youtube](https://img.shields.io/badge/youtube-red?logo=youtube)]
 
