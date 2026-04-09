@@ -36,6 +36,6 @@ Obviously, I am Chinese. :sunglasses:
 | **技能/证书**          |                                                     |
 
 
-[![CApi](https://img.shields.io/badge/C Api-pink)]
+[![CApi](https://img.shields.io/badge/CApi-pink)]
 
 
