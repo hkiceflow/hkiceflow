@@ -2,6 +2,8 @@
 
 ## :wave: : This's ICEFLOW
 
+Obviously, I am Chinese.:sunglasses:
+
 目前进行VR设备开发，偶尔做一些AI方面项目。下一个主研项目是开发全球最强PC播放器
 
 ### **社交主页：**
