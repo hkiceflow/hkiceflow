@@ -36,6 +36,6 @@ Obviously, I am Chinese. :sunglasses:
 | **技能/证书**          |                                                     |
 
 
-![Chatbox](https://img.shields.io/badge/Chatbox-bule?logo=chatbox)
+![微软生成式AI](https://img.shields.io/badge/微软生成式AI-bule?logo=microsoft)
 
 
