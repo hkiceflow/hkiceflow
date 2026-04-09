@@ -28,5 +28,14 @@ Obviously, I am Chinese. :sunglasses:
 
 [github-sub-title:img]: https://readme-typing-svg.herokuapp.com?font=Segoe+Script&center=true&lines=hkiceflow.
 
+| **常用**               | **软件及技术**                                      |
+|------------------------|-----------------------------------------------------|
+| **语言/集成开发环境**  | ![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=Python&logoColor=white) ![Pycharm Badge](https://img.shields.io/badge/-Pycharm-3776AB?style=flat&logo=Pycharm&logoColor=white) [![](https://img.shields.io/badge/-VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com) [![Markdown Badge](https://img.shields.io/badge/-Markdown-2088FF?style=flat&logo=Markdown&logoColor=white)](https://github.com/BEPb/BEPb) ![PyTorch](http://img.shields.io/badge/-PyTorch-eee?style=flat-square&logo=pytorch&logoColor=EE4C2C) ![Git](https://img.shields.io/badge/-Git-004400?style=flat&logo=git)&nbsp; Capi，mindline|
+| **学习平台/方式**      | youtube，bilibili，linkedln，obsidian，github，gitlab|
+| **辅助类工具**         | ima，ChatGPT，Chatbox，vscode plugins                |
+| **技能/证书**          |                                                     |
+
+
+
 
 
