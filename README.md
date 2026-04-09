@@ -8,7 +8,7 @@ Obviously, I am Chinese. :sunglasses:
 
 ## **社交主页：**
 
-[![bilibili](https://img.shields.io/badge/bilibili-hkiceflow-pink?logo=bilibili)](https://space.bilibili.com/368780828)<img src="https://img.shields.io/badge/fans-1.2k+?style=social"></code></a>：VR软硬件开发工程师，测试工程师，交互设计师 ; MPV（mpv-net）、sd（sd项目已弃用）开发者。
+[![bilibili](https://img.shields.io/badge/bilibili-hkiceflow-pink?logo=bilibili)](https://space.bilibili.com/368780828)<img src="https://img.shields.io/badge/fans->1.2K?style=social"></code></a>：VR软硬件开发工程师，测试工程师，交互设计师 ; MPV（mpv-net）、sd（sd项目已弃用）开发者。
 
 ## 逐步成长
 
