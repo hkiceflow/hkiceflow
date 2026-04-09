@@ -32,10 +32,10 @@ Obviously, I am Chinese. :sunglasses:
 |------------------------|-----------------------------------------------------|
 | **语言/集成开发环境**  | ![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=Python&logoColor=white) ![Pycharm Badge](https://img.shields.io/badge/-Pycharm-3776AB?style=flat&logo=Pycharm&logoColor=white) [![](https://img.shields.io/badge/-VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com) [![Markdown Badge](https://img.shields.io/badge/-Markdown-2088FF?style=flat&logo=Markdown&logoColor=white)](https://github.com/BEPb/BEPb) ![PyTorch](http://img.shields.io/badge/-PyTorch-eee?style=flat-square&logo=pytorch&logoColor=EE4C2C) ![Git](https://img.shields.io/badge/-Git-004400?style=flat&logo=git)&nbsp; ![CApi](https://img.shields.io/badge/CApi-yellow) ![mindline](https://img.shields.io/badge/mindline-white)|
 | **学习平台/方式**      | ![GitHub](https://img.shields.io/badge/-GitHub-444444?style=flat&logo=github)&nbsp; ![GitLab](https://img.shields.io/badge/-GitLab-444444?style=flat&logo=GitLab)&nbsp; ![youtube](https://img.shields.io/badge/youtube-red?logo=youtube) ![bilibili](https://img.shields.io/badge/bilibili-pink?logo=bilibili) ![linkedln](https://img.shields.io/badge/linkedln-blue) ![obsidian](https://img.shields.io/badge/obsidian-purple?logo=obsidian)|
-| **辅助类工具**         | ![ChatGPT](https://img.shields.io/badge/-ChatGPT-444444?style=flat&logo=ChatGPT)&nbsp;  [![](https://img.shields.io/badge/-VS_Code_Plugins-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com) ![ima](https://img.shields.io/badge/ima-write?logo=ima) ![Chatbox](https://img.shields.io/badge/Chatbox-write?logo=chatbox)|
+| **辅助类工具**         | ![ChatGPT](https://img.shields.io/badge/-ChatGPT-444444?style=flat&logo=ChatGPT)&nbsp;  [![](https://img.shields.io/badge/-VS_Code_Plugins-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com) ![ima](https://img.shields.io/badge/ima-white) ![Chatbox](https://img.shields.io/badge/Chatbox-yellow)|
 | **技能/证书**          |                                                     |
 
 
-![Chatbox](https://img.shields.io/badge/Chatbox-write?logo=chatbox)
+![Chatbox](https://img.shields.io/badge/Chatbox-bule?logo=chatbox)
 
 
