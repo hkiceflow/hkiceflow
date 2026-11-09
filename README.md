@@ -9,6 +9,9 @@ Obviously, I am Chinese. :sunglasses:
 
 目前进行VR设备开发，偶尔做一些AI方面项目。下一个主研项目是开发一款真正好用的PC播放器。
 
+![](./src/header_.png)
+<a href="https://www.python.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" align="right" height="48" width="48" ></a>
+
 ## **社交主页：**
 
 [![bilibili](https://img.shields.io/badge/bilibili-hkiceflow-pink?logo=bilibili)](https://space.bilibili.com/368780828)<img src="https://img.shields.io/badge/fans-1.3k+-pink?style=social"></code></a>：VR软硬件开发工程师，测试工程师，交互设计师 ; MPV（mpv-net）、Stablediffusion（sd项目已弃用）开发者。
