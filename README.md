@@ -22,7 +22,7 @@ Obviously, I am Chinese. :sunglasses:
 
 ![Modern C++ template][github-sub-title:img]
 
-[![MPV-net](https://img.shields.io/badge/code-MPV_net-blue?logo=mpv)](https://www.bilibili.com/video/BV1am421M7rH) 
+[![MPV-net](https://img.shields.io/badge/code-MPV_net-blue?logo=mpv)]([https://www.bilibili.com/video/BV1am421M7rH](https://github.com/hkiceflow/mpv_video)) 
 
 ![](https://img.shields.io/badge/专注-学习-yellow) 
 ![](https://img.shields.io/badge/性格-开放-orange) 
