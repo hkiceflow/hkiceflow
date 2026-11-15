@@ -2,7 +2,7 @@
 
 <table width="100%">
 <tr>
-<td width="64%" valign="middle">
+<td width="64%" valign="middle" align="center">
 <p><sub>人员简报 · hkiceflow</sub></p>
 <h1>iceflow</h1>
 <h2>:wave: : HI！ This's ICEFLOW</h2>
@@ -34,10 +34,17 @@
 <a href="https://fb.com/iceflow" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="iceflow" height="30" width="40" /></a>
 <a href="https://instagram.com/iceflow" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="iceflow" height="30" width="40" /></a>
 <a href="https://www.youtube.com/c/@iceflow7311" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="@iceflow7311" height="30" width="40" /></a>
+<br />
+<br />
+<a href="mailto:hkiceflow@gmail.com"><img src="https://img.shields.io/badge/Gmail-hkiceflow%40gmail.com-white?style=social&logo=gmail" alt="Gmail"></a>
 </p>
  
 <p><sub>Buildings that were once located at Florida State University, Florida, USA</sub></p>
-<p><a href="https://github.com/hkiceflow">GitHub</a> &nbsp;·&nbsp; <a href="https://space.bilibili.com/368780828">Website</a> &nbsp;·&nbsp; <a href="https://x.com/hkiceflow">X</a></p>
+<p>
+<a href="https://github.com/hkiceflow"><img src="https://img.shields.io/badge/Github-black?logo=github" alt="Github"></a>
+<a href="https://space.bilibili.com/368780828"><img src="https://img.shields.io/badge/Bilibili-pink?logo=bilibili" alt="Bilibili"></a>
+<a href="https://x.com/hkiceflow"><img src="https://img.shields.io/badge/X-black?logo=x" alt="X"></a>
+</p>
 </td>
 <td width="36%" valign="middle" align="center">
 <img src="https://avatars.githubusercontent.com/u/115037389?u=f36852748094a2e84d0780e59f80288ab0a8464f&amp;v=4" width="180" alt="iceflow GitHub avatar" />
@@ -145,7 +152,12 @@
 <table width="100%">
 <tr>
 <td width="62%" valign="middle"><h2>期待与你共同打造下一个作品</h2><p>期待与有深度的团队、有抱负的产品和有实际价值的工程项目合作。</p></td>
-<td width="38%" valign="middle" align="right"><a href="https://github.com/hkiceflow">GitHub</a><br /><a href="https://space.bilibili.com/368780828">Website</a><br /><a href="https://x.com/hkiceflow">X</a></td>
+<td width="38%" valign="middle" align="right">
+<a href="https://github.com/hkiceflow"><img src="https://img.shields.io/badge/Github-black?logo=github" alt="Github"></a><br />
+<a href="https://space.bilibili.com/368780828"><img src="https://img.shields.io/badge/Bilibili-pink?logo=bilibili" alt="Bilibili"></a><br />
+<a href="https://x.com/hkiceflow"><img src="https://img.shields.io/badge/X-black?logo=x" alt="X"></a><br />
+<a href="mailto:hkiceflow@gmail.com"><img src="https://img.shields.io/badge/Gmail-hkiceflow%40gmail.com-white?style=social&logo=gmail" alt="Gmail"></a>
+</td>
 </tr>
 </table>
 
