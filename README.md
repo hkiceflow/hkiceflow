@@ -7,7 +7,7 @@
 <h1>iceflow</h1>
 <h2>:wave: : HI！ This's ICEFLOW</h2>
 <p>Obviously, I am Chinese. :sunglasses:<p>
-<p>VR软硬件开发工程师、测试工程师、交互设计师、产品经理、CEO ;
+<p>VR软硬件开发工程师、测试工程师、交互设计师、产品经理、OPC、CEO、集团顾问、剪辑师、调色师【其余可查看下方列表】 ;
  MPV（mpv-net）、Stablediffusion（sd项目已弃用）开发者。</p>
 <p><strong>● Building and sharing work in public</strong></p>
  
@@ -47,7 +47,7 @@
 </p>
 </td>
 <td width="36%" valign="middle" align="center">
-<img src="https://avatars.githubusercontent.com/u/115037389?u=f36852748094a2e84d0780e59f80288ab0a8464f&amp;v=4" width="180" alt="iceflow GitHub avatar" />
+<img src="https://avatars.githubusercontent.com/u/115037389?u=f36852748094a2e84d0780e59f80288ab0a8464f&amp;v=4" width="2200" alt="iceflow GitHub avatar" />
 </td>
 </tr>
 </table>
@@ -63,7 +63,7 @@
 | **辅助类工具**          | ![ChatGPT](https://img.shields.io/badge/-ChatGPT-444444?style=flat&logo=chatgpt)&nbsp;  [![](https://img.shields.io/badge/-VS_Code_Plugins-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com) ![ima](https://img.shields.io/badge/ima-white?logo=ima) ![Chatbox](https://img.shields.io/badge/Chatbox-yellow?logo=chatbox) ![AI Agent](https://img.shields.io/badge/AI_Agent-gray)  ![Autobangumi](https://img.shields.io/badge/Autobangumi-purple?logo=autobangumi)  ![Cloudflare](https://img.shields.io/badge/Cloudflare-white?logo=cloudflare)  ![ClouDNS](https://img.shields.io/badge/ClouDNS-orange?logo=cloudflare) ![V2ray](https://img.shields.io/badge/V2ray-blue?lgog=v2ray) ![DeepSeek](https://img.shields.io/badge/DeepSeek-blue?logo=deepseek) ![Tampermonkey](https://img.shields.io/badge/Tampermonkey-black?logo=Tampermonkey) ![Shizuku](https://img.shields.io/badge/Shizuku-purple?logo=shizuku) ![Scene](https://img.shields.io/badge/Scene-blue?logo=scene)|
 | **技能/证书**           | ![microsoft generative ai](https://img.shields.io/badge/microsoft_generative_ai-green?logo=microsoft) ![HUAWEI Harmonyos Basic Developer](https://img.shields.io/badge/HUAWEI_Harmonyos_Basic_Developer-red?logo=HUAWEI) ![Huawei Push User Growth Service Junior Optimization Specialist](https://img.shields.io/badge/Huawei_Push_User_Growth_Service_Junior_Optimization_Specialist-red?logo=HUAWEI) ![Ali DAMO Senior Artificial Intelligence Trainer](https://img.shields.io/badge/Ali_DAMO_Senior_Artificial_Intelligence_Trainer-orange?logo=alibaba) ![Ali Business Consultant Data Analysis Specialist](https://img.shields.io/badge/Ali_Business_Consultant_Data_Analysis_Specialist-orange) ![Ali Business Analyst Operations Specialist](https://img.shields.io/badge/Ali_Business_Analyst_Operations_Specialis-orange)|
 | **当前软件开发**        | [![mpvnet](https://img.shields.io/badge/mpvnet-blue?logo=mpv)](https://github.com/hkiceflow/mpv_video)|
-| **兴趣/爱好**           | ![MiKan-Project](https://img.shields.io/badge/MiKan_Project-yellow?logo=mikan-project) ![Steam](https://img.shields.io/badge/Steam-black?logo=steam) ![Epic](https://img.shields.io/badge/Epic-black?logo=epic-games)  ![Battle.net](https://img.shields.io/badge/Battle.net-blue?logo=battle.net) ![Ubisoft](https://img.shields.io/badge/Ubisoft-black?logo=ubisoft) ![PlayStation](https://img.shields.io/badge/PlayStation-blue?logo=playstation) ![Xbox](https://img.shields.io/badge/Xbox-green?logo=xbox) ![Origin](https://img.shields.io/badge/Origin-orange?logo=origin) ![X](https://img.shields.io/badge/X-black?logo=x) ![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook) ![Telegram](https://img.shields.io/badge/Telegram-blue?logo=telegram) ![Discord](https://img.shields.io/badge/Discord-purple?logo=discord) ![Instagram](https://img.shields.io/badge/Instagram-pink?logo=instagram) ![Twitch](https://img.shields.io/badge/Twitch-purple?logo=twitch) ![Pixiv](https://img.shields.io/badge/Pixiv-blue?logo=pixiv) ![OKX](https://img.shields.io/badge/OKX-black?logo=okx) ![Gate](https://img.shields.io/badge/Gate-white?logo=gate)|
+| **兴趣/爱好**           | ![MiKan-Project](https://img.shields.io/badge/MiKan_Project-yellow?logo=mikan-project) ![Steam](https://img.shields.io/badge/Steam-black?logo=steam) ![Epic](https://img.shields.io/badge/Epic-black?logo=epic-games)  ![Battle.net](https://img.shields.io/badge/Battle.net-blue?logo=battle.net) ![Ubisoft](https://img.shields.io/badge/Ubisoft-black?logo=ubisoft) ![PlayStation](https://img.shields.io/badge/PlayStation-blue?logo=playstation) ![Xbox](https://img.shields.io/badge/Xbox-green?logo=xbox) ![Origin](https://img.shields.io/badge/Origin-orange?logo=origin) ![X](https://img.shields.io/badge/X-black?logo=x) ![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook) ![Telegram](https://img.shields.io/badge/Telegram-blue?logo=telegram) ![Discord](https://img.shields.io/badge/Discord-purple?logo=discord) ![Instagram](https://img.shields.io/badge/Instagram-pink?logo=instagram) ![Twitch](https://img.shields.io/badge/Twitch-purple?logo=twitch) ![Pixiv](https://img.shields.io/badge/Pixiv-blue?logo=pixiv) ![OKX](https://img.shields.io/badge/OKX-black?logo=okx) ![Gate](https://img.shields.io/badge/Gate-white?logo=gate) 、咖啡师、调酒师、茶艺师、剪辑师、调色师|
 
 <h2>团队快速评估</h2>
 
