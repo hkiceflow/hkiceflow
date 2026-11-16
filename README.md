@@ -90,7 +90,7 @@
 <h2>精选项目</h2>
 
 <p align="center">
-  <img src="./assets/gitskins-replacement/projects.svg" alt="hkiceflow projects visual" />
+  <img src="./assets/gitskins-replacement/projects.svg" width="100%" alt="hkiceflow projects visual" />
 </p>
 
 <h2>技术工具包 <sub>· 我未上传 code 信息，直接更新 Releases</sub></h2>
@@ -98,6 +98,8 @@
 <p align="center">
   <img src="./assets/gitskins-replacement/stack.svg" width="100%" alt="iceflow technology stack" />
 </p>
+
+<h2>语言分布</h2>
 
 <p align="center">
   <img src="./assets/gitskins-replacement/languages.svg"
