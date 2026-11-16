@@ -126,6 +126,22 @@ languages = Counter(
     for repo in repos
     if repo["primaryLanguage"]
 )
+# Language byte statistics
+language_bytes = Counter()
+
+for repo in repos:
+    for edge in repo["languages"]["edges"]:
+        language_bytes[edge["node"]["name"]] += edge["size"]
+
+total_language_bytes = sum(language_bytes.values()) or 1
+
+display_languages = [
+    "GLSL",
+    "Lua",
+    "Python",
+    "C",
+    "Batchfile",
+]
 
 # 1. Statistics
 svg = svg_start("GitHub Overview", "Profile statistics", 900, 190)
@@ -387,6 +403,48 @@ if not top_languages:
     svg += '<text x="30" y="120" fill="#9eaccb">No language data available</text>'
 svg += svg_end()
 write_svg("stack.svg", svg)
+# 3.5. Language Distribution
+svg = svg_start(
+    "Language Distribution",
+    "Public code composition",
+    900,
+    250
+)
+
+svg += '''
+    <rect x="28" y="94" width="844" height="128" rx="12"
+      fill="#0c1426" stroke="#34415f" stroke-width="1"/>
+'''
+
+for i, language in enumerate(display_languages):
+    x = 48 + i * 164
+    count = language_bytes[language]
+    percentage = count / total_language_bytes * 100
+
+    svg += f'''
+    <text x="{x}" y="125" fill="#dce5ff" font-size="13"
+      font-family="Segoe UI,Arial" font-weight="600">
+      {escape(language)}
+    </text>
+
+    <text x="{x}" y="165" fill="#f0f3ff" font-size="25"
+      font-family="Segoe UI,Arial" font-weight="600">
+      {percentage:.1f}%
+    </text>
+
+    <rect x="{x}" y="183" width="125" height="5" rx="2.5"
+      fill="#293550"/>
+
+    <rect x="{x}" y="183" width="{125 * percentage / 100:.2f}"
+      height="5" rx="2.5" fill="url(#accent)">
+      <animate attributeName="width"
+        from="0" to="{125 * percentage / 100:.2f}"
+        dur="1.4s" fill="freeze"/>
+    </rect>
+    '''
+
+svg += svg_end()
+write_svg("languages.svg", svg)
 
 # 4. Contribution heatmap
 days = [
