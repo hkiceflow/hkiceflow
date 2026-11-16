@@ -127,6 +127,7 @@ stats = [
     ("CONTRIBUTIONS", contributions),
     ("FOLLOWERS", followers),
 ]
+
 for i, (label, value) in enumerate(stats):
     x = 28 + i * 218
     svg += f'''
@@ -136,19 +137,20 @@ for i, (label, value) in enumerate(stats):
     <g opacity="0">
       <animate attributeName="opacity"
         from="0" to="1"
-        begin="{i * 0.22:.2f}s"
-        dur="0.65s"
+        begin="{i * 0.44:.2f}s"
+        dur="1.30s"
         fill="freeze"/>
       <animateTransform attributeName="transform"
         type="translate"
         from="0 10" to="0 0"
-        begin="{i * 0.22:.2f}s"
-        dur="0.65s"
+        begin="{i * 0.44:.2f}s"
+        dur="1.30s"
         fill="freeze"/>
       <text x="{x}" y="160" fill="#f3f5ff" font-size="27"
         font-family="Segoe UI,Arial" font-weight="600">{value:,}</text>
     </g>
     '''
+
 svg += svg_end()
 write_svg("stats.svg", svg)
 
