@@ -86,7 +86,7 @@
 <h2>Github 核心成果概览</h2>
 
 <p align="center">
-  <img src="./assets/gitskins-replacement/stats.svg" width="100%" alt="iceflow GitHub statistics" />
+  <img src="./assets/gitskins-replacement/stats.svg" width="100%" alt="iceflow GitHub statistics" loading="lazy" />
 </p>
 
 <p><code>176 contributions</code> · <code>2 day streak</code></p>
