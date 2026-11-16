@@ -225,6 +225,24 @@ write_svg("projects.svg", svg)
 
 # 3. Technology stack
 svg = svg_start("Technology Stack", "Primary languages across repositories", 900, 260)
+
+svg += '''
+    <text x="872" y="39"
+      text-anchor="end"
+      fill="#8998b8"
+      font-size="11"
+      font-family="Consolas,Monaco,monospace"
+      letter-spacing=".5">
+      &gt; stack.scan
+      <tspan fill="#55e68a">_
+        <animate attributeName="opacity"
+          values="1;0;1"
+          dur="1s"
+          repeatCount="indefinite"/>
+      </tspan>
+    </text>
+'''
+
 top_languages = languages.most_common(6)
 total_languages = sum(languages.values()) or 1
 for i, (language, count) in enumerate(top_languages):
