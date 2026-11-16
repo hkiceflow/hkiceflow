@@ -3,7 +3,7 @@ import os
 import json
 import urllib.request
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from xml.sax.saxutils import escape
 
 USERNAME = "hkiceflow"
@@ -179,13 +179,33 @@ svg += svg_end()
 write_svg("stats.svg", svg)
 
 # 1.5. Professional Brief
-active_days = sum(
-    1
+# Calculate current contribution streak
+contribution_days = {
+    datetime.strptime(day["date"], "%Y-%m-%d").date():
+    day["contributionCount"]
     for week in calendar["weeks"]
     for day in week["contributionDays"]
-    if day["contributionCount"] > 0
-)
+}
+calendar_dates = sorted(contribution_days)
+latest_date = calendar_dates[-1] if calendar_dates else None
 
+if latest_date:
+    streak_date = (
+        latest_date
+        if contribution_days.get(latest_date, 0) > 0
+        else latest_date - timedelta(days=1)
+    )
+else:
+    streak_date = None
+
+current_streak = 0
+
+while (
+    streak_date is not None
+    and contribution_days.get(streak_date, 0) > 0
+):
+    current_streak += 1
+    streak_date -= timedelta(days=1)
 svg = svg_start(
     "Professional Snapshot",
     "Recruiter signal brief · hkiceflow",
@@ -284,11 +304,11 @@ svg += f'''
 
     <text x="627" y="243" fill="#f0f3ff" font-size="29"
       font-family="Segoe UI,Arial" font-weight="600">
-      {active_days}
+      {current_streak}
     </text>
     <text x="627" y="261" fill="#8998b8" font-size="10"
       font-family="Segoe UI,Arial" letter-spacing="1.2">
-      ACTIVE DAYS
+      CURRENT STREAK
     </text>
 '''
 
