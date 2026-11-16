@@ -36,10 +36,10 @@
     <rect x="48" y="183" width="125" height="5" rx="2.5"
       fill="#293550"/>
 
-    <rect x="48" y="183" width="124.12"
+    <rect x="48" y="183" width="124.10"
       height="5" rx="2.5" fill="url(#accent)">
       <animate attributeName="width"
-        from="0" to="124.12"
+        from="0" to="124.10"
         dur="1.4s" fill="freeze"/>
     </rect>
     
@@ -76,10 +76,10 @@
     <rect x="376" y="183" width="125" height="5" rx="2.5"
       fill="#293550"/>
 
-    <rect x="376" y="183" width="0.28"
+    <rect x="376" y="183" width="0.30"
       height="5" rx="2.5" fill="url(#accent)">
       <animate attributeName="width"
-        from="0" to="0.28"
+        from="0" to="0.30"
         dur="1.4s" fill="freeze"/>
     </rect>
     
