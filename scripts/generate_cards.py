@@ -265,30 +265,48 @@ for i, role in enumerate(roles):
       font-family="Segoe UI,Arial">{escape(role)}</text>
     '''
 
+
 # Public proof
-svg += f'''
-    <text x="340" y="177" fill="#f0f3ff" font-size="29"
-      font-family="Segoe UI,Arial" font-weight="600">
-      {total_repos}
-    </text>
-    <text x="340" y="195" fill="#8998b8" font-size="10"
-      font-family="Segoe UI,Arial" letter-spacing="1.2">
-      PUBLIC REPOSITORIES
-    </text>
+svg += '''
+    <a href="https://github.com/hkiceflow/mpv_video"
+       target="_blank">
+      <!-- mpv purple logo -->
+      <circle cx="359" cy="174" r="19" fill="#ffffff"/>
+      <circle cx="359" cy="174" r="17" fill="#493078"/>
+      <circle cx="359" cy="174" r="14" fill="#8056c7"/>
+      <circle cx="359" cy="174" r="9.5" fill="#f2edff"/>
+      <path d="M356 168.5 L364.5 174 L356 179.5 Z"
+        fill="#6741a8"/>
 
-    <text x="340" y="243" fill="#f0f3ff" font-size="29"
-      font-family="Segoe UI,Arial" font-weight="600">
-      {stars}
-    </text>
-    <text x="340" y="261" fill="#8998b8" font-size="10"
-      font-family="Segoe UI,Arial" letter-spacing="1.2">
-      TOTAL STARS
-    </text>
+      <text x="389" y="173" fill="#f0f3ff" font-size="13"
+        font-family="Segoe UI,Arial" font-weight="600">
+        mpv_video
+      </text>
+      <text x="389" y="191" fill="#8998b8" font-size="10"
+        font-family="Segoe UI,Arial" letter-spacing="1">
+        OPEN SOURCE PROJECT
+      </text>
+    </a>
 
-    <text x="340" y="289" fill="#9eaccb" font-size="11"
-      font-family="Segoe UI,Arial">
-      SOCIAL ACCOUNTS  ·  OPEN SOURCE
-    </text>
+    <a href="https://space.bilibili.com/368780828"
+       target="_blank">
+      <!-- Bilibili logo -->
+      <rect x="342" y="221" width="34" height="27" rx="7"
+        fill="#00a1d6"/>
+      <path d="M350 220 L346 214 M368 220 L372 214"
+        stroke="#00a1d6" stroke-width="3" stroke-linecap="round"/>
+      <path d="M352 232 V239 M366 232 V239"
+        stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+
+      <text x="389" y="237" fill="#f0f3ff" font-size="13"
+        font-family="Segoe UI,Arial" font-weight="600">
+        哔哩哔哩
+      </text>
+      <text x="389" y="255" fill="#8998b8" font-size="10"
+        font-family="Segoe UI,Arial" letter-spacing="1">
+        SOCIAL MEDIA
+      </text>
+    </a>
 '''
 
 # GitHub Momentum
