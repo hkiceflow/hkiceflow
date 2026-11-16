@@ -203,6 +203,16 @@ write_svg("heatmap.svg", svg)
 # 5. Social/profile card
 display_name = escape(user["name"] or user["login"])
 avatar = escape(user["avatarUrl"])
+avatar_request = urllib.request.Request(
+    user["avatarUrl"],
+    headers={"User-Agent": USERNAME}
+)
+
+with urllib.request.urlopen(avatar_request) as response:
+    avatar_data = response.read()
+
+with open(os.path.join(OUTPUT_DIR, "avatar.png"), "wb") as f:
+    f.write(avatar_data)
 svg = svg_start("Profile", "Developer identity", 900, 190)
 svg += f'''
 <image href="{avatar}" x="30" y="91" width="66" height="66"
