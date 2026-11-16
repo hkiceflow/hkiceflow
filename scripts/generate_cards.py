@@ -383,7 +383,6 @@ nebula_layer = '''
         <circle cx="800" cy="318" r="1.3"/>
       </g>
     </g>
-  </g>
 '''
 
 svg = svg.replace(
