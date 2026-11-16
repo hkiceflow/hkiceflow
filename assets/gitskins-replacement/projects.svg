@@ -39,19 +39,10 @@
     </text>
     
     <text x="30" y="198" fill="#dce5ff" font-size="14"
-      font-family="Segoe UI,Arial" font-weight="600">AutoGrowAI</text>
-    <text x="30" y="215" fill="#8493b2" font-size="10"
-      font-family="Segoe UI,Arial">🌐 Self-Supervised Learning AI Framework | 自监督学习AI框架</text>
-    <text x="850" y="198" text-anchor="end" fill="#a9baff"
-      font-size="12" font-family="Segoe UI,Arial">
-      ★ 0  ·  Forks 0
-    </text>
-    
-    <text x="30" y="241" fill="#dce5ff" font-size="14"
       font-family="Segoe UI,Arial" font-weight="600">hkiceflow</text>
-    <text x="30" y="258" fill="#8493b2" font-size="10"
+    <text x="30" y="215" fill="#8493b2" font-size="10"
       font-family="Segoe UI,Arial">个人readme，包括主页显示</text>
-    <text x="850" y="241" text-anchor="end" fill="#a9baff"
+    <text x="850" y="198" text-anchor="end" fill="#a9baff"
       font-size="12" font-family="Segoe UI,Arial">
       ★ 0  ·  Forks 0
     </text>
