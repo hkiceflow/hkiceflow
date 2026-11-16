@@ -57,6 +57,12 @@
 </table>
 </div>
 
+<p align="center">
+  <img src="./assets/gitskins-replacement/divider.svg"
+       width="100%"
+       alt="Animated divider" />
+</p>
+
 ![](./src/header_.png)
 <a href="https://www.python.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" align="right" height="48" width="48" ></a>
 
@@ -73,7 +79,13 @@
 | **当前软件开发**        | [![mpvnet](https://img.shields.io/badge/mpvnet-blue?logo=mpv)](https://github.com/hkiceflow/mpv_video)|
 | **兴趣/爱好**           | ![MiKan-Project](https://img.shields.io/badge/MiKan_Project-yellow?logo=mikan-project) ![Steam](https://img.shields.io/badge/Steam-black?logo=steam) ![Epic](https://img.shields.io/badge/Epic-black?logo=epic-games)  ![Battle.net](https://img.shields.io/badge/Battle.net-blue?logo=battle.net) ![Ubisoft](https://img.shields.io/badge/Ubisoft-black?logo=ubisoft) ![PlayStation](https://img.shields.io/badge/PlayStation-blue?logo=playstation) ![Xbox](https://img.shields.io/badge/Xbox-green?logo=xbox) ![Origin](https://img.shields.io/badge/Origin-orange?logo=origin) ![X](https://img.shields.io/badge/X-black?logo=x) ![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook) ![Telegram](https://img.shields.io/badge/Telegram-blue?logo=telegram) ![Discord](https://img.shields.io/badge/Discord-purple?logo=discord) ![Instagram](https://img.shields.io/badge/Instagram-pink?logo=instagram) ![Twitch](https://img.shields.io/badge/Twitch-purple?logo=twitch) ![Pixiv](https://img.shields.io/badge/Pixiv-blue?logo=pixiv) ![OKX](https://img.shields.io/badge/OKX-black?logo=okx) ![Gate](https://img.shields.io/badge/Gate-white?logo=gate) ![咖啡师](https://img.shields.io/badge/咖啡师-brown) ![调酒师](https://img.shields.io/badge/调酒师-D4AF37) ![茶艺师](https://img.shields.io/badge/茶艺师-654321) ![剪辑师](https://img.shields.io/badge/剪辑师-4169A1) ![调色师](https://img.shields.io/badge/调色师-7952A0)|
 
-<h2>团队快速评估</h2>
+<p align="center">
+  <img src="./assets/gitskins-replacement/divider.svg"
+       width="100%"
+       alt="Animated divider" />
+</p>
+
+<h3>团队快速评估</h3>
 
 <p align="center">
   <img src="./assets/gitskins-replacement/brief.svg"
@@ -81,25 +93,49 @@
        alt="iceflow professional profile brief" />
 </p>
 
-<h2>Github 核心成果概览</h2>
+<p align="center">
+  <img src="./assets/gitskins-replacement/divider.svg"
+       width="100%"
+       alt="Animated divider" />
+</p>
+
+<h3>Github 核心成果概览</h3>
 
 <p align="center">
   <img src="./assets/gitskins-replacement/stats.svg" width="100%" alt="iceflow GitHub statistics" loading="lazy" />
 </p>
 
-<h2>精选项目</h2>
+<p align="center">
+  <img src="./assets/gitskins-replacement/divider.svg"
+       width="100%"
+       alt="Animated divider" />
+</p>
+
+<h3>精选项目</h3>
 
 <p align="center">
   <img src="./assets/gitskins-replacement/projects.svg" width="100%" alt="hkiceflow projects visual" />
 </p>
 
-<h2>技术工具包 <sub>· 我未上传 code 信息，直接更新 Releases</sub></h2>
+<p align="center">
+  <img src="./assets/gitskins-replacement/divider.svg"
+       width="100%"
+       alt="Animated divider" />
+</p>
+
+<h3>技术工具包 <sub>· 我未上传 code 信息，直接更新 Releases</sub></h3>
 
 <p align="center">
   <img src="./assets/gitskins-replacement/stack.svg" width="100%" alt="iceflow technology stack" />
 </p>
 
-<h2>语言分布</h2>
+<p align="center">
+  <img src="./assets/gitskins-replacement/divider.svg"
+       width="100%"
+       alt="Animated divider" />
+</p>
+
+<h3>语言分布</h3>
 
 <p align="center">
   <img src="./assets/gitskins-replacement/languages.svg"
@@ -107,21 +143,38 @@
        alt="Programming language distribution" />
 </p>
 
-<h2>Consistency signal</h2>
+<p align="center">
+  <img src="./assets/gitskins-replacement/divider.svg"
+       width="100%"
+       alt="Animated divider" />
+</p>
+
+<h3>Consistency signal</h3>
 
 <p align="center">
   <img src="./assets/gitskins-replacement/heatmap.svg" width="100%" alt="iceflow contribution activity" />
+</p>
+
+<p align="center">
+  <img src="./assets/gitskins-replacement/divider.svg"
+       width="100%"
+       alt="Animated divider" />
 </p>
 
 ## 🏆 GitHub Trophies
 
 ![](https://github-profile-trophy-chi-ten.vercel.app/?username=hkiceflow&theme=darkhub&no-frame=false&no-bg=true&margin-w=4)
 
-<hr />
+<p align="center">
+  <img src="./assets/gitskins-replacement/divider.svg"
+       width="100%"
+       alt="Animated divider" />
+</p>
 
 <p align="center">
   <img src="./assets/gitskins-replacement/social.svg" width="100%" alt="hkiceflow social visual" />
 </p>
+
 
 <table width="100%">
 <tr>
