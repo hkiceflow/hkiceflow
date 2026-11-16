@@ -86,10 +86,7 @@
 <h2>Github 核心成果概览</h2>
 
 <p align="center">
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/stats?username=hkiceflow&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F115037389%3Fu%3Df36852748094a2e84d0780e59f80288ab0a8464f%26v%3D4&v=recruiter-stats-1&mode=light" />
-  <img src="https://www.gitskins.com/api/section/stats?username=hkiceflow&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F115037389%3Fu%3Df36852748094a2e84d0780e59f80288ab0a8464f%26v%3D4&v=recruiter-stats-1&mode=dark" width="100%" alt="iceflow GitHub proof metrics" />
-</picture>
+  <img src="./assets/gitskins-replacement/stats.svg" width="100%" alt="iceflow GitHub statistics" />
 </p>
 
 <p><code>176 contributions</code> · <code>2 day streak</code></p>
@@ -97,16 +94,13 @@
 <h2>精选项目</h2>
 
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/projects?username=hkiceflow&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F115037389%3Fu%3Df36852748094a2e84d0780e59f80288ab0a8464f%26v%3D4" alt="hkiceflow projects visual" />
+  <img src="./assets/gitskins-replacement/projects.svg" alt="hkiceflow projects visual" />
 </p>
 
 <h2>技术工具包 <sub>· 我未上传 code 信息，直接更新 Releases</sub></h2>
 
 <p align="center">
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/stack?username=hkiceflow&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F115037389%3Fu%3Df36852748094a2e84d0780e59f80288ab0a8464f%26v%3D4&v=recruiter-stack-1&mode=light" />
-  <img src="https://www.gitskins.com/api/section/stack?username=hkiceflow&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F115037389%3Fu%3Df36852748094a2e84d0780e59f80288ab0a8464f%26v%3D4&v=recruiter-stack-1&mode=dark" width="100%" alt="iceflow technology stack" />
-</picture>
+  <img src="./assets/gitskins-replacement/stack.svg" width="100%" alt="iceflow technology stack" />
 </p>
 
 <table width="100%">
@@ -122,10 +116,7 @@
 <h2>Consistency signal</h2>
 
 <p align="center">
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/heatmap?username=hkiceflow&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F115037389%3Fu%3Df36852748094a2e84d0780e59f80288ab0a8464f%26v%3D4&v=recruiter-heatmap-1&mode=light" />
-  <img src="https://www.gitskins.com/api/section/heatmap?username=hkiceflow&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F115037389%3Fu%3Df36852748094a2e84d0780e59f80288ab0a8464f%26v%3D4&v=recruiter-heatmap-1&mode=dark" width="100%" alt="iceflow contribution activity" />
-</picture>
+  <img src="./assets/gitskins-replacement/heatmap.svg" width="100%" alt="iceflow contribution activity" />
 </p>
 
 ## 🏆 GitHub Trophies
