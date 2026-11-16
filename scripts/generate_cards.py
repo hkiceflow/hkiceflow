@@ -310,7 +310,7 @@ nebula_layer = '''
           attributeType="XML"
           type="rotate"
           values="0 450 165;360 450 165"
-          dur="45s"
+          dur="8s"
           repeatCount="indefinite"/>
 
         <g opacity=".55">
