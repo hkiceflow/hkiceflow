@@ -203,4 +203,94 @@ for i, day in enumerate(days):
 svg += svg_end()
 write_svg("heatmap.svg", svg)
 
-print("Generated four SVG cards successfully.")
+
+# 5. Social identity card
+
+social_svg = '''<svg xmlns="http://www.w3.org/2000/svg"
+width="900" height="220" viewBox="0 0 900 220">
+
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#10182d"/>
+    <stop offset="100%" stop-color="#17112b"/>
+  </linearGradient>
+
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#62a8ff"/>
+    <stop offset="55%" stop-color="#9b7bff"/>
+    <stop offset="100%" stop-color="#e18bff"/>
+  </linearGradient>
+
+  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+    <feGaussianBlur stdDeviation="4" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</defs>
+
+<rect width="900" height="220" rx="18"
+      fill="url(#bg)" stroke="#34415f" stroke-width="1"/>
+
+<text x="450" y="43"
+      text-anchor="middle"
+      fill="#f0f3ff"
+      font-size="19"
+      font-family="Segoe UI,Arial"
+      font-weight="600">Github</text>
+
+<!-- Elliptical orbit -->
+<ellipse cx="450" cy="111" rx="119" ry="49"
+         fill="none"
+         stroke="#34415f"
+         stroke-width="1.5"
+         opacity=".7"/>
+
+<ellipse cx="450" cy="111" rx="119" ry="49"
+         fill="none"
+         stroke="url(#accent)"
+         stroke-width="2.2"
+         stroke-linecap="round"
+         stroke-dasharray="230 520"
+         filter="url(#glow)">
+  <animate attributeName="stroke-dashoffset"
+           from="0" to="-750"
+           dur="6s"
+           repeatCount="indefinite"/>
+</ellipse>
+
+<!-- Moving orbit highlight -->
+<circle r="4" fill="#8deaff" filter="url(#glow)">
+  <animateMotion
+    dur="6s"
+    repeatCount="indefinite"
+    path="M 569,111 A 119,49 0 1,1 331,111 A 119,49 0 1,1 569,111"/>
+</circle>
+
+<!-- Central identity -->
+<circle cx="450" cy="111" r="34"
+        fill="#111a30"
+        stroke="url(#accent)"
+        stroke-width="2"/>
+
+<text x="450" y="126"
+      text-anchor="middle"
+      fill="url(#accent)"
+      font-size="43"
+      font-family="Segoe UI,Arial"
+      font-weight="600">I</text>
+
+<text x="450" y="202"
+      text-anchor="middle"
+      fill="#8998b8"
+      font-size="14"
+      font-family="Segoe UI,Arial"
+      letter-spacing="1">@hkiceflow</text>
+
+</svg>'''
+
+write_svg("social.svg", social_svg)
+
+print("Generated five SVG cards successfully.")
+
