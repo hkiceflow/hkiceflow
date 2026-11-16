@@ -145,6 +145,71 @@ display_languages = [
 
 # 1. Statistics
 svg = svg_start("GitHub Overview", "Profile statistics", 900, 190)
+
+# Galaxy orbit animation
+svg += '''
+    <defs>
+      <radialGradient id="planetBlue">
+        <stop offset="0%" stop-color="#d8f7ff"/>
+        <stop offset="35%" stop-color="#62caff"/>
+        <stop offset="75%" stop-color="#2585e8"/>
+        <stop offset="100%" stop-color="#1550a8"/>
+      </radialGradient>
+
+      <filter id="planetGlow" x="-300%" y="-300%"
+        width="700%" height="700%">
+        <feGaussianBlur stdDeviation="4" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+
+    <!-- Diagonal galaxy orbit -->
+    <ellipse cx="790" cy="60" rx="85" ry="20"
+      transform="rotate(-35 790 60)"
+      fill="none"
+      stroke="#557bbd"
+      stroke-width="1.2"
+      opacity=".38"/>
+
+    <ellipse cx="790" cy="60" rx="85" ry="20"
+      transform="rotate(-35 790 60)"
+      fill="none"
+      stroke="#79caff"
+      stroke-width="1.5"
+      stroke-dasharray="28 190"
+      opacity=".65"/>
+
+    <!-- Blue planet glow -->
+    <circle r="8" fill="#319dff" opacity=".35"
+      filter="url(#planetGlow)">
+      <animateMotion
+        dur="8s"
+        repeatCount="indefinite"
+        path="M 859.6,11.3 A 85,20 -35 1,1 720.4,108.7 A 85,20 -35 1,1 859.6,11.3"/>
+    </circle>
+
+    <!-- Moving blue planet -->
+    <circle r="5.5" fill="url(#planetBlue)"
+      stroke="#a8e8ff" stroke-width=".8"
+      filter="url(#planetGlow)">
+      <animateMotion
+        dur="8s"
+        repeatCount="indefinite"
+        path="M 859.6,11.3 A 85,20 -35 1,1 720.4,108.7 A 85,20 -35 1,1 859.6,11.3"/>
+    </circle>
+
+    <!-- Planet highlight -->
+    <circle r="1.5" fill="#ffffff" opacity=".9">
+      <animateMotion
+        dur="8s"
+        repeatCount="indefinite"
+        path="M 859.6,11.3 A 85,20 -35 1,1 720.4,108.7 A 85,20 -35 1,1 859.6,11.3"/>
+    </circle>
+'''
+
 stats = [
     ("REPOSITORIES", total_repos),
     ("STARS", stars),
