@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    width="900" height="190" viewBox="0 0 900 190">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#10182d"/>
+        <stop offset="100%" stop-color="#17112b"/>
+      </linearGradient>
+      <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#62a8ff"/>
+        <stop offset="55%" stop-color="#9b7bff"/>
+        <stop offset="100%" stop-color="#e18bff"/>
+      </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" rx="18" fill="url(#bg)"
+      stroke="#34415f" stroke-width="1"/>
+    <circle cx="870" cy="10" r="100" fill="#765cff" opacity=".07"/>
+    <text x="28" y="39" fill="#f0f3ff" font-size="20"
+      font-family="Segoe UI,Arial" font-weight="600">Profile</text>
+    <text x="28" y="61" fill="#8998b8" font-size="11"
+      font-family="Segoe UI,Arial" letter-spacing="2">DEVELOPER IDENTITY</text>
+    <rect x="28" y="76" width="54" height="3" rx="2" fill="url(#accent)"/>
+    
+<image href="https://avatars.githubusercontent.com/u/115037389?u=f36852748094a2e84d0780e59f80288ab0a8464f&amp;v=4" x="30" y="91" width="66" height="66"
+  clip-path="inset(0 round 12px)"/>
+<text x="116" y="119" fill="#f1f4ff" font-size="22"
+  font-family="Segoe UI,Arial" font-weight="600">iceflow</text>
+<text x="116" y="143" fill="#91a0bf" font-size="13"
+  font-family="Segoe UI,Arial">@hkiceflow</text>
+<text x="500" y="115" fill="#a9baff" font-size="13"
+  font-family="Segoe UI,Arial">4 repositories</text>
+<text x="650" y="115" fill="#a9baff" font-size="13"
+  font-family="Segoe UI,Arial">51 stars</text>
+<text x="790" y="115" fill="#a9baff" font-size="13"
+  font-family="Segoe UI,Arial">20 followers</text>
+</svg>

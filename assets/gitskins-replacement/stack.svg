@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    width="900" height="260" viewBox="0 0 900 260">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#10182d"/>
+        <stop offset="100%" stop-color="#17112b"/>
+      </linearGradient>
+      <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#62a8ff"/>
+        <stop offset="55%" stop-color="#9b7bff"/>
+        <stop offset="100%" stop-color="#e18bff"/>
+      </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" rx="18" fill="url(#bg)"
+      stroke="#34415f" stroke-width="1"/>
+    <circle cx="870" cy="10" r="100" fill="#765cff" opacity=".07"/>
+    <text x="28" y="39" fill="#f0f3ff" font-size="20"
+      font-family="Segoe UI,Arial" font-weight="600">Technology Stack</text>
+    <text x="28" y="61" fill="#8998b8" font-size="11"
+      font-family="Segoe UI,Arial" letter-spacing="2">PRIMARY LANGUAGES ACROSS REPOSITORIES</text>
+    <rect x="28" y="76" width="54" height="3" rx="2" fill="url(#accent)"/>
+    
+    <text x="30" y="112" fill="#dce5ff" font-size="12"
+      font-family="Segoe UI,Arial">Python</text>
+    <rect x="180" y="100" width="430" height="8" rx="4"
+      fill="#293550"/>
+    <rect x="180" y="100" width="430" height="8" rx="4"
+      fill="url(#accent)"/>
+    <text x="630" y="110" fill="#9eaccb" font-size="11"
+      font-family="Segoe UI,Arial">2 repositories</text>
+    
+    <text x="30" y="136" fill="#dce5ff" font-size="12"
+      font-family="Segoe UI,Arial">GLSL</text>
+    <rect x="180" y="124" width="430" height="8" rx="4"
+      fill="#293550"/>
+    <rect x="180" y="124" width="215" height="8" rx="4"
+      fill="url(#accent)"/>
+    <text x="630" y="134" fill="#9eaccb" font-size="11"
+      font-family="Segoe UI,Arial">1 repositories</text>
+    </svg>
