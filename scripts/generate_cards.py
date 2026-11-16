@@ -764,6 +764,30 @@ days = days[-371:]
 
 svg = svg_start("Contribution Activity", "Daily contribution history", 900, 180)
 
+# Contribution intensity legend
+svg += '''
+    <g>
+      <text x="744" y="57"
+        fill="#8998b8" font-size="10"
+        font-family="Segoe UI,Arial">Less</text>
+
+      <rect x="775" y="48" width="8" height="8" rx="2"
+        fill="#B5EBC7"/>
+      <rect x="787" y="48" width="8" height="8" rx="2"
+        fill="#78D99A"/>
+      <rect x="799" y="48" width="8" height="8" rx="2"
+        fill="#43B978"/>
+      <rect x="811" y="48" width="8" height="8" rx="2"
+        fill="#239F61"/>
+      <rect x="823" y="48" width="8" height="8" rx="2"
+        fill="#16834D"/>
+
+      <text x="841" y="57"
+        fill="#8998b8" font-size="10"
+        font-family="Segoe UI,Arial">More</text>
+    </g>
+'''
+
 scan_points = []
 
 for i, day in enumerate(days):
