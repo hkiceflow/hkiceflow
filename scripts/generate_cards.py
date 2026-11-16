@@ -627,6 +627,97 @@ svg = svg_start(
     250
 )
 
+# Animated four-color nebula background
+svg += '''
+    <defs>
+      <radialGradient id="langNebulaBlue">
+        <stop offset="0%" stop-color="#2457c5" stop-opacity=".58"/>
+        <stop offset="45%" stop-color="#2457c5" stop-opacity=".30"/>
+        <stop offset="100%" stop-color="#2457c5" stop-opacity="0"/>
+      </radialGradient>
+
+      <radialGradient id="langNebulaPurple">
+        <stop offset="0%" stop-color="#8549d6" stop-opacity=".52"/>
+        <stop offset="48%" stop-color="#8549d6" stop-opacity=".26"/>
+        <stop offset="100%" stop-color="#8549d6" stop-opacity="0"/>
+      </radialGradient>
+
+      <radialGradient id="langNebulaOrange">
+        <stop offset="0%" stop-color="#e76a35" stop-opacity=".44"/>
+        <stop offset="48%" stop-color="#e76a35" stop-opacity=".22"/>
+        <stop offset="100%" stop-color="#e76a35" stop-opacity="0"/>
+      </radialGradient>
+
+      <radialGradient id="langNebulaGreen">
+        <stop offset="0%" stop-color="#22b99a" stop-opacity=".48"/>
+        <stop offset="48%" stop-color="#22b99a" stop-opacity=".24"/>
+        <stop offset="100%" stop-color="#22b99a" stop-opacity="0"/>
+      </radialGradient>
+
+      <filter id="langNebulaBlur"
+        x="-50%" y="-100%" width="200%" height="300%">
+        <feGaussianBlur stdDeviation="22"/>
+      </filter>
+    </defs>
+
+    <!-- Clockwise rotating nebula -->
+    <g filter="url(#langNebulaBlur)" pointer-events="none">
+      <g>
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="rotate"
+          values="0 450 125;360 450 125"
+          dur="8s"
+          repeatCount="indefinite"/>
+
+        <!-- Deep blue -->
+        <circle cx="145" cy="20" r="245"
+          fill="url(#langNebulaBlue)" opacity=".75">
+          <animate attributeName="r"
+            values="220;285;220"
+            dur="12s" repeatCount="indefinite"/>
+          <animate attributeName="opacity"
+            values=".72;.38;.72"
+            dur="12s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Purple -->
+        <circle cx="760" cy="15" r="250"
+          fill="url(#langNebulaPurple)" opacity=".72">
+          <animate attributeName="r"
+            values="225;290;225"
+            dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="opacity"
+            values=".68;.34;.68"
+            dur="15s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Orange red -->
+        <circle cx="760" cy="235" r="245"
+          fill="url(#langNebulaOrange)" opacity=".68">
+          <animate attributeName="r"
+            values="215;280;215"
+            dur="13s" repeatCount="indefinite"/>
+          <animate attributeName="opacity"
+            values=".62;.30;.62"
+            dur="13s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Cyan green -->
+        <circle cx="140" cy="235" r="250"
+          fill="url(#langNebulaGreen)" opacity=".70">
+          <animate attributeName="r"
+            values="220;290;220"
+            dur="14s" repeatCount="indefinite"/>
+          <animate attributeName="opacity"
+            values=".66;.32;.66"
+            dur="14s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </g>
+'''
+
 svg += '''
     <rect x="28" y="94" width="844" height="128" rx="12"
       fill="#0c1426" stroke="#34415f" stroke-width="1"/>
