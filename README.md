@@ -101,15 +101,11 @@
   <img src="./assets/gitskins-replacement/stack.svg" width="100%" alt="iceflow technology stack" />
 </p>
 
-<table width="100%">
-<tr>
-<td width="20%" align="center"><strong>GLSL</strong><br /><sub>99% of public code</sub></td>
-<td width="20%" align="center"><strong>Lua</strong><br /><sub>0% of public code</sub></td>
-<td width="20%" align="center"><strong>Python</strong><br /><sub>0% of public code</sub></td>
-<td width="20%" align="center"><strong>C</strong><br /><sub>0% of public code</sub></td>
-<td width="20%" align="center"><strong>Batchfile</strong><br /><sub>0% of public code</sub></td>
-</tr>
-</table>
+<p align="center">
+  <img src="./assets/gitskins-replacement/languages.svg"
+       width="100%"
+       alt="Programming language distribution" />
+</p>
 
 <h2>Consistency signal</h2>
 
