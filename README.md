@@ -56,6 +56,10 @@
 ![](./src/header_.png)
 <a href="https://www.python.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" align="right" height="48" width="48" ></a>
 
+<p align="center" style="margin: 0; padding: 0; line-height: 1;">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Zhi+Mang+Xing&color=FFA500&center=true&vCenter=true&size=22&width=1000&height=30&pause=3000&duration=4000&repeat=true&lines=%E4%B8%80%E4%B8%AA%E8%83%BD%E5%A4%9F%E5%8D%87%E8%B5%B7%E6%9C%88%E4%BA%AE%E7%9A%84%E8%BA%AB%E4%BD%93%EF%BC%8C%E5%BF%85%E7%84%B6%E9%A9%BC%E4%BD%8F%E4%BA%86%E6%97%A0%E6%95%B0%E6%AC%A1%E7%9A%84%E6%97%A5%E8%90%BD" alt="一个能够升起月亮的身体，必然驼住了无数次的日落" />
+</p>
+
 | **常用**                | **软件及技术**                                      |
 |-------------------------|-----------------------------------------------------|
 | **语言/集成开发环境**   | ![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white) ![Pycharm Badge](https://img.shields.io/badge/-Pycharm-3776AB?style=flat&logo=pycharm&logoColor=white) [![](https://img.shields.io/badge/-VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com) [![Markdown Badge](https://img.shields.io/badge/-Markdown-2088FF?style=flat&logo=Markdown&logoColor=white)](https://github.com/BEPb/BEPb) ![PyTorch](http://img.shields.io/badge/-PyTorch-eee?style=flat-square&logo=pytorch&logoColor=EE4C2C) ![Git](https://img.shields.io/badge/-Git-004400?style=flat&logo=git)&nbsp; ![CApi](https://img.shields.io/badge/CApi-yellow?logo=caip) ![mindline](https://img.shields.io/badge/mindline-white?logo=mindline) ![CSS](https://img.shields.io/badge/CSS-green?logo=css) ![JavaScript](https://img.shields.io/badge/JavaScript-red?logo=javascript) ![HTML](https://img.shields.io/badge/HTML-green?logo=html)|
