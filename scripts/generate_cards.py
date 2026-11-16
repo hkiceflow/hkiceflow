@@ -483,7 +483,7 @@ if scan_points:
     )
 
     scan_duration = 42.0
-    trail_length = 6
+    trail_length = 4
     step_duration = scan_duration / len(scan_points)
 
     svg += '''
@@ -496,16 +496,21 @@ if scan_points:
     '''
 
     # Draw the fading trail, from farthest to nearest
-    trail_opacities = [0.10, 0.16, 0.25, 0.38, 0.58, 0.82]
+    trail_colors = [
+    "#B5EBC7",
+    "#78D99A",
+    "#43B978",
+    "#239F61",
+]
 
     for distance in range(trail_length, 0, -1):
-        opacity = trail_opacities[trail_length - distance]
+        color = trail_colors[trail_length - distance]
         delay = distance * step_duration
         begin_offset = scan_duration - delay
 
         svg += f'''
         <rect x="-4" y="-4" width="8" height="8" rx="2"
-          fill="#55e68a" opacity="{opacity}">
+          fill="{color}" opacity="1">
           <animateMotion
             path="{scan_path}"
             dur="{scan_duration}s"
@@ -529,7 +534,7 @@ if scan_points:
 
     <!-- Full-size scanning head -->
     <rect x="-4" y="-4" width="8" height="8" rx="2"
-      fill="#8affb5" opacity=".95">
+      fill="#16834D" opacity=".95">
       <animateMotion
         path="{scan_path}"
         dur="{scan_duration}s"
