@@ -137,10 +137,19 @@
 <table width="100%">
   <tr>
     <td width="100" align="center" valign="middle">
-      <img src="./assets/gitskins-replacement/avatar.png" width="76" alt="GitHub avatar"/>
+      <img
+        src="https://raw.githubusercontent.com/hkiceflow/hkiceflow/main/assets/gitskins-replacement/avatar.png"
+        width="76"
+        height="76"
+        alt="GitHub avatar"
+      />
     </td>
     <td valign="middle">
-      <img src="./assets/gitskins-replacement/social.svg" width="100%" alt="GitHub social profile card"/>
+      <img
+        src="https://raw.githubusercontent.com/hkiceflow/hkiceflow/main/assets/gitskins-replacement/social.svg"
+        width="100%"
+        alt="GitHub social profile card"
+      />
     </td>
   </tr>
 </table>
