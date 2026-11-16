@@ -301,17 +301,19 @@ nebula_layer = '''
         <stop offset="100%" stop-color="#55d9ff" stop-opacity="0"/>
       </radialGradient>
     </defs>
-
-    <g clip-path="url(#briefNebulaClip)" pointer-events="none">
-      <!-- Slowly rotating nebula -->
-      <g opacity=".55">
+    
+<g clip-path="url(#briefNebulaClip)" pointer-events="none">
+ <!-- Slowly rotating nebula -->
+      <g>
         <animateTransform
           attributeName="transform"
+          attributeType="XML"
           type="rotate"
-          from="0 450 165"
-          to="360 450 165"
-          dur="90s"
+          values="0 450 165;360 450 165"
+          dur="45s"
           repeatCount="indefinite"/>
+
+        <g opacity=".55">
 
         <ellipse cx="180" cy="90" rx="260" ry="105"
           fill="url(#nebulaBlue)"/>
@@ -324,6 +326,7 @@ nebula_layer = '''
 
         <ellipse cx="820" cy="260" rx="230" ry="100"
           fill="url(#nebulaBlue)"/>
+        </g>
       </g>
 
       <!-- Star field -->
@@ -380,6 +383,7 @@ nebula_layer = '''
         <circle cx="800" cy="318" r="1.3"/>
       </g>
     </g>
+  </g>
 '''
 
 svg = svg.replace(
