@@ -31,21 +31,35 @@
   <path d="M888 10 L896 18 L888 26 L880 18 Z"
     fill="#E21D36"/>
 
-  <!-- Moving light glow -->
-  <circle r="5" fill="url(#dividerGradient)"
+<!-- Moving light glow -->
+  <circle r="5" fill="#174CBB"
     opacity=".45" filter="url(#dividerGlow)">
     <animateMotion
-      dur="3.5s"
+      dur="7s"
       repeatCount="indefinite"
-      path="M12 18 L888 18"/>
+      path="M12 18 L888 18 L12 18"/>
+    <animate
+      attributeName="fill"
+      values="#174CBB;#E21D36;#174CBB"
+      keyTimes="0;0.5;1"
+      calcMode="linear"
+      dur="7s"
+      repeatCount="indefinite"/>
   </circle>
 
   <!-- Moving gradient-colored dot -->
-  <circle r="5" fill="url(#dividerGradient)">
+  <circle r="5" fill="#174CBB">
     <animateMotion
-      dur="3.5s"
+      dur="7s"
       repeatCount="indefinite"
-      path="M12 18 L888 18"/>
+      path="M12 18 L888 18 L12 18"/>
+    <animate
+      attributeName="fill"
+      values="#174CBB;#E21D36;#174CBB"
+      keyTimes="0;0.5;1"
+      calcMode="linear"
+      dur="7s"
+      repeatCount="indefinite"/>
   </circle>
 
 </svg>
