@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    width="900" height="330" viewBox="0 0 900 330">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#10182d"/>
+        <stop offset="100%" stop-color="#17112b"/>
+      </linearGradient>
+      <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#62a8ff"/>
+        <stop offset="55%" stop-color="#9b7bff"/>
+        <stop offset="100%" stop-color="#e18bff"/>
+      </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" rx="18" fill="url(#bg)"
+      stroke="#34415f" stroke-width="1"/>
+    <circle cx="870" cy="10" r="100" fill="#765cff" opacity=".07"/>
+    <text x="28" y="39" fill="#f0f3ff" font-size="20"
+      font-family="Segoe UI,Arial" font-weight="600">Professional Snapshot</text>
+    <text x="28" y="61" fill="#8998b8" font-size="11"
+      font-family="Segoe UI,Arial" letter-spacing="2">RECRUITER SIGNAL BRIEF · HKICEFLOW</text>
+    <rect x="28" y="76" width="54" height="3" rx="2" fill="url(#accent)"/>
+    
+    <rect x="28" y="95" width="270" height="216" rx="12"
+      fill="#0c1426" stroke="#34415f" stroke-width="1"/>
+
+    <rect x="315" y="95" width="270" height="216" rx="12"
+      fill="#0c1426" stroke="#34415f" stroke-width="1"/>
+
+    <rect x="602" y="95" width="270" height="216" rx="12"
+      fill="#0c1426" stroke="#34415f" stroke-width="1"/>
+
+    <text x="48" y="123" fill="#dce5ff" font-size="13"
+      font-family="Segoe UI,Arial" font-weight="600">
+      职位 / 角色匹配度
+    </text>
+
+    <text x="335" y="123" fill="#dce5ff" font-size="13"
+      font-family="Segoe UI,Arial" font-weight="600">
+      公开证明
+    </text>
+
+    <text x="622" y="123" fill="#dce5ff" font-size="13"
+      font-family="Segoe UI,Arial" font-weight="600">
+      GitHub Momentum
+    </text>
+
+    <line x1="44" y1="136" x2="282" y2="136"
+      stroke="#34415f" stroke-width="1"/>
+    <line x1="331" y1="136" x2="569" y2="136"
+      stroke="#34415f" stroke-width="1"/>
+    <line x1="618" y1="136" x2="856" y2="136"
+      stroke="#34415f" stroke-width="1"/>
+
+    <text x="48" y="158" fill="#aebcda" font-size="12"
+      font-family="Segoe UI,Arial">软硬件开发工程师</text>
+    
+    <text x="48" y="179" fill="#aebcda" font-size="12"
+      font-family="Segoe UI,Arial">测试工程师</text>
+    
+    <text x="48" y="200" fill="#aebcda" font-size="12"
+      font-family="Segoe UI,Arial">交互设计师</text>
+    
+    <text x="48" y="221" fill="#aebcda" font-size="12"
+      font-family="Segoe UI,Arial">产品经理</text>
+    
+    <text x="48" y="242" fill="#aebcda" font-size="12"
+      font-family="Segoe UI,Arial">CEO</text>
+    
+    <text x="48" y="263" fill="#aebcda" font-size="12"
+      font-family="Segoe UI,Arial">剪辑师</text>
+    
+    <text x="48" y="284" fill="#aebcda" font-size="12"
+      font-family="Segoe UI,Arial">调色师</text>
+    
+    <text x="340" y="177" fill="#f0f3ff" font-size="29"
+      font-family="Segoe UI,Arial" font-weight="600">
+      4
+    </text>
+    <text x="340" y="195" fill="#8998b8" font-size="10"
+      font-family="Segoe UI,Arial" letter-spacing="1.2">
+      PUBLIC REPOSITORIES
+    </text>
+
+    <text x="340" y="243" fill="#f0f3ff" font-size="29"
+      font-family="Segoe UI,Arial" font-weight="600">
+      51
+    </text>
+    <text x="340" y="261" fill="#8998b8" font-size="10"
+      font-family="Segoe UI,Arial" letter-spacing="1.2">
+      TOTAL STARS
+    </text>
+
+    <text x="340" y="289" fill="#9eaccb" font-size="11"
+      font-family="Segoe UI,Arial">
+      SOCIAL ACCOUNTS  ·  OPEN SOURCE
+    </text>
+
+    <text x="627" y="177" fill="#f0f3ff" font-size="29"
+      font-family="Segoe UI,Arial" font-weight="600">
+      202
+    </text>
+    <text x="627" y="195" fill="#8998b8" font-size="10"
+      font-family="Segoe UI,Arial" letter-spacing="1.2">
+      CONTRIBUTIONS
+    </text>
+
+    <text x="627" y="243" fill="#f0f3ff" font-size="29"
+      font-family="Segoe UI,Arial" font-weight="600">
+      14
+    </text>
+    <text x="627" y="261" fill="#8998b8" font-size="10"
+      font-family="Segoe UI,Arial" letter-spacing="1.2">
+      ACTIVE DAYS
+    </text>
+</svg>
