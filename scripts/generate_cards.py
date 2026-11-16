@@ -156,25 +156,70 @@ write_svg("stats.svg", svg)
 
 # 2. Projects
 svg = svg_start("Selected Projects", "Most starred repositories", 900, 300)
+
 selected_repos = [
     repo for repo in repos
     if repo["name"].casefold() != "autogrowai"
 ][:3]
 
-for i, repo in enumerate(selected_repos):
-    y = 112 + i * 43
-    name = escape(repo["name"])
-    desc = escape((repo["description"] or "No description")[:65])
-    svg += f'''
-    <text x="30" y="{y}" fill="#dce5ff" font-size="14"
-      font-family="Segoe UI,Arial" font-weight="600">{name}</text>
-    <text x="30" y="{y+17}" fill="#8493b2" font-size="10"
-      font-family="Segoe UI,Arial">{desc}</text>
-    <text x="850" y="{y}" text-anchor="end" fill="#a9baff"
-      font-size="12" font-family="Segoe UI,Arial">
-      ★ {repo["stargazerCount"]}  ·  Forks {repo["forkCount"]}
+# Project window
+svg += '''
+    <rect x="28" y="91" width="844" height="184" rx="12"
+      fill="#0c1426" stroke="#34415f" stroke-width="1"/>
+
+    <text x="48" y="113" fill="#8998b8" font-size="10"
+      font-family="Segoe UI,Arial" letter-spacing="1.2">
+      HKICEFLOW / PROJECT WINDOW
+    </text>
+
+    <circle cx="842" cy="108" r="7" fill="#55e68a" opacity=".18">
+      <animate attributeName="opacity"
+        values=".18;.04;.18"
+        dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="842" cy="108" r="3.5" fill="#55e68a">
+      <animate attributeName="opacity"
+        values="1;.35;1"
+        dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <line x1="44" y1="127" x2="856" y2="127"
+      stroke="#34415f" stroke-width="1"/>
+'''
+
+if selected_repos:
+    for i, repo in enumerate(selected_repos):
+        y = 151 + i * 40
+        name = escape(repo["name"])
+        desc = escape((repo["description"] or "No description")[:65])
+
+        svg += f'''
+        <text x="48" y="{y}" fill="#dce5ff" font-size="14"
+          font-family="Segoe UI,Arial" font-weight="600">{name}</text>
+
+        <text x="48" y="{y+17}" fill="#8493b2" font-size="10"
+          font-family="Segoe UI,Arial">{desc}</text>
+
+        <text x="850" y="{y}" text-anchor="end" fill="#a9baff"
+          font-size="12" font-family="Segoe UI,Arial">
+          ★ {repo["stargazerCount"]}  ·  Forks {repo["forkCount"]}
+        </text>
+        '''
+
+        if i < len(selected_repos) - 1:
+            svg += f'''
+            <line x1="48" y1="{y+25}" x2="852" y2="{y+25}"
+              stroke="#26334e" stroke-width="1"/>
+            '''
+else:
+    svg += '''
+    <text x="48" y="165" fill="#8493b2" font-size="12"
+      font-family="Segoe UI,Arial">
+      No selected repositories available
     </text>
     '''
+
 svg += svg_end()
 write_svg("projects.svg", svg)
 
