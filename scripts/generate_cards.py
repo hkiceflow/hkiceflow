@@ -215,8 +215,6 @@ with open(os.path.join(OUTPUT_DIR, "avatar.png"), "wb") as f:
     f.write(avatar_data)
 svg = svg_start("Profile", "Developer identity", 900, 190)
 svg += f'''
-<image href="{avatar}" x="30" y="91" width="66" height="66"
-  clip-path="inset(0 round 12px)"/>
 <text x="116" y="119" fill="#f1f4ff" font-size="22"
   font-family="Segoe UI,Arial" font-weight="600">{display_name}</text>
 <text x="116" y="143" fill="#91a0bf" font-size="13"
