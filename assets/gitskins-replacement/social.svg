@@ -1,90 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+width="900" height="220" viewBox="0 0 900 220">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="230" viewBox="0 0 900 230">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#10182d"/>
-      <stop offset="55%" stop-color="#17152f"/>
-      <stop offset="100%" stop-color="#21143a"/>
-    </linearGradient>
-    <linearGradient id="border" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#42d9ff"/>
-      <stop offset="50%" stop-color="#8275ff"/>
-      <stop offset="100%" stop-color="#d46bff"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#43d9ff"/>
-      <stop offset="100%" stop-color="#b875ff"/>
-    </linearGradient>
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <style>
-      .platform { font-family: Arial, sans-serif; font-size: 16px; font-weight: 600; fill: #f0f3ff; }
-      .symbol { font-family: Arial, sans-serif; font-size: 15px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
-      .small { font-family: Arial, sans-serif; font-size: 10px; fill: #929bbd; letter-spacing: 1.5px; }
-    </style>
-  </defs>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#10182d"/>
+    <stop offset="100%" stop-color="#17112b"/>
+  </linearGradient>
 
-  <rect x="3" y="3" width="894" height="224" rx="18" fill="url(#bg)" stroke="url(#border)" stroke-width="2"/>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#62a8ff"/>
+    <stop offset="55%" stop-color="#9b7bff"/>
+    <stop offset="100%" stop-color="#e18bff"/>
+  </linearGradient>
 
-  <circle cx="820" cy="20" r="90" fill="#745bff" opacity=".07"/>
-  <circle cx="80" cy="210" r="100" fill="#32cfff" opacity=".06"/>
+  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+    <feGaussianBlur stdDeviation="4" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</defs>
 
-  <path d="M28 57 H872" stroke="url(#accent)" stroke-width="1" opacity=".45"/>
+<rect width="900" height="220" rx="18"
+      fill="url(#bg)" stroke="#34415f" stroke-width="1"/>
 
-  <text x="30" y="32" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff" letter-spacing="2">CONNECT WITH ME</text>
-  <text x="870" y="31" class="small" text-anchor="end">ICEFLOW · SOCIAL NETWORK</text>
+<text x="450" y="43"
+      text-anchor="middle"
+      fill="#f0f3ff"
+      font-size="19"
+      font-family="Segoe UI,Arial"
+      font-weight="600">Github</text>
 
-  <g filter="url(#glow)">
-    <rect x="25" y="72" width="204" height="55" rx="10" fill="#ffffff" fill-opacity=".035" stroke="#42d9ff" stroke-opacity=".55"/>
-    <rect x="241" y="72" width="204" height="55" rx="10" fill="#ffffff" fill-opacity=".035" stroke="#8275ff" stroke-opacity=".55"/>
-    <rect x="457" y="72" width="204" height="55" rx="10" fill="#ffffff" fill-opacity=".035" stroke="#42d9ff" stroke-opacity=".55"/>
-    <rect x="673" y="72" width="204" height="55" rx="10" fill="#ffffff" fill-opacity=".035" stroke="#b875ff" stroke-opacity=".55"/>
+<!-- Elliptical orbit -->
+<ellipse cx="450" cy="111" rx="119" ry="49"
+         fill="none"
+         stroke="#34415f"
+         stroke-width="1.5"
+         opacity=".7"/>
 
-    <rect x="25" y="141" width="204" height="55" rx="10" fill="#ffffff" fill-opacity=".035" stroke="#8275ff" stroke-opacity=".55"/>
-    <rect x="241" y="141" width="204" height="55" rx="10" fill="#ffffff" fill-opacity=".035" stroke="#42d9ff" stroke-opacity=".55"/>
-    <rect x="457" y="141" width="204" height="55" rx="10" fill="#ffffff" fill-opacity=".035" stroke="#b875ff" stroke-opacity=".55"/>
-    <rect x="673" y="141" width="204" height="55" rx="10" fill="#ffffff" fill-opacity=".035" stroke="#8275ff" stroke-opacity=".55"/>
-  </g>
+<ellipse cx="450" cy="111" rx="119" ry="49"
+         fill="none"
+         stroke="url(#accent)"
+         stroke-width="2.2"
+         stroke-linecap="round"
+         stroke-dasharray="230 520"
+         filter="url(#glow)">
+  <animate attributeName="stroke-dashoffset"
+           from="0" to="-750"
+           dur="6s"
+           repeatCount="indefinite"/>
+</ellipse>
 
-  <g>
-    <circle cx="53" cy="99" r="16" fill="#242b40" stroke="#8d9bbd"/>
-    <text x="53" y="104" class="symbol">GH</text>
-    <text x="80" y="105" class="platform">GitHub</text>
+<!-- Moving orbit highlight -->
+<circle r="4" fill="#8deaff" filter="url(#glow)">
+  <animateMotion
+    dur="6s"
+    repeatCount="indefinite"
+    path="M 569,111 A 119,49 0 1,1 331,111 A 119,49 0 1,1 569,111"/>
+</circle>
 
-    <circle cx="269" cy="99" r="16" fill="#e875a8"/>
-    <text x="269" y="104" class="symbol">B</text>
-    <text x="296" y="105" class="platform">Bilibili</text>
+<!-- Central identity -->
+<circle cx="450" cy="111" r="34"
+        fill="#111a30"
+        stroke="url(#accent)"
+        stroke-width="2"/>
 
-    <circle cx="485" cy="99" r="16" fill="#202633"/>
-    <text x="485" y="104" class="symbol">X</text>
-    <text x="512" y="105" class="platform">X</text>
+<text x="450" y="126"
+      text-anchor="middle"
+      fill="url(#accent)"
+      font-size="43"
+      font-family="Segoe UI,Arial"
+      font-weight="600">I</text>
 
-    <circle cx="701" cy="99" r="16" fill="#2867a8"/>
-    <text x="701" y="104" class="symbol">in</text>
-    <text x="728" y="105" class="platform">LinkedIn</text>
+<text x="450" y="202"
+      text-anchor="middle"
+      fill="#8998b8"
+      font-size="14"
+      font-family="Segoe UI,Arial"
+      letter-spacing="1">@hkiceflow</text>
 
-    <circle cx="53" cy="168" r="16" fill="#3268ad"/>
-    <text x="53" y="173" class="symbol">f</text>
-    <text x="80" y="174" class="platform">Facebook</text>
-
-    <circle cx="269" cy="168" r="16" fill="#a34d9a"/>
-    <text x="269" y="173" class="symbol">◎</text>
-    <text x="296" y="174" class="platform">Instagram</text>
-
-    <circle cx="485" cy="168" r="16" fill="#d34b4b"/>
-    <text x="485" y="173" class="symbol">▶</text>
-    <text x="512" y="174" class="platform">YouTube</text>
-
-    <circle cx="701" cy="168" r="16" fill="#c45b63"/>
-    <text x="701" y="173" class="symbol">@</text>
-    <text x="728" y="174" class="platform">Gmail</text>
-  </g>
-
-  <path d="M30 210 H870" stroke="url(#accent)" stroke-width="1" opacity=".3"/>
-  <text x="450" y="219" class="small" text-anchor="middle">BUILD · CREATE · CONNECT</text>
 </svg>
