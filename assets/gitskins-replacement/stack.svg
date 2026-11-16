@@ -20,6 +20,21 @@
       font-family="Segoe UI,Arial" letter-spacing="2">PRIMARY LANGUAGES ACROSS REPOSITORIES</text>
     <rect x="28" y="76" width="54" height="3" rx="2" fill="url(#accent)"/>
     
+    <text x="872" y="39"
+      text-anchor="end"
+      fill="#8998b8"
+      font-size="11"
+      font-family="Consolas,Monaco,monospace"
+      letter-spacing=".5">
+      &gt; stack.scan
+      <tspan fill="#55e68a">_
+        <animate attributeName="opacity"
+          values="1;0;1"
+          dur="1s"
+          repeatCount="indefinite"/>
+      </tspan>
+    </text>
+
     <text x="30" y="112" fill="#dce5ff" font-size="12"
       font-family="Segoe UI,Arial">Python</text>
     <rect x="180" y="100" width="430" height="8" rx="4"
