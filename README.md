@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=个人%20Readme&fontSize=40&fontAlignY=35&animation=fadeIn" />
+</p>
+
 <div align="center">
 
 <table width="100%">
@@ -81,15 +85,6 @@
 
 <h2>Github 核心成果概览</h2>
 
-<table width="100%">
-<tr>
-<td width="25%" align="center"><strong>4</strong><br /><sub>Repositories</sub></td>
-<td width="25%" align="center"><strong>51</strong><br /><sub>Stars</sub></td>
-<td width="25%" align="center"><strong>165</strong><br /><sub>Contributions</sub></td>
-<td width="25%" align="center"><strong>20</strong><br /><sub>Followers</sub></td>
-</tr>
-</table>
-
 <p align="center">
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/stats?username=hkiceflow&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F115037389%3Fu%3Df36852748094a2e84d0780e59f80288ab0a8464f%26v%3D4&v=recruiter-stats-1&mode=light" />
@@ -97,31 +92,13 @@
 </picture>
 </p>
 
+<p><code>176 contributions</code> · <code>2 day streak</code></p>
+
 <h2>精选项目</h2>
 
-<table width="100%">
-<tr>
-<td width="58%" valign="top">
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://www.gitskins.com/api/section/projects?username=hkiceflow&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F115037389%3Fu%3Df36852748094a2e84d0780e59f80288ab0a8464f%26v%3D4&repos=hkiceflow%2Fmpv_video%2Chkiceflow%2Fhkiceflow%2Chkiceflow%2Fhkiceflow.github.io&v=recruiter-projects-1&mode=light" />
-  <img src="https://www.gitskins.com/api/section/projects?username=hkiceflow&theme=github-dark&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F115037389%3Fu%3Df36852748094a2e84d0780e59f80288ab0a8464f%26v%3D4&repos=hkiceflow%2Fmpv_video%2Chkiceflow%2Fhkiceflow%2Chkiceflow%2Fhkiceflow.github.io&v=recruiter-projects-1&mode=dark" width="100%" alt="iceflow selected projects" />
-</picture>
-</td>
-<td width="42%" valign="top">
-<h3><a href="https://github.com/hkiceflow/mpv_video">mpv_video</a></h3>
-<p>搭配目前画面最好的实时超分及滤镜算法。 Works with the best real-time super-resolution and filter algorithms for current visuals.</p>
-<p><sub>GLSL · ⭐ 51 · 🍴 4</sub></p>
-<p><a href="https://github.com/hkiceflow/mpv_video">Read the repository →</a></p>
-</td>
-</tr>
-</table>
-
-<table width="100%">
-<tr>
-<td width="33%" valign="top"><h3><a href="https://github.com/hkiceflow/hkiceflow">hkiceflow</a></h3><p>A selected public project.</p><p><sub>Open source · ⭐ 0</sub></p></td>
-<td width="33%" valign="top"><h3><a href="https://github.com/hkiceflow/hkiceflow.github.io">hkiceflow.github.io</a></h3><p>A selected public project.</p><p><sub>Open source · ⭐ 0</sub></p></td>
-</tr>
-</table>
+<p align="center">
+  <img src="https://www.gitskins.com/api/section/projects?username=hkiceflow&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F115037389%3Fu%3Df36852748094a2e84d0780e59f80288ab0a8464f%26v%3D4" alt="hkiceflow projects visual" />
+</p>
 
 <h2>技术工具包 <sub>· 我未上传 code 信息，直接更新 Releases</sub></h2>
 
