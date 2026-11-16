@@ -128,6 +128,10 @@
 </picture>
 </p>
 
+## 🏆 GitHub Trophies
+
+![](https://github-profile-trophy-chi-ten.vercel.app/?username=hkiceflow&theme=darkhub&no-frame=false&no-bg=true&margin-w=4)
+
 <hr />
 
 <p align="center">
