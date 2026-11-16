@@ -149,6 +149,10 @@
 
 <hr />
 
+<p align="center">
+  <img src="https://www.gitskins.com/api/section/social?username=hkiceflow&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F115037389%3Fu%3Df36852748094a2e84d0780e59f80288ab0a8464f%26v%3D4" alt="hkiceflow social visual" />
+</p>
+
 <table width="100%">
 <tr>
 <td width="62%" valign="middle"><h2>期待与你共同打造下一个作品</h2><p>期待与有深度的团队、有抱负的产品和有实际价值的工程项目合作。</p></td>
