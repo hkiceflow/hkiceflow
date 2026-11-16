@@ -87,6 +87,14 @@ query = """
         stargazerCount
         forkCount
         primaryLanguage { name }
+        languages(first: 100) {
+          edges {
+            size
+            node {
+              name
+            }
+          }
+        }
       }
     }
     contributionsCollection {
