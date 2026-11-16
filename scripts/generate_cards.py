@@ -278,13 +278,13 @@ svg += '''
       <path d="M356 168.5 L364.5 174 L356 179.5 Z"
         fill="#6741a8"/>
 
-      <text x="389" y="173" fill="#f0f3ff" font-size="13"
+      <text x="389" y="237" fill="#f0f3ff" font-size="13"
         font-family="Segoe UI,Arial" font-weight="600">
-        mpv_video
+        哔哩哔哩
       </text>
-      <text x="389" y="191" fill="#8998b8" font-size="10"
-        font-family="Segoe UI,Arial" letter-spacing="1">
-        OPEN SOURCE PROJECT
+      <text x="389" y="255" fill="#8abaff" font-size="10"
+        font-family="Segoe UI,Arial">
+        space.bilibili.com/368780828
       </text>
     </a>
 
@@ -298,9 +298,9 @@ svg += '''
       <path d="M352 232 V239 M366 232 V239"
         stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
 
-      <text x="389" y="237" fill="#f0f3ff" font-size="13"
-        font-family="Segoe UI,Arial" font-weight="600">
-        哔哩哔哩
+        <text x="389" y="255" fill="#8abaff" font-size="10"
+        font-family="Segoe UI,Arial">
+        space.bilibili.com/368780828
       </text>
       <text x="389" y="255" fill="#8998b8" font-size="10"
         font-family="Segoe UI,Arial" letter-spacing="1">
