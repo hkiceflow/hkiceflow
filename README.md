@@ -75,13 +75,11 @@
 
 <h2>团队快速评估</h2>
 
-<table width="100%">
-<tr>
-<td width="33%" valign="top"><h3>职位/角色匹配度</h3><p>软硬件开发工程师、测试工程师、交互设计师、产品经理、CEO</p></td>
-<td width="33%" valign="top"><h3>公开证明</h3><p>4 repositories · 51 stars、社交账号、开源项目</p></td>
-<td width="33%" valign="top"><h3>Github Momentum</h3><p>165 contributions · 13 active days</p></td>
-</tr>
-</table>
+<p align="center">
+  <img src="./assets/gitskins-replacement/brief.svg"
+       width="100%"
+       alt="iceflow professional profile brief" />
+</p>
 
 <h2>Github 核心成果概览</h2>
 
