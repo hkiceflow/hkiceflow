@@ -26,7 +26,6 @@ def github_graphql(query):
     )
     with urllib.request.urlopen(request) as response:
         result = json.loads(response.read())
-
     if "errors" in result:
         raise RuntimeError(result["errors"])
 
@@ -72,7 +71,6 @@ query = """
   user(login: "hkiceflow") {
     name
     login
-    avatarUrl
     followers { totalCount }
     repositories(
       first: 100
@@ -200,33 +198,4 @@ for i, day in enumerate(days):
 svg += svg_end()
 write_svg("heatmap.svg", svg)
 
-# 5. Social/profile card
-display_name = escape(user["name"] or user["login"])
-avatar = escape(user["avatarUrl"])
-avatar_request = urllib.request.Request(
-    user["avatarUrl"],
-    headers={"User-Agent": USERNAME}
-)
-
-with urllib.request.urlopen(avatar_request) as response:
-    avatar_data = response.read()
-
-with open(os.path.join(OUTPUT_DIR, "avatar.png"), "wb") as f:
-    f.write(avatar_data)
-svg = svg_start("Profile", "Developer identity", 900, 190)
-svg += f'''
-<text x="116" y="119" fill="#f1f4ff" font-size="22"
-  font-family="Segoe UI,Arial" font-weight="600">{display_name}</text>
-<text x="116" y="143" fill="#91a0bf" font-size="13"
-  font-family="Segoe UI,Arial">@{escape(user["login"])}</text>
-<text x="500" y="115" fill="#a9baff" font-size="13"
-  font-family="Segoe UI,Arial">{total_repos} repositories</text>
-<text x="650" y="115" fill="#a9baff" font-size="13"
-  font-family="Segoe UI,Arial">{stars} stars</text>
-<text x="790" y="115" fill="#a9baff" font-size="13"
-  font-family="Segoe UI,Arial">{followers} followers</text>
-'''
-svg += svg_end()
-write_svg("social.svg", svg)
-
-print("Generated five SVG cards successfully.")
+print("Generated four SVG cards successfully.")
