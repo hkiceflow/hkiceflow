@@ -476,15 +476,54 @@ for i, day in enumerate(days):
     scan_points.append((x + 4, y + 4))
 
 
-# Build serpentine scanning animation with fading cell trail
-if scan_points:
+
+
+
+# Build serpentine scanning animation with a fixed four-cell trail
+if len(scan_points) >= 5:
     scan_path = "M " + " L ".join(
         f"{x} {y}" for x, y in scan_points
     )
 
     scan_duration = 42.0
     trail_length = 4
-    step_duration = scan_duration / len(scan_points)
+
+    # Calculate cumulative distances along the serpentine path
+    cumulative_distances = [0.0]
+
+    for i in range(1, len(scan_points)):
+        x1, y1 = scan_points[i - 1]
+        x2, y2 = scan_points[i]
+
+        segment_length = (
+            (x2 - x1) ** 2 + (y2 - y1) ** 2
+        ) ** 0.5
+
+        cumulative_distances.append(
+            cumulative_distances[-1] + segment_length
+        )
+
+    total_distance = cumulative_distances[-1]
+
+    # Trail colors: nearest to farthest
+    trail_colors = [
+        "#239F61",
+        "#43B978",
+        "#78D99A",
+        "#B5EBC7",
+    ]
+
+    # Initial head position: fifth cell
+    head_offset = (
+        cumulative_distances[trail_length]
+        / total_distance
+        * scan_duration
+    )
+
+    # Hide the entire five-cell train briefly before the path resets
+    hide_start = (scan_duration - head_offset) / scan_duration
+    fade_duration = min(0.002, hide_start / 2)
+    hide_end = hide_start + fade_duration
 
     svg += '''
     <defs>
@@ -495,18 +534,18 @@ if scan_points:
     </defs>
     '''
 
-    # Draw the fading trail, from farthest to nearest
-    trail_colors = [
-    "#B5EBC7",
-    "#78D99A",
-    "#43B978",
-    "#239F61",
-]
+    # All five cells move as one visual train
+    svg += '<g id="scanTrain">'
 
-    for distance in range(trail_length, 0, -1):
-        color = trail_colors[trail_length - distance]
-        delay = distance * step_duration
-        begin_offset = scan_duration - delay
+    # Four complete trail cells, present from the first frame
+    for trail_index in range(trail_length):
+        color = trail_colors[trail_length - 1 - trail_index]
+
+        trail_offset = (
+            cumulative_distances[trail_index]
+            / total_distance
+            * scan_duration
+        )
 
         svg += f'''
         <rect x="-4" y="-4" width="8" height="8" rx="2"
@@ -514,7 +553,7 @@ if scan_points:
           <animateMotion
             path="{scan_path}"
             dur="{scan_duration}s"
-            begin="-{begin_offset:.4f}s"
+            begin="-{trail_offset:.6f}s"
             repeatCount="indefinite"
             calcMode="paced"/>
         </rect>
@@ -523,24 +562,37 @@ if scan_points:
     # Soft glow behind the scanning head
     svg += f'''
     <rect x="-4" y="-4" width="8" height="8" rx="2"
-      fill="#55e68a" opacity=".65"
+      fill="#16834D" opacity=".45"
       filter="url(#scanGlow)">
       <animateMotion
         path="{scan_path}"
         dur="{scan_duration}s"
+        begin="-{head_offset:.6f}s"
         repeatCount="indefinite"
         calcMode="paced"/>
     </rect>
 
-    <!-- Full-size scanning head -->
+    <!-- Full-size dark-green scanning head -->
     <rect x="-4" y="-4" width="8" height="8" rx="2"
-      fill="#16834D" opacity=".95">
+      fill="#16834D" opacity="1">
       <animateMotion
         path="{scan_path}"
         dur="{scan_duration}s"
+        begin="-{head_offset:.6f}s"
         repeatCount="indefinite"
         calcMode="paced"/>
     </rect>
+    '''
+
+    # Hide all five cells together during the loop reset
+    svg += f'''
+      <animate
+        attributeName="opacity"
+        values="1;1;0;0"
+        keyTimes="0;{hide_start:.6f};{hide_end:.6f};1"
+        dur="{scan_duration}s"
+        repeatCount="indefinite"/>
+    </g>
     '''
 
 # 5. Social identity card
