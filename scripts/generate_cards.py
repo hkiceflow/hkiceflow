@@ -475,57 +475,68 @@ for i, day in enumerate(days):
     # Record the center of each cell for the scanning animation
     scan_points.append((x + 4, y + 4))
 
-# Build a continuous serpentine scanning path
+
+# Build serpentine scanning animation with fading cell trail
 if scan_points:
     scan_path = "M " + " L ".join(
         f"{x} {y}" for x, y in scan_points
     )
 
-    # Gradient trail: bright head fading into transparency
+    scan_duration = 42.0
+    trail_length = 6
+    step_duration = scan_duration / len(scan_points)
+
     svg += '''
     <defs>
-      <linearGradient id="scanTrail" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#55e68a" stop-opacity="0"/>
-        <stop offset="65%" stop-color="#55e68a" stop-opacity=".25"/>
-        <stop offset="100%" stop-color="#8affb5" stop-opacity="1"/>
-      </linearGradient>
-
       <filter id="scanGlow" x="-100%" y="-100%"
         width="300%" height="300%">
-        <feGaussianBlur stdDeviation="2.5"/>
+        <feGaussianBlur stdDeviation="3"/>
       </filter>
     </defs>
-
-    <path d="''' + scan_path + '''"
-      fill="none"
-      stroke="#55e68a"
-      stroke-width="8"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      opacity=".20"
-      stroke-dasharray="48 6000"
-      filter="url(#scanGlow)">
-      <animate
-        attributeName="stroke-dashoffset"
-        from="0" to="-''' + str(len(scan_points) * 16) + '''"
-        dur="42s"
-        repeatCount="indefinite"/>
-    </path>
-
-    <circle cx="0" cy="0" r="4"
-      fill="#8affb5"
-      stroke="#55e68a"
-      stroke-width="1.5">
-      <animateMotion
-        path="''' + scan_path + '''"
-        dur="42s"
-        repeatCount="indefinite"
-        calcMode="linear"/>
-    </circle>
     '''
 
-svg += svg_end()
-write_svg("heatmap.svg", svg)
+    # Draw the fading trail, from farthest to nearest
+    trail_opacities = [0.10, 0.16, 0.25, 0.38, 0.58, 0.82]
+
+    for distance in range(trail_length, 0, -1):
+        opacity = trail_opacities[trail_length - distance]
+        delay = distance * step_duration
+        begin_offset = scan_duration - delay
+
+        svg += f'''
+        <rect x="-4" y="-4" width="8" height="8" rx="2"
+          fill="#55e68a" opacity="{opacity}">
+          <animateMotion
+            path="{scan_path}"
+            dur="{scan_duration}s"
+            begin="-{begin_offset:.4f}s"
+            repeatCount="indefinite"
+            calcMode="paced"/>
+        </rect>
+        '''
+
+    # Soft glow behind the scanning head
+    svg += f'''
+    <rect x="-4" y="-4" width="8" height="8" rx="2"
+      fill="#55e68a" opacity=".65"
+      filter="url(#scanGlow)">
+      <animateMotion
+        path="{scan_path}"
+        dur="{scan_duration}s"
+        repeatCount="indefinite"
+        calcMode="paced"/>
+    </rect>
+
+    <!-- Full-size scanning head -->
+    <rect x="-4" y="-4" width="8" height="8" rx="2"
+      fill="#8affb5" opacity=".95">
+      <animateMotion
+        path="{scan_path}"
+        dur="{scan_duration}s"
+        repeatCount="indefinite"
+        calcMode="paced"/>
+    </rect>
+    '''
 
 # 5. Social identity card
 
