@@ -126,7 +126,7 @@
 <hr />
 
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/social?username=hkiceflow&theme=neon&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F115037389%3Fu%3Df36852748094a2e84d0780e59f80288ab0a8464f%26v%3D4" alt="hkiceflow social visual" />
+  <img src="./assets/gitskins-replacement/social.svg" width="100%" alt="hkiceflow social visual" />
 </p>
 
 <table width="100%">
