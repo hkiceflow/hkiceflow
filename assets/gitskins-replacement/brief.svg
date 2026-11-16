@@ -13,6 +13,108 @@
     </defs>
     <rect width="100%" height="100%" rx="18" fill="url(#bg)"
       stroke="#34415f" stroke-width="1"/>
+
+    <defs>
+      <clipPath id="briefNebulaClip">
+        <rect width="900" height="330" rx="18"/>
+      </clipPath>
+
+      <radialGradient id="nebulaBlue">
+        <stop offset="0%" stop-color="#398dff" stop-opacity=".48"/>
+        <stop offset="55%" stop-color="#3565d8" stop-opacity=".20"/>
+        <stop offset="100%" stop-color="#3565d8" stop-opacity="0"/>
+      </radialGradient>
+
+      <radialGradient id="nebulaPurple">
+        <stop offset="0%" stop-color="#a56aff" stop-opacity=".42"/>
+        <stop offset="55%" stop-color="#7951d6" stop-opacity=".18"/>
+        <stop offset="100%" stop-color="#7951d6" stop-opacity="0"/>
+      </radialGradient>
+
+      <radialGradient id="nebulaCyan">
+        <stop offset="0%" stop-color="#55d9ff" stop-opacity=".30"/>
+        <stop offset="100%" stop-color="#55d9ff" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+
+    <g clip-path="url(#briefNebulaClip)" pointer-events="none">
+      <!-- Slowly rotating nebula -->
+      <g opacity=".55">
+        <animateTransform
+          attributeName="transform"
+          type="rotate"
+          from="0 450 165"
+          to="360 450 165"
+          dur="90s"
+          repeatCount="indefinite"/>
+
+        <ellipse cx="180" cy="90" rx="260" ry="105"
+          fill="url(#nebulaBlue)"/>
+
+        <ellipse cx="650" cy="70" rx="300" ry="115"
+          fill="url(#nebulaPurple)"/>
+
+        <ellipse cx="450" cy="230" rx="330" ry="100"
+          fill="url(#nebulaCyan)"/>
+
+        <ellipse cx="820" cy="260" rx="230" ry="100"
+          fill="url(#nebulaBlue)"/>
+      </g>
+
+      <!-- Star field -->
+      <g fill="#d8eaff">
+        <circle cx="105" cy="20" r="1.2">
+          <animate attributeName="opacity" values=".25;1;.25" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="185" cy="52" r=".9">
+          <animate attributeName="opacity" values=".2;.9;.2" dur="4s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="270" cy="16" r="1.5">
+          <animate attributeName="opacity" values=".3;1;.3" dur="2.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="350" cy="68" r="1">
+          <animate attributeName="opacity" values=".2;.8;.2" dur="3.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="430" cy="18" r="1.3">
+          <animate attributeName="opacity" values=".25;1;.25" dur="3.2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="520" cy="48" r=".8">
+          <animate attributeName="opacity" values=".2;.9;.2" dur="4.2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="610" cy="17" r="1.4">
+          <animate attributeName="opacity" values=".3;1;.3" dur="2.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="700" cy="58" r="1">
+          <animate attributeName="opacity" values=".2;.9;.2" dur="3.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="790" cy="22" r="1.5">
+          <animate attributeName="opacity" values=".25;1;.25" dur="3.1s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="860" cy="65" r=".9">
+          <animate attributeName="opacity" values=".2;.8;.2" dur="4s" repeatCount="indefinite"/>
+        </circle>
+
+        <circle cx="55" cy="90" r="1.1"/>
+        <circle cx="145" cy="78" r=".8"/>
+        <circle cx="235" cy="88" r="1.3"/>
+        <circle cx="325" cy="95" r=".8"/>
+        <circle cx="415" cy="83" r="1.1"/>
+        <circle cx="505" cy="92" r="1.4"/>
+        <circle cx="595" cy="78" r=".9"/>
+        <circle cx="685" cy="91" r="1.2"/>
+        <circle cx="775" cy="82" r=".8"/>
+        <circle cx="845" cy="100" r="1.2"/>
+
+        <circle cx="18" cy="180" r="1"/>
+        <circle cx="880" cy="155" r="1.2"/>
+        <circle cx="15" cy="270" r="1.3"/>
+        <circle cx="885" cy="285" r=".9"/>
+        <circle cx="100" cy="320" r="1"/>
+        <circle cx="300" cy="318" r="1.2"/>
+        <circle cx="570" cy="320" r=".9"/>
+        <circle cx="800" cy="318" r="1.3"/>
+      </g>
+    </g>
     <circle cx="870" cy="10" r="100" fill="#765cff" opacity=".07"/>
     <text x="28" y="39" fill="#f0f3ff" font-size="20"
       font-family="Segoe UI,Arial" font-weight="600">Professional Snapshot</text>
