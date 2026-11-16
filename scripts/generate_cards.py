@@ -614,6 +614,9 @@ if len(scan_points) >= 5:
         repeatCount="indefinite"/>
     </g>
     '''
+svg += svg_end()
+
+write_svg("heatmap.svg", svg)
 
 # 5. Social identity card
 
