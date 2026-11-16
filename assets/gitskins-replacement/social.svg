@@ -20,8 +20,6 @@
       font-family="Segoe UI,Arial" letter-spacing="2">DEVELOPER IDENTITY</text>
     <rect x="28" y="76" width="54" height="3" rx="2" fill="url(#accent)"/>
     
-<image href="https://avatars.githubusercontent.com/u/115037389?u=f36852748094a2e84d0780e59f80288ab0a8464f&amp;v=4" x="30" y="91" width="66" height="66"
-  clip-path="inset(0 round 12px)"/>
 <text x="116" y="119" fill="#f1f4ff" font-size="22"
   font-family="Segoe UI,Arial" font-weight="600">iceflow</text>
 <text x="116" y="143" fill="#91a0bf" font-size="13"
