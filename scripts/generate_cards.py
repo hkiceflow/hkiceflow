@@ -154,6 +154,123 @@ for i, (label, value) in enumerate(stats):
 svg += svg_end()
 write_svg("stats.svg", svg)
 
+# 1.5. Professional Brief
+active_days = sum(
+    1
+    for week in calendar["weeks"]
+    for day in week["contributionDays"]
+    if day["contributionCount"] > 0
+)
+
+svg = svg_start(
+    "Professional Snapshot",
+    "Recruiter signal brief · hkiceflow",
+    900,
+    330
+)
+
+# Three-column panels
+svg += '''
+    <rect x="28" y="95" width="270" height="216" rx="12"
+      fill="#0c1426" stroke="#34415f" stroke-width="1"/>
+
+    <rect x="315" y="95" width="270" height="216" rx="12"
+      fill="#0c1426" stroke="#34415f" stroke-width="1"/>
+
+    <rect x="602" y="95" width="270" height="216" rx="12"
+      fill="#0c1426" stroke="#34415f" stroke-width="1"/>
+
+    <text x="48" y="123" fill="#dce5ff" font-size="13"
+      font-family="Segoe UI,Arial" font-weight="600">
+      职位 / 角色匹配度
+    </text>
+
+    <text x="335" y="123" fill="#dce5ff" font-size="13"
+      font-family="Segoe UI,Arial" font-weight="600">
+      公开证明
+    </text>
+
+    <text x="622" y="123" fill="#dce5ff" font-size="13"
+      font-family="Segoe UI,Arial" font-weight="600">
+      GitHub Momentum
+    </text>
+
+    <line x1="44" y1="136" x2="282" y2="136"
+      stroke="#34415f" stroke-width="1"/>
+    <line x1="331" y1="136" x2="569" y2="136"
+      stroke="#34415f" stroke-width="1"/>
+    <line x1="618" y1="136" x2="856" y2="136"
+      stroke="#34415f" stroke-width="1"/>
+'''
+
+# Roles
+roles = [
+    "软硬件开发工程师",
+    "测试工程师",
+    "交互设计师",
+    "产品经理",
+    "CEO",
+    "剪辑师",
+    "调色师",
+]
+
+for i, role in enumerate(roles):
+    y = 158 + i * 21
+    svg += f'''
+    <text x="48" y="{y}" fill="#aebcda" font-size="12"
+      font-family="Segoe UI,Arial">{escape(role)}</text>
+    '''
+
+# Public proof
+svg += f'''
+    <text x="340" y="177" fill="#f0f3ff" font-size="29"
+      font-family="Segoe UI,Arial" font-weight="600">
+      {total_repos}
+    </text>
+    <text x="340" y="195" fill="#8998b8" font-size="10"
+      font-family="Segoe UI,Arial" letter-spacing="1.2">
+      PUBLIC REPOSITORIES
+    </text>
+
+    <text x="340" y="243" fill="#f0f3ff" font-size="29"
+      font-family="Segoe UI,Arial" font-weight="600">
+      {stars}
+    </text>
+    <text x="340" y="261" fill="#8998b8" font-size="10"
+      font-family="Segoe UI,Arial" letter-spacing="1.2">
+      TOTAL STARS
+    </text>
+
+    <text x="340" y="289" fill="#9eaccb" font-size="11"
+      font-family="Segoe UI,Arial">
+      SOCIAL ACCOUNTS  ·  OPEN SOURCE
+    </text>
+'''
+
+# GitHub Momentum
+svg += f'''
+    <text x="627" y="177" fill="#f0f3ff" font-size="29"
+      font-family="Segoe UI,Arial" font-weight="600">
+      {contributions}
+    </text>
+    <text x="627" y="195" fill="#8998b8" font-size="10"
+      font-family="Segoe UI,Arial" letter-spacing="1.2">
+      CONTRIBUTIONS
+    </text>
+
+    <text x="627" y="243" fill="#f0f3ff" font-size="29"
+      font-family="Segoe UI,Arial" font-weight="600">
+      {active_days}
+    </text>
+    <text x="627" y="261" fill="#8998b8" font-size="10"
+      font-family="Segoe UI,Arial" letter-spacing="1.2">
+      ACTIVE DAYS
+    </text>
+'''
+
+svg += svg_end()
+write_svg("brief.svg", svg)
+
 # 2. Projects
 svg = svg_start("Selected Projects", "Most starred repositories", 900, 300)
 
