@@ -446,6 +446,7 @@ for i, language in enumerate(display_languages):
 svg += svg_end()
 write_svg("languages.svg", svg)
 
+
 # 4. Contribution heatmap
 days = [
     day
@@ -455,16 +456,56 @@ days = [
 days = days[-371:]
 
 svg = svg_start("Contribution Activity", "Daily contribution history", 900, 180)
+
+scan_points = []
+
 for i, day in enumerate(days):
     col = i // 7
-    row = i % 7
+
+    # Alternate vertical direction for each column
+    row = 6 - (i % 7) if col % 2 == 0 else i % 7
+
     x = 30 + col * 12
     y = 91 + row * 11
+
     color = day["color"] or "#202a40"
+
     svg += f'<rect x="{x}" y="{y}" width="8" height="8" rx="2" fill="{color}"/>'
+
+    # Record the center of each cell for the scanning animation
+    scan_points.append((x + 4, y + 4))
+
+# Build a continuous serpentine scanning path
+if scan_points:
+    scan_path = "M " + " L ".join(
+        f"{x} {y}" for x, y in scan_points
+    )
+
+    svg += f'''
+    <circle r="5" fill="#55e68a" opacity="0.20">
+      <animateMotion
+        path="{scan_path}"
+        dur="42s"
+        repeatCount="indefinite"
+        calcMode="linear"/>
+    </circle>
+
+    <circle r="2.2" fill="#8affb5">
+      <animateMotion
+        path="{scan_path}"
+        dur="42s"
+        repeatCount="indefinite"
+        calcMode="linear"/>
+      <animate
+        attributeName="opacity"
+        values="1;0.65;1"
+        dur="1.2s"
+        repeatCount="indefinite"/>
+    </circle>
+    '''
+
 svg += svg_end()
 write_svg("heatmap.svg", svg)
-
 
 # 5. Social identity card
 
