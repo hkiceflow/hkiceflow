@@ -140,7 +140,12 @@ write_svg("stats.svg", svg)
 
 # 2. Projects
 svg = svg_start("Selected Projects", "Most starred repositories", 900, 300)
-for i, repo in enumerate(repos[:4]):
+selected_repos = [
+    repo for repo in repos
+    if repo["name"].casefold() != "autogrowai"
+][:3]
+
+for i, repo in enumerate(selected_repos):
     y = 112 + i * 43
     name = escape(repo["name"])
     desc = escape((repo["description"] or "No description")[:65])
