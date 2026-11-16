@@ -481,26 +481,46 @@ if scan_points:
         f"{x} {y}" for x, y in scan_points
     )
 
-    svg += f'''
-    <circle r="5" fill="#55e68a" opacity="0.20">
-      <animateMotion
-        path="{scan_path}"
-        dur="42s"
-        repeatCount="indefinite"
-        calcMode="linear"/>
-    </circle>
+    # Gradient trail: bright head fading into transparency
+    svg += '''
+    <defs>
+      <linearGradient id="scanTrail" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#55e68a" stop-opacity="0"/>
+        <stop offset="65%" stop-color="#55e68a" stop-opacity=".25"/>
+        <stop offset="100%" stop-color="#8affb5" stop-opacity="1"/>
+      </linearGradient>
 
-    <circle r="2.2" fill="#8affb5">
+      <filter id="scanGlow" x="-100%" y="-100%"
+        width="300%" height="300%">
+        <feGaussianBlur stdDeviation="2.5"/>
+      </filter>
+    </defs>
+
+    <path d="''' + scan_path + '''"
+      fill="none"
+      stroke="#55e68a"
+      stroke-width="8"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      opacity=".20"
+      stroke-dasharray="48 6000"
+      filter="url(#scanGlow)">
+      <animate
+        attributeName="stroke-dashoffset"
+        from="0" to="-''' + str(len(scan_points) * 16) + '''"
+        dur="42s"
+        repeatCount="indefinite"/>
+    </path>
+
+    <circle cx="0" cy="0" r="4"
+      fill="#8affb5"
+      stroke="#55e68a"
+      stroke-width="1.5">
       <animateMotion
-        path="{scan_path}"
+        path="''' + scan_path + '''"
         dur="42s"
         repeatCount="indefinite"
         calcMode="linear"/>
-      <animate
-        attributeName="opacity"
-        values="1;0.65;1"
-        dur="1.2s"
-        repeatCount="indefinite"/>
     </circle>
     '''
 
