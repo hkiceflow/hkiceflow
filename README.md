@@ -15,7 +15,7 @@
  MPV（mpv-net）、Stablediffusion（sd项目已弃用）开发者。</p>
 <p><strong>● Building and sharing work in public</strong></p>
  
- [![bilibili](https://img.shields.io/badge/bilibili-hkiceflow-pink?logo=bilibili)](https://space.bilibili.com/368780828)<img src="https://img.shields.io/badge/fans-1.3k+-pink?style=social"></code></a>
+ [![bilibili](https://img.shields.io/badge/bilibili-iceflow_official-pink?logo=bilibili)](https://space.bilibili.com/368780828)<img src="https://img.shields.io/badge/fans-1.3k+-pink?style=social"></code></a>
 
 <div id="title" align=center>
 
