@@ -1322,8 +1322,8 @@ profile_svg = f'''
         rx="23" fill="url(#avatarBorder)"/>
 
       <image
-        x="230" y="285"
-        width="440" height="300"
+        x="197" y="262.5"
+        width="506" height="345"
         xlink:href="{avatar_data_uri}"
         preserveAspectRatio="xMidYMid meet"
         clip-path="url(#avatarClip)"/>
