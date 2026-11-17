@@ -262,3 +262,12 @@
       font-family="Segoe UI,Arial" letter-spacing="1.2">
       CURRENT STREAK
     </text>
+
+    <rect x="2" y="2"
+      width="896" height="326"
+      rx="16"
+      fill="none"
+      stroke="url(#rgbBorder)"
+      stroke-width="4"/>
+    </svg>
+    

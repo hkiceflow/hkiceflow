@@ -185,3 +185,11 @@
         font-family="Segoe UI,Arial" font-weight="600">22</text>
     </g>
     
+    <rect x="2" y="2"
+      width="896" height="186"
+      rx="16"
+      fill="none"
+      stroke="url(#rgbBorder)"
+      stroke-width="4"/>
+    </svg>
+    
