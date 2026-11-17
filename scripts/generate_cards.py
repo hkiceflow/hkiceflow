@@ -24,7 +24,7 @@ def github_graphql(query):
             "User-Agent": USERNAME,
         },
     )
-    with urllib.request.urlopen(request) as response:
+    with urllib.request.urlopen(request, timeout=30) as response:
         result = json.loads(response.read())
     if "errors" in result:
         raise RuntimeError(result["errors"])
@@ -1017,8 +1017,6 @@ width="900" height="220" viewBox="0 0 900 220">
 
 write_svg("social.svg", social_svg)
 
-print("Generated SVG cards successfully.")
-
 # 7. Animated gradient divider
 svg = '''
 <svg xmlns="http://www.w3.org/2000/svg"
@@ -1088,3 +1086,5 @@ svg = '''
 '''
 
 write_svg("divider.svg", svg)
+
+print("Generated SVG cards successfully.")
