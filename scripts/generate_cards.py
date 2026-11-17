@@ -90,7 +90,7 @@ def svg_end(height=220):
       rx="16"
       fill="none"
       stroke="url(#rgbBorder)"
-      stroke-width="4"/>
+      stroke-width="6"/>
     </svg>
     '''
 
@@ -369,7 +369,7 @@ def svg_end(height=220):
       rx="16"
       fill="none"
       stroke="url(#rgbBorder)"
-      stroke-width="4"/>
+      stroke-width="6"/>
     </svg>
     '''
 write_svg("stats.svg", svg)
@@ -646,7 +646,7 @@ def svg_end(height=220):
       rx="16"
       fill="none"
       stroke="url(#rgbBorder)"
-      stroke-width="4"/>
+      stroke-width="6"/>
     </svg>
     '''
 write_svg("brief.svg", svg)
@@ -724,7 +724,7 @@ def svg_end(height=220):
       rx="16"
       fill="none"
       stroke="url(#rgbBorder)"
-      stroke-width="4"/>
+      stroke-width="6"/>
     </svg>
     '''
 write_svg("projects.svg", svg)
@@ -773,7 +773,7 @@ def svg_end(height=220):
       rx="16"
       fill="none"
       stroke="url(#rgbBorder)"
-      stroke-width="4"/>
+      stroke-width="6"/>
     </svg>
     '''
 write_svg("stack.svg", svg)
@@ -915,7 +915,7 @@ def svg_end(height=220):
       rx="16"
       fill="none"
       stroke="url(#rgbBorder)"
-      stroke-width="4"/>
+      stroke-width="6"/>
     </svg>
     '''
 write_svg("languages.svg", svg)
@@ -1099,7 +1099,7 @@ def svg_end(height=220):
       rx="16"
       fill="none"
       stroke="url(#rgbBorder)"
-      stroke-width="4"/>
+      stroke-width="6"/>
     </svg>
     '''
 
@@ -1215,7 +1215,7 @@ width="900" height="220" viewBox="0 0 900 220">
   rx="16"
   fill="none"
   stroke="url(#rgbBorder)"
-  stroke-width="4"/>
+  stroke-width="6"/>
 </svg>'''
 
 write_svg("social.svg", social_svg)
@@ -1532,7 +1532,7 @@ profile_svg = f'''
       rx="28"
       fill="none"
       stroke="url(#rgbBorder)"
-      stroke-width="4.4"/>
+      stroke-width="6"/>
 
     </g>
   </g>
