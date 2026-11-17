@@ -1,4 +1,5 @@
 
+import base64
 import os
 import json
 import urllib.request
@@ -71,6 +72,8 @@ query = """
   user(login: "hkiceflow") {
     name
     login
+    avatarUrl
+    createdAt
     followers { totalCount }
     repositories(
       first: 100
@@ -115,6 +118,20 @@ query = """
 
 user = github_graphql(query)["user"]
 repos = user["repositories"]["nodes"]
+# Fetch and embed GitHub avatar
+avatar_request = urllib.request.Request(
+    user["avatarUrl"],
+    headers={"User-Agent": "Mozilla/5.0"}
+)
+
+with urllib.request.urlopen(avatar_request, timeout=30) as response:
+    avatar_mime = response.headers.get_content_type()
+    avatar_base64 = base64.b64encode(response.read()).decode("ascii")
+
+avatar_data_uri = f"data:{avatar_mime};base64,{avatar_base64}"
+
+# GitHub account creation time
+github_since = user["createdAt"]
 calendar = user["contributionsCollection"]["contributionCalendar"]
 total_repos = user["repositories"]["totalCount"]
 stars = sum(repo["stargazerCount"] for repo in repos)
@@ -1094,5 +1111,230 @@ svg = '''
 '''
 
 write_svg("divider.svg", svg)
+
+# 8. Animated GitHub profile card
+profile_svg = f'''
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="900" height="900"
+     viewBox="0 0 900 900">
+
+  <defs>
+    <!-- Background -->
+    <linearGradient id="profileBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#020817"/>
+      <stop offset="50%" stop-color="#071b43"/>
+      <stop offset="100%" stop-color="#020817"/>
+    </linearGradient>
+
+    <radialGradient id="blueNebula">
+      <stop offset="0%" stop-color="#1769e8" stop-opacity=".55"/>
+      <stop offset="55%" stop-color="#1249a5" stop-opacity=".20"/>
+      <stop offset="100%" stop-color="#1249a5" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="purpleNebula">
+      <stop offset="0%" stop-color="#7654ff" stop-opacity=".30"/>
+      <stop offset="100%" stop-color="#7654ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="avatarBorder" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#168dff"/>
+      <stop offset="50%" stop-color="#a9eaff"/>
+      <stop offset="100%" stop-color="#397dff"/>
+    </linearGradient>
+
+    <linearGradient id="planetLight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1249a5" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#64caff"/>
+      <stop offset="100%" stop-color="#1249a5" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Reflection: brightest in the center, fading on both sides -->
+    <linearGradient id="reflectionGradient"
+      x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="42%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.34"/>
+      <stop offset="58%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <clipPath id="profileClip">
+      <rect x="35" y="25" width="830" height="830" rx="30"/>
+    </clipPath>
+
+    <clipPath id="avatarClip">
+      <rect x="230" y="285" width="440" height="300" rx="18"/>
+    </clipPath>
+  </defs>
+
+  <!-- Entire card swings around its bottom-center pivot -->
+  <g>
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      values="-1.2 450 850;1.2 450 850;-1.2 450 850"
+      keyTimes="0;0.5;1"
+      calcMode="spline"
+      keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+      dur="6s"
+      repeatCount="indefinite"/>
+
+    <!-- Card background -->
+    <rect x="35" y="25" width="830" height="830"
+      rx="30" fill="url(#profileBg)"
+      stroke="#173d78" stroke-width="1.5"/>
+
+    <g clip-path="url(#profileClip)">
+
+      <!-- Nebula -->
+      <ellipse cx="270" cy="390" rx="390" ry="330"
+        fill="url(#blueNebula)"/>
+
+      <ellipse cx="700" cy="280" rx="330" ry="300"
+        fill="url(#purpleNebula)"/>
+
+      <ellipse cx="480" cy="720" rx="420" ry="260"
+        fill="url(#blueNebula)"/>
+
+      <!-- Star field -->
+      <g fill="#b9ddff">
+        <circle cx="105" cy="115" r="1.5" opacity=".8"/>
+        <circle cx="185" cy="230" r="1" opacity=".6"/>
+        <circle cx="300" cy="155" r="1.3" opacity=".8"/>
+        <circle cx="405" cy="105" r="1" opacity=".5"/>
+        <circle cx="545" cy="190" r="1.5" opacity=".7"/>
+        <circle cx="690" cy="120" r="1" opacity=".7"/>
+        <circle cx="790" cy="220" r="1.5" opacity=".8"/>
+        <circle cx="120" cy="390" r="1" opacity=".6"/>
+        <circle cx="180" cy="540" r="1.5" opacity=".8"/>
+        <circle cx="730" cy="440" r="1" opacity=".7"/>
+        <circle cx="790" cy="570" r="1.4" opacity=".6"/>
+        <circle cx="110" cy="680" r="1.3" opacity=".7"/>
+        <circle cx="250" cy="750" r="1" opacity=".6"/>
+        <circle cx="650" cy="700" r="1.4" opacity=".8"/>
+        <circle cx="780" cy="760" r="1" opacity=".6"/>
+        <circle cx="470" cy="650" r="1" opacity=".7"/>
+      </g>
+
+      <!-- Twinkling stars -->
+      <g fill="#d8f2ff">
+        <circle cx="145" cy="300" r="2">
+          <animate attributeName="opacity"
+            values=".25;1;.25" dur="3s"
+            repeatCount="indefinite"/>
+        </circle>
+        <circle cx="750" cy="350" r="2">
+          <animate attributeName="opacity"
+            values="1;.2;1" dur="4s"
+            repeatCount="indefinite"/>
+        </circle>
+        <circle cx="350" cy="690" r="2">
+          <animate attributeName="opacity"
+            values=".2;1;.2" dur="3.5s"
+            repeatCount="indefinite"/>
+        </circle>
+      </g>
+
+      <!-- Username -->
+      <text x="90" y="155"
+        fill="#ffffff"
+        font-family="Arial, sans-serif"
+        font-size="76"
+        font-weight="bold">
+        iceflow
+      </text>
+
+      <!-- Total stars -->
+      <g>
+        <path d="M730 90
+          L741 116 L769 118
+          L748 136 L754 164
+          L730 149 L706 164
+          L712 136 L691 118
+          L719 116 Z"
+          fill="#FFD84D"/>
+
+        <text x="790" y="150"
+          fill="#FFE45C"
+          font-family="Arial, sans-serif"
+          font-size="48"
+          font-weight="bold"
+          text-anchor="end">{stars}</text>
+      </g>
+
+      <!-- Rectangular avatar -->
+      <rect x="222" y="277" width="456" height="316"
+        rx="23" fill="url(#avatarBorder)"/>
+
+      <image
+        x="230" y="285"
+        width="440" height="300"
+        xlink:href="{avatar_data_uri}"
+        preserveAspectRatio="xMidYMid meet"
+        clip-path="url(#avatarClip)"/>
+
+      <!-- Avatar subtle inner outline -->
+      <rect x="230" y="285" width="440" height="300"
+        rx="18" fill="none"
+        stroke="#b5eaff" stroke-opacity=".55"
+        stroke-width="1.5"/>
+
+      <!-- SINCE -->
+      <text x="450" y="690"
+        fill="#c6e5ff"
+        font-family="monospace"
+        font-size="23"
+        letter-spacing="2"
+        text-anchor="middle">
+        SINCE {github_since}
+      </text>
+
+      <!-- Planet horizon -->
+      <path
+        d="M35 835
+           Q450 680 865 835
+           L865 855 L35 855 Z"
+        fill="#09295e"/>
+
+      <path
+        d="M35 835
+           Q450 680 865 835"
+        fill="none"
+        stroke="url(#planetLight)"
+        stroke-width="4"/>
+
+      <path
+        d="M35 842
+           Q450 700 865 842"
+        fill="none"
+        stroke="#3289e8"
+        stroke-opacity=".25"
+        stroke-width="2"/>
+
+      <!-- Moving diagonal reflection -->
+      <g clip-path="url(#profileClip)">
+        <g>
+          <rect x="-1100" y="-100"
+            width="2200" height="1100"
+            fill="url(#reflectionGradient)"
+            transform="skewX(-25)"/>
+
+          <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="1500 0;-1500 0"
+            dur="5s"
+            repeatCount="indefinite"/>
+        </g>
+      </g>
+
+    </g>
+  </g>
+</svg>
+'''
+
+write_svg("profile.svg", profile_svg)
 
 print("Generated SVG cards successfully.")
