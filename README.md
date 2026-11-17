@@ -1,5 +1,5 @@
 <div align="center" style="margin-top: -8px;">
-  <sup>推荐使用深色模式观看</sup>
+  <sup><span style="color: #A5EFFF;">推荐使用深色模式观看</sup>
 </div>
 
 <p align="center">
