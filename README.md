@@ -1,22 +1,21 @@
-<p align="center">
+<div align="center">
   <img src="./assets/hint.svg"
        width="100%"
        alt="推荐使用深色模式观看" />
-</p>
+</div>
 
-<p align="center">
+<div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=个人%20Readme&fontSize=40&fontAlignY=35&animation=fadeIn" />
-</p>
-
+</div>
 <div align="center">
 
 <table width="100%">
 <tr>
 <td width="64%" valign="middle" align="center">
-<p><sub>人员简报 · hkiceflow</sub></p>
+<div><sub>人员简报 · hkiceflow</sub></div>
 <h1>iceflow</h1>
 <h2>:wave: : HI！ This's ICEFLOW</h2>
-<p>Obviously, I am Chinese. :sunglasses:<p>
+<p>Obviously, I am Chinese. :sunglasses:</p>
 <p>VR软硬件开发工程师、测试工程师、交互设计师、数据分析师、产品经理、OPC、CEO、集团顾问、剪辑师、调色师【其余可查看下方列表】 ;
  MPV（mpv-net）、Stablediffusion（sd项目已弃用）开发者。</p>
 <p><strong>● Building and sharing work in public</strong></p>
