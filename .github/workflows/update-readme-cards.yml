@@ -3,6 +3,11 @@ name: Update GitHub Profile Cards
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/generate_cards.py'
   schedule:
     - cron: "17 3 * * *"
 
