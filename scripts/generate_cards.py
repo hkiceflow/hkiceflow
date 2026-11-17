@@ -1328,16 +1328,6 @@ profile_svg = f'''
 
       <!-- Avatar subtle inner outline -->
 
-      <!-- SINCE -->
-      <text x="450" y="690"
-        fill="#c6e5ff"
-        font-family="monospace"
-        font-size="23"
-        letter-spacing="2"
-        text-anchor="middle">
-        SINCE {github_since}
-      </text>
-
       <!-- Planet horizon -->
       <path
         d="M35 835
@@ -1359,6 +1349,16 @@ profile_svg = f'''
         stroke="#3289e8"
         stroke-opacity=".25"
         stroke-width="2"/>
+
+            <!-- SINCE -->
+      <text x="450" y="740"
+        fill="#c6e5ff"
+        font-family="monospace"
+        font-size="26"
+        letter-spacing="2"
+        text-anchor="middle">
+        SINCE {github_since}
+      </text>
 
       <!-- Moving diagonal reflection -->
       <g clip-path="url(#profileClip)">
