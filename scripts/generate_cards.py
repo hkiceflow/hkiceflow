@@ -122,11 +122,6 @@ def write_svg(filename, content):
         f.write(content)
 
 
-def write_svg(filename, content):
-    with open(os.path.join(OUTPUT_DIR, filename), "w", encoding="utf-8") as f:
-        f.write(content)
-
-
 query = """
 {
   user(login: "hkiceflow") {
