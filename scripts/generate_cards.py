@@ -1371,7 +1371,7 @@ profile_svg = f'''
           <animateTransform
             attributeName="transform"
             type="translate"
-            values="1500 0;-1500 0"
+            values="-1500 0;1500 0"
             dur="5s"
             repeatCount="indefinite"/>
         </g>
