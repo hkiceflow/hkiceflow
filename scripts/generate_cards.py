@@ -1019,6 +1019,7 @@ write_svg("social.svg", social_svg)
 
 # 7. Animated gradient divider
 svg = '''
+
 <svg xmlns="http://www.w3.org/2000/svg"
      width="900" height="36"
      viewBox="0 0 900 36">
@@ -1030,12 +1031,6 @@ svg = '''
       <stop offset="0%" stop-color="#174CBB"/>
       <stop offset="100%" stop-color="#E21D36"/>
     </linearGradient>
-
-    <filter id="dividerGlow"
-      x="-300%" y="-300%"
-      width="700%" height="700%">
-      <feGaussianBlur stdDeviation="3"/>
-    </filter>
   </defs>
 
   <!-- Gradient line -->
@@ -1051,9 +1046,22 @@ svg = '''
   <path d="M888 10 L896 18 L888 26 L880 18 Z"
     fill="#E21D36"/>
 
-<!-- Moving light glow -->
-  <circle r="5" fill="#174CBB"
-    opacity=".45" filter="url(#dividerGlow)">
+  <!-- Moving light glow -->
+  <circle r="12" fill="#174CBB" opacity=".08">
+    <animateMotion
+      dur="7s"
+      repeatCount="indefinite"
+      path="M12 18 L888 18 L12 18"/>
+    <animate
+      attributeName="fill"
+      values="#174CBB;#E21D36;#174CBB"
+      keyTimes="0;0.5;1"
+      calcMode="linear"
+      dur="7s"
+      repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="8" fill="#174CBB" opacity=".16">
     <animateMotion
       dur="7s"
       repeatCount="indefinite"
