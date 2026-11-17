@@ -1309,7 +1309,7 @@ profile_svg = f'''
           L719 116 Z"
           fill="#FFD84D"/>
 
-        <text x="790" y="150"
+        <text x="840" y="150"
           fill="#FFE45C"
           font-family="Arial, sans-serif"
           font-size="48"
