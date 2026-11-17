@@ -1,0 +1,17 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="900" height="24"
+     viewBox="0 0 900 24">
+
+  <text
+    x="450"
+    y="12"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Arial, sans-serif"
+    font-size="12"
+    fill="#A5EFFF">
+    推荐使用深色模式观看
+  </text>
+
+</svg>
