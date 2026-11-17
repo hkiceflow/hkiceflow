@@ -41,25 +41,85 @@ def svg_start(title, subtitle, width=900, height=220):
         <stop offset="0%" stop-color="#10182d"/>
         <stop offset="100%" stop-color="#17112b"/>
       </linearGradient>
+
       <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
         <stop offset="0%" stop-color="#62a8ff"/>
         <stop offset="55%" stop-color="#9b7bff"/>
         <stop offset="100%" stop-color="#e18bff"/>
       </linearGradient>
+
+      <linearGradient id="rgbBorder"
+        x1="0" y1="0" x2="1" y2="1">
+
+        <stop offset="0%" stop-color="#0000FF"/>
+        <stop offset="32%" stop-color="#0000FF"/>
+        <stop offset="34%" stop-color="#00FF00"/>
+        <stop offset="65%" stop-color="#00FF00"/>
+        <stop offset="67%" stop-color="#FF0000"/>
+        <stop offset="98%" stop-color="#FF0000"/>
+        <stop offset="100%" stop-color="#0000FF"/>
+
+        <animateTransform
+          attributeName="gradientTransform"
+          type="rotate"
+          from="0 0.5 0.5"
+          to="360 0.5 0.5"
+          dur="12s"
+          repeatCount="indefinite"/>
+      </linearGradient>
     </defs>
+
     <rect width="100%" height="100%" rx="18" fill="url(#bg)"
       stroke="#34415f" stroke-width="1"/>
-    <circle cx="{width-30}" cy="10" r="100" fill="#765cff" opacity=".07"/>
+
+    <circle cx="{width-30}" cy="10" r="100"
+      fill="#765cff" opacity=".07"/>
+
     <text x="28" y="39" fill="#f0f3ff" font-size="20"
       font-family="Segoe UI,Arial" font-weight="600">{escape(title)}</text>
+
     <text x="28" y="61" fill="#8998b8" font-size="11"
       font-family="Segoe UI,Arial" letter-spacing="2">{escape(subtitle.upper())}</text>
-    <rect x="28" y="76" width="54" height="3" rx="2" fill="url(#accent)"/>
+
+    <rect x="28" y="76" width="54" height="3" rx="2"
+      fill="url(#accent)"/>
     '''
 
 
-def svg_end():
-    return "</svg>"
+def svg_end(height=220):
+    return f'''
+    <rect x="2" y="2"
+      width="896" height="{height - 4}"
+      rx="16"
+      fill="none"
+      stroke="url(#rgbBorder)"
+      stroke-width="4"/>
+    </svg>
+    '''
+
+
+def write_svg(filename, content):
+    rgb_cards = {
+        "stats.svg",
+        "brief.svg",
+        "projects.svg",
+        "stack.svg",
+        "languages.svg",
+        "heatmap.svg",
+    }
+
+    if filename in rgb_cards:
+        height = int(
+            content.split('height="', 1)[1].split('"', 1)[0]
+        )
+
+        content = (
+            content.rsplit("</svg>", 1)[0]
+            + svg_end(height)
+        )
+
+    with open(os.path.join(OUTPUT_DIR, filename), "w", encoding="utf-8") as f:
+        f.write(content)
 
 
 def write_svg(filename, content):
@@ -310,7 +370,16 @@ for i, (label, value) in enumerate(stats):
     </g>
     '''
 
-svg += svg_end()
+def svg_end(height=220):
+    return f'''
+    <rect x="2" y="2"
+      width="896" height="{height - 4}"
+      rx="16"
+      fill="none"
+      stroke="url(#rgbBorder)"
+      stroke-width="4"/>
+    </svg>
+    '''
 write_svg("stats.svg", svg)
 
 # 1.5. Professional Brief
@@ -578,7 +647,16 @@ svg += f'''
     </text>
 '''
 
-svg += svg_end()
+def svg_end(height=220):
+    return f'''
+    <rect x="2" y="2"
+      width="896" height="{height - 4}"
+      rx="16"
+      fill="none"
+      stroke="url(#rgbBorder)"
+      stroke-width="4"/>
+    </svg>
+    '''
 write_svg("brief.svg", svg)
 
 # 2. Projects
@@ -647,7 +725,16 @@ else:
     </text>
     '''
 
-svg += svg_end()
+def svg_end(height=220):
+    return f'''
+    <rect x="2" y="2"
+      width="896" height="{height - 4}"
+      rx="16"
+      fill="none"
+      stroke="url(#rgbBorder)"
+      stroke-width="4"/>
+    </svg>
+    '''
 write_svg("projects.svg", svg)
 
 # 3. Technology stack
@@ -687,7 +774,16 @@ for i, (language, count) in enumerate(top_languages):
     '''
 if not top_languages:
     svg += '<text x="30" y="120" fill="#9eaccb">No language data available</text>'
-svg += svg_end()
+def svg_end(height=220):
+    return f'''
+    <rect x="2" y="2"
+      width="896" height="{height - 4}"
+      rx="16"
+      fill="none"
+      stroke="url(#rgbBorder)"
+      stroke-width="4"/>
+    </svg>
+    '''
 write_svg("stack.svg", svg)
 # 3.5. Language Distribution
 svg = svg_start(
@@ -820,7 +916,16 @@ for i, language in enumerate(display_languages):
     </rect>
     '''
 
-svg += svg_end()
+def svg_end(height=220):
+    return f'''
+    <rect x="2" y="2"
+      width="896" height="{height - 4}"
+      rx="16"
+      fill="none"
+      stroke="url(#rgbBorder)"
+      stroke-width="4"/>
+    </svg>
+    '''
 write_svg("languages.svg", svg)
 
 
@@ -995,7 +1100,16 @@ if len(scan_points) >= 5:
         repeatCount="indefinite"/>
     </g>
     '''
-svg += svg_end()
+def svg_end(height=220):
+    return f'''
+    <rect x="2" y="2"
+      width="896" height="{height - 4}"
+      rx="16"
+      fill="none"
+      stroke="url(#rgbBorder)"
+      stroke-width="4"/>
+    </svg>
+    '''
 
 write_svg("heatmap.svg", svg)
 
@@ -1015,7 +1129,28 @@ width="900" height="220" viewBox="0 0 900 220">
     <stop offset="55%" stop-color="#9b7bff"/>
     <stop offset="100%" stop-color="#e18bff"/>
   </linearGradient>
+  <!-- RGB flowing border -->
+  <linearGradient id="rgbBorder"
+    x1="0" y1="0" x2="1" y2="1">
 
+    <stop offset="0%" stop-color="#0000FF"/>
+    <stop offset="32%" stop-color="#0000FF"/>
+    <stop offset="34%" stop-color="#00FF00"/>
+
+    <stop offset="65%" stop-color="#00FF00"/>
+    <stop offset="67%" stop-color="#FF0000"/>
+    <stop offset="98%" stop-color="#FF0000"/>
+
+    <stop offset="100%" stop-color="#0000FF"/>
+
+    <animateTransform
+      attributeName="gradientTransform"
+      type="rotate"
+      from="0 0.5 0.5"
+      to="360 0.5 0.5"
+      dur="12s"
+      repeatCount="indefinite"/>
+  </linearGradient>
   <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
     <feGaussianBlur stdDeviation="4" result="blur"/>
     <feMerge>
@@ -1082,7 +1217,13 @@ width="900" height="220" viewBox="0 0 900 220">
       font-size="14"
       font-family="Segoe UI,Arial"
       letter-spacing="1">@hkiceflow</text>
-
+<!-- RGB flowing border -->
+<rect x="2" y="2"
+  width="896" height="216"
+  rx="16"
+  fill="none"
+  stroke="url(#rgbBorder)"
+  stroke-width="4"/>
 </svg>'''
 
 write_svg("social.svg", social_svg)
