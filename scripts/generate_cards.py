@@ -1218,7 +1218,7 @@ profile_svg = f'''
     </clipPath>
 
     <clipPath id="avatarClip">
-      <rect x="230" y="285" width="440" height="300" rx="18"/>
+        <rect x="175" y="247.5" width="550" height="375" rx="18"/>
     </clipPath>
   </defs>
 
@@ -1322,8 +1322,8 @@ profile_svg = f'''
         rx="23" fill="url(#avatarBorder)"/>
 
       <image
-        x="197" y="262.5"
-        width="506" height="345"
+        x="175" y="247.5"
+        width="550" height="375"
         xlink:href="{avatar_data_uri}"
         preserveAspectRatio="xMidYMid meet"
         clip-path="url(#avatarClip)"/>
