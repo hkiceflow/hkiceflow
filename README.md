@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/gitskins-replacement/hint.svg"
+  <img src="./assets/hint.svg"
        width="100%"
        alt="推荐使用深色模式观看" />
 </p>
