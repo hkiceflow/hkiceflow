@@ -56,7 +56,9 @@
 </p>
 </td>
 <td width="36%" valign="middle" align="center">
-<img src="https://avatars.githubusercontent.com/u/115037389?u=f36852748094a2e84d0780e59f80288ab0a8464f&amp;v=4" width="2200" alt="iceflow GitHub avatar" />
+<img src="./assets/gitskins-replacement/profile.svg"
+     width="100%"
+     alt="iceflow GitHub profile" />
 </td>
 </tr>
 </table>
