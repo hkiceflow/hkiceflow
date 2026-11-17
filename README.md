@@ -11,7 +11,7 @@
 <h1>iceflow</h1>
 <h2>:wave: : HI！ This's ICEFLOW</h2>
 <p>Obviously, I am Chinese. :sunglasses:<p>
-<p>VR软硬件开发工程师、测试工程师、交互设计师、产品经理、OPC、CEO、集团顾问、剪辑师、调色师【其余可查看下方列表】 ;
+<p>VR软硬件开发工程师、测试工程师、交互设计师、数据分析师、产品经理、OPC、CEO、集团顾问、剪辑师、调色师【其余可查看下方列表】 ;
  MPV（mpv-net）、Stablediffusion（sd项目已弃用）开发者。</p>
 <p><strong>● Building and sharing work in public</strong></p>
  
