@@ -76,30 +76,39 @@ query = """
     createdAt
     followers { totalCount }
     repositories(
-      first: 100
-      ownerAffiliations: OWNER
-      privacy: PUBLIC
-      isFork: false
-      orderBy: {field: STARGAZERS, direction: DESC}
-    ) {
-      totalCount
-      nodes {
-        name
-        description
-        url
-        stargazerCount
-        forkCount
-        primaryLanguage { name }
-        languages(first: 100) {
-          edges {
-            size
-            node {
-              name
-            }
-          }
-        }
-      }
+  first: 100
+  after: null
+  ownerAffiliations: OWNER
+  privacy: PUBLIC
+  isFork: false
+  orderBy: {field: STARGAZERS, direction: DESC}
+) {
+  totalCount
+  pageInfo {
+    hasNextPage
+    endCursor
+  }
+  nodes {
+    name
+    description
+    url
+    stargazerCount
+    forkCount
+    primaryLanguage { name }
+   languages(first: 100) {
+  pageInfo {
+    hasNextPage
+    endCursor
+  }
+  edges {
+    size
+    node {
+      name
+     }
     }
+  }
+ }
+}
     contributionsCollection {
       contributionCalendar {
         totalContributions
@@ -117,7 +126,51 @@ query = """
 """
 
 user = github_graphql(query)["user"]
-repos = user["repositories"]["nodes"]
+
+repo_data = user["repositories"]
+repos = repo_data["nodes"]
+
+while repo_data["pageInfo"]["hasNextPage"]:
+    cursor = repo_data["pageInfo"]["endCursor"]
+
+    next_query = query.replace(
+        "after: null",
+        f'after: "{cursor}"'
+    )
+
+    repo_data = github_graphql(next_query)["user"]["repositories"]
+    repos.extend(repo_data["nodes"])
+# Fetch all language pages for each repository
+for repo in repos:
+    language_data = repo["languages"]
+
+    while language_data["pageInfo"]["hasNextPage"]:
+        cursor = language_data["pageInfo"]["endCursor"]
+
+        language_query = f"""
+        query {{
+          repository(
+            owner: {json.dumps(USERNAME)}
+            name: {json.dumps(repo["name"])}
+          ) {{
+            languages(first: 100, after: {json.dumps(cursor)}) {{
+              pageInfo {{
+                hasNextPage
+                endCursor
+              }}
+              edges {{
+                size
+                node {{
+                  name
+                }}
+              }}
+            }}
+          }}
+        }}
+        """
+
+        language_data = github_graphql(language_query)["repository"]["languages"]
+        repo["languages"]["edges"].extend(language_data["edges"])
 # Fetch and embed GitHub avatar
 avatar_request = urllib.request.Request(
     user["avatarUrl"],
