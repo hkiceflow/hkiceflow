@@ -1318,8 +1318,6 @@ profile_svg = f'''
       </g>
 
       <!-- Rectangular avatar -->
-      <rect x="222" y="277" width="456" height="316"
-        rx="23" fill="url(#avatarBorder)"/>
 
       <image
         x="175" y="247.5"
