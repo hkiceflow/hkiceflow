@@ -1,4 +1,8 @@
 <p align="center">
+  <sup>推荐使用深色模式观看</sup>
+</p>
+
+<p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=个人%20Readme&fontSize=40&fontAlignY=35&animation=fadeIn" />
 </p>
 
