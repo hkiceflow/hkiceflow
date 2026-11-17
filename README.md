@@ -67,7 +67,7 @@
 <a href="https://www.python.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" align="right" height="48" width="48" ></a>
 
 <p align="center" style="margin: 0; padding: 0; line-height: 1;">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Zhi+Mang+Xing&color=FFA500&center=true&vCenter=true&size=22&width=1000&height=30&pause=3000&duration=4000&repeat=true&lines=%E4%B8%80%E4%B8%AA%E8%83%BD%E5%A4%9F%E5%8D%87%E8%B5%B7%E6%9C%88%E4%BA%AE%E7%9A%84%E8%BA%AB%E4%BD%93%EF%BC%8C%E5%BF%85%E7%84%B6%E9%A9%BC%E4%BD%8F%E4%BA%86%E6%97%A0%E6%95%B0%E6%AC%A1%E7%9A%84%E6%97%A5%E8%90%BD" alt="一个能够升起月亮的身体，必然驼住了无数次的日落" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Zhi+Mang+Xing&color=FFA500&center=true&vCenter=true&size=22&width=700&height=28&pause=3000&duration=4000&repeat=true&lines=%E4%B8%80%E4%B8%AA%E8%83%BD%E5%A4%9F%E5%8D%87%E8%B5%B7%E6%9C%88%E4%BA%AE%E7%9A%84%E8%BA%AB%E4%BD%93%EF%BC%8C%E5%BF%85%E7%84%B6%E9%A9%BC%E4%BD%8F%E4%BA%86%E6%97%A0%E6%95%B0%E6%AC%A1%E7%9A%84%E6%97%A5%E8%90%BD" alt="一个能够升起月亮的身体，必然驼住了无数次的日落" />
 </p>
 
 | **常用**                | **软件及技术**                                      |
