@@ -51,13 +51,10 @@ def svg_start(title, subtitle, width=900, height=220):
       <linearGradient id="rgbBorder"
         x1="0" y1="0" x2="1" y2="1">
 
-        <stop offset="0%" stop-color="#0000FF"/>
-        <stop offset="32%" stop-color="#0000FF"/>
-        <stop offset="34%" stop-color="#00FF00"/>
-        <stop offset="65%" stop-color="#00FF00"/>
-        <stop offset="67%" stop-color="#FF0000"/>
-        <stop offset="98%" stop-color="#FF0000"/>
-        <stop offset="100%" stop-color="#0000FF"/>
+        <stop offset="0%" stop-color="#FF0000"/>
+        <stop offset="33%" stop-color="#00FF00"/>
+        <stop offset="67%" stop-color="#0000FF"/>
+        <stop offset="100%" stop-color="#FF0000"/>
 
         <animateTransform
           attributeName="gradientTransform"
