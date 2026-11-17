@@ -1527,7 +1527,7 @@ profile_svg = f'''
       rx="28"
       fill="none"
       stroke="url(#rgbBorder)"
-      stroke-width="6"/>
+      stroke-width="12"/>
 
     </g>
   </g>
