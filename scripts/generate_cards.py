@@ -33,6 +33,56 @@ def github_graphql(query):
 
     return result["data"]
 
+def get_lifetime_contributions():
+    years_query = f"""
+    query {{
+      user(login: {json.dumps(USERNAME)}) {{
+        contributionsCollection {{
+          contributionYears
+        }}
+      }}
+    }}
+    """
+
+    years = github_graphql(years_query)[
+        "user"
+    ]["contributionsCollection"]["contributionYears"]
+
+    total = 0
+    now = datetime.now(timezone.utc)
+
+    for year in years:
+        start = datetime(year, 1, 1, tzinfo=timezone.utc)
+        end = min(
+            datetime(year + 1, 1, 1, tzinfo=timezone.utc),
+            now
+        )
+
+        query = f"""
+        query {{
+          user(login: {json.dumps(USERNAME)}) {{
+            contributionsCollection(
+              from: "{start.strftime('%Y-%m-%dT%H:%M:%SZ')}",
+              to: "{end.strftime('%Y-%m-%dT%H:%M:%SZ')}"
+            ) {{
+              contributionCalendar {{
+                totalContributions
+              }}
+            }}
+          }}
+        }}
+        """
+
+        result = github_graphql(query)
+
+        total += result[
+            "user"
+        ]["contributionsCollection"][
+            "contributionCalendar"
+        ]["totalContributions"]
+
+    return total
+
 def github_rest(path, params=None):
     url = "https://api.github.com" + path
 
