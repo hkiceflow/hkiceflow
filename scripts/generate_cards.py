@@ -604,6 +604,7 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
     </text>
     ''')
 
+   
     # Secret trophies
     for index, trophy in enumerate(hidden_trophies):
         col = index % 4
@@ -611,12 +612,54 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
 
         x = start_x + col * (card_width + gap_x)
         y = 475 + row * 145
-
         cx = x + card_width / 2
+
+        if trophy.get("custom"):
+            parts.append(f'''
+            <g>
+              <rect x="{x}" y="{y}"
+                width="{card_width}" height="145"
+                rx="13"
+                fill="url(#trophyCard)"
+                stroke="#D6A72C"
+                stroke-width="1.5"/>
+
+              {trophy_icon(cx, y + 4, "gold")}
+
+              <text x="{cx}" y="{y + 105}"
+                text-anchor="middle"
+                fill="#FFFFFF"
+                font-size="10.5"
+                font-weight="600">
+                Lifetime Contributions
+              </text>
+
+              <text x="{cx}" y="{y + 120}"
+                text-anchor="middle"
+                fill="#D6A72C"
+                font-size="11"
+                font-weight="700">
+                {trophy["value"]:,}
+              </text>
+
+              <rect x="{cx - 22}" y="{y + 125}"
+                width="44" height="16"
+                rx="8"
+                fill="url(#gold)"/>
+
+              <text x="{cx}" y="{y + 137}"
+                text-anchor="middle"
+                fill="#FFFFFF"
+                font-size="10"
+                font-weight="800">
+                SSS
+              </text>
+            </g>
+            ''')
+            continue
 
         unlocked = trophy["unlocked"]
         metal = "gold" if unlocked else "dark"
-
         status = "UNLOCKED" if unlocked else "LOCKED"
 
         parts.append(f'''
@@ -2165,6 +2208,17 @@ hidden_trophies = get_hidden_trophies(
     trophy_ranks,
     trophy_stats["created_at"]
 )
+
+# Lifetime Contributions — custom SSS trophy
+lifetime_contributions = get_lifetime_contributions()
+
+hidden_trophies.append({
+    "name": "Lifetime Contributions",
+    "unlocked": True,
+    "value": lifetime_contributions,
+    "rank": "SSS",
+    "custom": True
+})
 
 trophies_svg = generate_trophies_svg(
     trophy_stats,
