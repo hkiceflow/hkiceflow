@@ -3,6 +3,7 @@ import base64
 import os
 import json
 import urllib.request
+import urllib.parse
 from collections import Counter
 from datetime import datetime, timezone, timedelta
 from xml.sax.saxutils import escape
@@ -32,6 +33,360 @@ def github_graphql(query):
 
     return result["data"]
 
+def github_rest(path, params=None):
+    url = "https://api.github.com" + path
+
+    if params:
+        url += "?" + urllib.parse.urlencode(params)
+
+    request = urllib.request.Request(
+        url,
+        headers={
+            "Authorization": f"Bearer {TOKEN}",
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "User-Agent": USERNAME
+        }
+    )
+
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return json.loads(response.read().decode("utf-8"))
+
+
+def get_trophy_stats():
+    # 用户基本信息
+    profile = github_rest(f"/users/{USERNAME}")
+
+    # 获取全部公开仓库
+    repos = []
+    page = 1
+
+    while True:
+        batch = github_rest(
+            f"/users/{USERNAME}/repos",
+            {
+                "type": "owner",
+                "visibility": "public",
+                "per_page": 100,
+                "page": page
+            }
+        )
+
+        if not batch:
+            break
+
+        repos.extend(batch)
+
+        if len(batch) < 100:
+            break
+
+        page += 1
+
+    # 统计公开 Commits
+    commits = github_rest(
+        "/search/commits",
+        {
+            "q": f"author:{USERNAME}",
+            "per_page": 1
+        }
+    )
+
+    # 统计仓库主要编程语言
+    languages = {
+        repo["language"]
+        for repo in repos
+        if repo.get("language")
+    }
+
+    # 获取公开组织
+    organizations = github_rest(
+        f"/users/{USERNAME}/orgs"
+    )
+
+    # 统计公开 Issues
+    issues = github_rest(
+        "/search/issues",
+        {
+            "q": f"author:{USERNAME} is:public type:issue",
+            "per_page": 1
+        }
+    )
+
+    # 统计公开 Pull Requests
+    pull_requests = github_rest(
+        "/search/issues",
+        {
+            "q": f"author:{USERNAME} is:public type:pr",
+            "per_page": 1
+        }
+    )
+
+    # 统计参与审查的公开 Pull Requests
+    reviews = github_rest(
+        "/search/issues",
+        {
+            "q": f"reviewed-by:{USERNAME} is:public type:pr",
+            "per_page": 1
+        }
+    )
+
+    # 账号存续天数除以 100
+    created_at = datetime.fromisoformat(
+        profile["created_at"].replace("Z", "+00:00")
+    )
+
+    experience = (
+        datetime.now(timezone.utc) - created_at
+    ).days // 100
+
+    return {
+        "stars": sum(
+            repo["stargazers_count"] for repo in repos
+        ),
+        "commits": commits["total_count"],
+        "followers": profile["followers"],
+        "repositories": profile["public_repos"],
+        "issues": issues["total_count"],
+        "pull_requests": pull_requests["total_count"],
+        "reviews": reviews["total_count"],
+        "experience": experience,
+        "created_at": created_at,
+        "languages": len(languages),
+        "organizations": len(organizations)
+    }
+
+
+def get_trophy_rank(score, thresholds):
+    ranks = [
+        ("SSS", thresholds[0]),
+        ("SS", thresholds[1]),
+        ("S", thresholds[2]),
+        ("AAA", thresholds[3]),
+        ("AA", thresholds[4]),
+        ("A", thresholds[5]),
+        ("B", thresholds[6]),
+        ("C", thresholds[7])
+    ]
+
+    for rank, required in ranks:
+        if score >= required:
+            return rank
+
+    return "UNKNOWN"
+
+
+def get_trophy_ranks(stats):
+    thresholds = {
+        "stars":         [2000, 700, 200, 100, 50, 30, 10, 1],
+        "commits":       [4000, 2000, 1000, 500, 200, 100, 10, 1],
+        "followers":     [1000, 400, 200, 100, 50, 20, 10, 1],
+        "issues":        [1000, 500, 200, 100, 50, 20, 10, 1],
+        "pull_requests": [1000, 500, 200, 100, 50, 20, 10, 1],
+        "repositories":  [50, 45, 40, 35, 30, 20, 10, 1],
+        "reviews":       [70, 57, 45, 30, 20, 8, 3, 1],
+        "experience":    [70, 55, 40, 28, 18, 11, 6, 2]
+    }
+
+    return {
+        name: get_trophy_rank(stats[name], limits)
+        for name, limits in thresholds.items()
+    }
+
+def get_hidden_trophies(stats, ranks, created_at):
+    joined_year = created_at.year
+
+    all_super_rank = all(
+        ranks[key] in ("SSS", "SS", "S")
+        for key in (
+            "stars",
+            "commits",
+            "followers",
+            "issues",
+            "pull_requests",
+            "repositories",
+            "reviews",
+            "experience"
+        )
+    )
+
+    return [
+        {
+            "name": "MultiLanguage",
+            "unlocked": stats["languages"] >= 5
+        },
+        {
+            "name": "AllSuperRank",
+            "unlocked": all_super_rank
+        },
+        {
+            "name": "Joined2020",
+            "unlocked": joined_year == 2020
+        },
+        {
+            "name": "AncientUser",
+            "unlocked": joined_year <= 2011
+        },
+        {
+            "name": "LongTimeUser",
+            "unlocked": stats["experience"] >= 36
+        },
+        {
+            "name": "Organizations",
+            "unlocked": stats["organizations"] >= 1
+        },
+        {
+            "name": "OGUser",
+            "unlocked": joined_year <= 2009
+        }
+    ]
+
+def generate_trophies_svg(stats, ranks, hidden_trophies):
+    trophies = [
+        ("STARS", "★", "stars"),
+        ("COMMITS", "◆", "commits"),
+        ("FOLLOWERS", "●", "followers"),
+        ("ISSUES", "!", "issues"),
+        ("PULL REQUESTS", "⇧", "pull_requests"),
+        ("REPOSITORIES", "▣", "repositories"),
+        ("REVIEWS", "✓", "reviews"),
+        ("EXPERIENCE", "⌛", "experience")
+    ]
+
+    rank_colors = {
+        "SSS": "#FFD700",
+        "SS": "#E5C7FF",
+        "S": "#FF8C42",
+        "AAA": "#65D6FF",
+        "AA": "#62D99B",
+        "A": "#8EA7FF",
+        "B": "#B0B8CC",
+        "C": "#8A93A8",
+        "UNKNOWN": "#555F75"
+    }
+
+    width = 900
+    height = 790
+    card_width = 205
+    card_height = 165
+    gap_x = 15
+    gap_y = 18
+    start_x = 15
+    start_y = 55
+
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" '
+        f'width="{width}" height="{height}" '
+        f'viewBox="0 0 {width} {height}">',
+        '''
+        <defs>
+          <linearGradient id="trophyBg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#10182d"/>
+            <stop offset="100%" stop-color="#17112b"/>
+          </linearGradient>
+          <linearGradient id="trophyTitle" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#55C7FF"/>
+            <stop offset="50%" stop-color="#A78BFA"/>
+            <stop offset="100%" stop-color="#FF75B5"/>
+          </linearGradient>
+        </defs>
+        <rect width="900" height="790" rx="20" fill="url(#trophyBg)"/>
+        <text x="450" y="35" text-anchor="middle"
+          font-size="22" font-weight="bold"
+          fill="url(#trophyTitle)">GITHUB TROPHIES</text>
+        '''
+    ]
+
+    # 常规奖杯：四列两行
+    for index, (label, symbol, key) in enumerate(trophies):
+        col = index % 4
+        row = index // 4
+
+        x = start_x + col * (card_width + gap_x)
+        y = start_y + row * (card_height + gap_y)
+
+        rank = ranks[key]
+        color = rank_colors[rank]
+
+        if key == "experience":
+            years = (
+                datetime.now(timezone.utc) - stats["created_at"]
+            ).total_seconds() / (365.2425 * 24 * 3600)
+            display_value = f"{years:.1f} YEARS"
+        else:
+            display_value = f'{stats[key]:,}'
+
+        parts.append(f'''
+        <g>
+          <rect x="{x}" y="{y}"
+            width="{card_width}" height="{card_height}"
+            rx="14" fill="#151F38"
+            stroke="{color}" stroke-width="2"/>
+
+          <circle cx="{x + card_width / 2}" cy="{y + 48}"
+            r="30" fill="{color}" opacity="0.14"/>
+
+          <text x="{x + card_width / 2}" y="{y + 59}"
+            text-anchor="middle" font-size="38"
+            font-weight="bold" fill="{color}">{symbol}</text>
+
+          <text x="{x + card_width / 2}" y="{y + 98}"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="#DCE6FF">{label}</text>
+
+          <text x="{x + card_width / 2}" y="{y + 123}"
+            text-anchor="middle" font-size="16"
+            font-weight="bold" fill="#FFFFFF">{display_value}</text>
+
+          <text x="{x + card_width / 2}" y="{y + 147}"
+            text-anchor="middle" font-size="15"
+            font-weight="bold" fill="{color}">{rank}</text>
+        </g>
+        ''')
+
+    # 隐藏奖杯标题
+    parts.append('''
+    <text x="450" y="440" text-anchor="middle"
+      font-size="19" font-weight="bold"
+      fill="url(#trophyTitle)">SECRET TROPHIES</text>
+    ''')
+
+    # 隐藏奖杯：四列两行
+    for index, trophy in enumerate(hidden_trophies):
+        col = index % 4
+        row = index // 4
+
+        x = start_x + col * (card_width + gap_x)
+        y = 465 + row * 145
+
+        unlocked = trophy["unlocked"]
+        color = "#FFD700" if unlocked else "#555F75"
+        symbol = "★" if unlocked else "🔒"
+        status = "UNLOCKED" if unlocked else "LOCKED"
+
+        parts.append(f'''
+        <g>
+          <rect x="{x}" y="{y}"
+            width="{card_width}" height="125"
+            rx="14" fill="#151F38"
+            stroke="{color}" stroke-width="2"
+            opacity="{1 if unlocked else 0.7}"/>
+
+          <text x="{x + card_width / 2}" y="{y + 48}"
+            text-anchor="middle" font-size="34"
+            fill="{color}">{symbol}</text>
+
+          <text x="{x + card_width / 2}" y="{y + 79}"
+            text-anchor="middle" font-size="12"
+            font-weight="bold" fill="#DCE6FF">{trophy["name"]}</text>
+
+          <text x="{x + card_width / 2}" y="{y + 105}"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="{color}">{status}</text>
+        </g>
+        ''')
+
+    parts.append("</svg>")
+    return "".join(parts)
 
 def svg_start(title, subtitle, width=900, height=220):
     return f'''<svg xmlns="http://www.w3.org/2000/svg"
@@ -1535,5 +1890,22 @@ profile_svg = f'''
 '''
 
 write_svg("profile.svg", profile_svg)
+# Generate GitHub trophies
+trophy_stats = get_trophy_stats()
+trophy_ranks = get_trophy_ranks(trophy_stats)
+
+hidden_trophies = get_hidden_trophies(
+    trophy_stats,
+    trophy_ranks,
+    trophy_stats["created_at"]
+)
+
+trophies_svg = generate_trophies_svg(
+    trophy_stats,
+    trophy_ranks,
+    hidden_trophies
+)
+
+write_svg("trophies.svg", trophies_svg)
 
 print("Generated SVG cards successfully.")
