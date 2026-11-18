@@ -512,26 +512,26 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
           {trophy_icon(cx, y + 9, metal)}
 
           <!-- Achievement -->
-          <text x="{cx}" y="{y + 125}"
+          <text x="{cx}" y="{y + 120}"
             text-anchor="middle"
             font-size="12"
             font-weight="bold"
             letter-spacing=".7"
             fill="#DCE6FF">{label}</text>
 
-          <text x="{cx}" y="{y + 145}"
+          <text x="{cx}" y="{y + 138}"
             text-anchor="middle"
             font-size="15"
             font-weight="bold"
             fill="#FFFFFF">{display_value}</text>
 
-          <!-- Rank badge -->
-          <rect x="{cx - 22}" y="{y + 150}"
-            width="44" height="18"
-            rx="9"
+           <!-- Rank badge -->
+          <rect x="{cx - 22}" y="{y + 144}"
+            width="44" height="16"
+            rx="8"
             fill="url(#{metal})"/>
 
-          <text x="{cx}" y="{y + 163}"
+          <text x="{cx}" y="{y + 156}"
             text-anchor="middle"
             font-size="11"
             font-weight="bold"
