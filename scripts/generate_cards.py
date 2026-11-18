@@ -240,152 +240,368 @@ def get_hidden_trophies(stats, ranks, created_at):
         }
     ]
 
+
 def generate_trophies_svg(stats, ranks, hidden_trophies):
     trophies = [
-        ("STARS", "★", "stars"),
-        ("COMMITS", "◆", "commits"),
-        ("FOLLOWERS", "●", "followers"),
-        ("ISSUES", "!", "issues"),
-        ("PULL REQUESTS", "⇧", "pull_requests"),
-        ("REPOSITORIES", "▣", "repositories"),
-        ("REVIEWS", "✓", "reviews"),
-        ("EXPERIENCE", "⌛", "experience")
+        ("STARS", "stars"),
+        ("COMMITS", "commits"),
+        ("FOLLOWERS", "followers"),
+        ("ISSUES", "issues"),
+        ("PULL REQUESTS", "pull_requests"),
+        ("REPOSITORIES", "repositories"),
+        ("REVIEWS", "reviews"),
+        ("EXPERIENCE", "experience")
     ]
 
-    rank_colors = {
-        "SSS": "#FFD700",
-        "SS": "#E5C7FF",
-        "S": "#FF8C42",
-        "AAA": "#65D6FF",
-        "AA": "#62D99B",
-        "A": "#8EA7FF",
-        "B": "#B0B8CC",
-        "C": "#8A93A8",
-        "UNKNOWN": "#555F75"
+    rank_metal = {
+        "SSS": "gold",
+        "SS": "gold",
+        "S": "gold",
+        "AAA": "gold",
+        "AA": "silver",
+        "A": "silver",
+        "B": "bronze",
+        "C": "bronze",
+        "UNKNOWN": "dark"
     }
 
     width = 900
     height = 790
+
     card_width = 205
     card_height = 165
     gap_x = 15
     gap_y = 18
+
     start_x = 15
-    start_y = 55
+    start_y = 65
 
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" '
         f'width="{width}" height="{height}" '
         f'viewBox="0 0 {width} {height}">',
+
         '''
         <defs>
-          <linearGradient id="trophyBg" x1="0" y1="0" x2="1" y2="1">
+          <linearGradient id="trophyBg"
+            x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stop-color="#10182d"/>
             <stop offset="100%" stop-color="#17112b"/>
           </linearGradient>
-          <linearGradient id="trophyTitle" x1="0" y1="0" x2="1" y2="0">
+
+          <linearGradient id="trophyTitle"
+            x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stop-color="#55C7FF"/>
             <stop offset="50%" stop-color="#A78BFA"/>
             <stop offset="100%" stop-color="#FF75B5"/>
           </linearGradient>
+
+          <linearGradient id="gold"
+            x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FFF2A6"/>
+            <stop offset="35%" stop-color="#FFD700"/>
+            <stop offset="70%" stop-color="#D99A18"/>
+            <stop offset="100%" stop-color="#FFF0A0"/>
+          </linearGradient>
+
+          <linearGradient id="silver"
+            x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FFFFFF"/>
+            <stop offset="35%" stop-color="#DCE5F0"/>
+            <stop offset="70%" stop-color="#8293AA"/>
+            <stop offset="100%" stop-color="#F5F8FF"/>
+          </linearGradient>
+
+          <linearGradient id="bronze"
+            x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FFD0A0"/>
+            <stop offset="35%" stop-color="#CD8750"/>
+            <stop offset="70%" stop-color="#92512E"/>
+            <stop offset="100%" stop-color="#F2B77C"/>
+          </linearGradient>
+
+          <linearGradient id="dark"
+            x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#64718A"/>
+            <stop offset="100%" stop-color="#30394D"/>
+          </linearGradient>
+
+          <linearGradient id="trophyCard"
+            x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1B2945"/>
+            <stop offset="100%" stop-color="#121C32"/>
+          </linearGradient>
+
+          <filter id="trophyShadow"
+            x="-40%" y="-40%" width="180%" height="190%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+            <feOffset dy="3"/>
+            <feComponentTransfer>
+              <feFuncA type="linear" slope="0.35"/>
+            </feComponentTransfer>
+            <feMerge>
+              <feMergeNode/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
         </defs>
-        <rect width="900" height="790" rx="20" fill="url(#trophyBg)"/>
-        <text x="450" y="35" text-anchor="middle"
-          font-size="22" font-weight="bold"
-          fill="url(#trophyTitle)">GITHUB TROPHIES</text>
+
+        <rect width="900" height="790"
+          rx="20" fill="url(#trophyBg)"/>
+
+        <text x="450" y="38"
+          text-anchor="middle"
+          font-size="23"
+          font-weight="bold"
+          letter-spacing="2"
+          fill="url(#trophyTitle)">
+          GITHUB TROPHIES
+        </text>
+
+        <line x1="30" y1="49" x2="870" y2="49"
+          stroke="#34415f" stroke-width="1"/>
         '''
     ]
 
-    # 常规奖杯：四列两行
-    for index, (label, symbol, key) in enumerate(trophies):
+    def trophy_icon(cx, top, metal, locked=False):
+        fill = "url(#dark)" if locked else f"url(#{metal})"
+        opacity = "0.48" if locked else "1"
+
+        return f'''
+        <g opacity="{opacity}" filter="url(#trophyShadow)">
+
+          <!-- Trophy handles -->
+          <path d="
+            M {cx - 24} {top + 13}
+            C {cx - 53} {top + 7},
+              {cx - 51} {top + 48},
+              {cx - 23} {top + 49}
+            L {cx - 18} {top + 39}
+            C {cx - 37} {top + 38},
+              {cx - 39} {top + 22},
+              {cx - 24} {top + 25}
+            Z"
+            fill="{fill}"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
+
+          <path d="
+            M {cx + 24} {top + 13}
+            C {cx + 53} {top + 7},
+              {cx + 51} {top + 48},
+              {cx + 23} {top + 49}
+            L {cx + 18} {top + 39}
+            C {cx + 37} {top + 38},
+              {cx + 39} {top + 22},
+              {cx + 24} {top + 25}
+            Z"
+            fill="{fill}"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
+
+          <!-- Trophy cup -->
+          <path d="
+            M {cx - 26} {top + 8}
+            L {cx + 26} {top + 8}
+            L {cx + 21} {top + 39}
+            Q {cx + 18} {top + 61} {cx} {top + 67}
+            Q {cx - 18} {top + 61} {cx - 21} {top + 39}
+            Z"
+            fill="{fill}"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M {cx - 17} {top + 14}
+            L {cx - 10} {top + 14}
+            L {cx - 7} {top + 43}
+            Q {cx - 8} {top + 52} {cx - 13} {top + 53}
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M {cx - 5} {top + 65}
+            L {cx + 5} {top + 65}
+            L {cx + 8} {top + 79}
+            L {cx - 8} {top + 79}
+            Z"
+            fill="{fill}"/>
+
+          <!-- Base -->
+          <path d="
+            M {cx - 19} {top + 79}
+            L {cx + 19} {top + 79}
+            L {cx + 23} {top + 88}
+            L {cx - 23} {top + 88}
+            Z"
+            fill="{fill}"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M {cx - 12} {top + 89}
+            L {cx + 12} {top + 89}
+            L {cx + 15} {top + 94}
+            L {cx - 15} {top + 94}
+            Z"
+            fill="{fill}"/>
+
+        </g>
+
+        {"" if not locked else f'''
+        <!-- Lock symbol -->
+        <g transform="translate({cx + 15} {top + 57})">
+          <rect x="-10" y="0" width="23" height="19"
+            rx="4" fill="#202B40"
+            stroke="#9AA7BC" stroke-width="1.5"/>
+          <path d="M -5 0 V -6
+            A 6 6 0 0 1 7 -6 V 0"
+            fill="none" stroke="#9AA7BC"
+            stroke-width="3" stroke-linecap="round"/>
+          <circle cx="1.5" cy="9" r="2"
+            fill="#DCE6FF"/>
+        </g>
+        '''}
+        '''
+
+    # Regular trophies: four columns, two rows
+    for index, (label, key) in enumerate(trophies):
         col = index % 4
         row = index // 4
 
         x = start_x + col * (card_width + gap_x)
         y = start_y + row * (card_height + gap_y)
 
+        cx = x + card_width / 2
+
         rank = ranks[key]
-        color = rank_colors[rank]
+        metal = rank_metal.get(rank, "dark")
 
         if key == "experience":
             years = (
                 datetime.now(timezone.utc) - stats["created_at"]
             ).total_seconds() / (365.2425 * 24 * 3600)
+
             display_value = f"{years:.1f} YEARS"
         else:
             display_value = f'{stats[key]:,}'
 
         parts.append(f'''
         <g>
+          <!-- Card -->
           <rect x="{x}" y="{y}"
             width="{card_width}" height="{card_height}"
-            rx="14" fill="#151F38"
-            stroke="{color}" stroke-width="2"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="#34415f"
+            stroke-width="1.3"/>
 
-          <circle cx="{x + card_width / 2}" cy="{y + 48}"
-            r="30" fill="{color}" opacity="0.14"/>
+          <rect x="{x + 1}" y="{y + 1}"
+            width="{card_width - 2}" height="3"
+            rx="2"
+            fill="url(#{metal})"/>
 
-          <text x="{x + card_width / 2}" y="{y + 59}"
-            text-anchor="middle" font-size="38"
-            font-weight="bold" fill="{color}">{symbol}</text>
+          <!-- Trophy -->
+          {trophy_icon(cx, y + 9, metal)}
 
-          <text x="{x + card_width / 2}" y="{y + 98}"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="#DCE6FF">{label}</text>
+          <!-- Achievement -->
+          <text x="{cx}" y="{y + 125}"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            letter-spacing=".7"
+            fill="#DCE6FF">{label}</text>
 
-          <text x="{x + card_width / 2}" y="{y + 123}"
-            text-anchor="middle" font-size="16"
-            font-weight="bold" fill="#FFFFFF">{display_value}</text>
+          <text x="{cx}" y="{y + 145}"
+            text-anchor="middle"
+            font-size="15"
+            font-weight="bold"
+            fill="#FFFFFF">{display_value}</text>
 
-          <text x="{x + card_width / 2}" y="{y + 147}"
-            text-anchor="middle" font-size="15"
-            font-weight="bold" fill="{color}">{rank}</text>
+          <!-- Rank badge -->
+          <rect x="{cx - 22}" y="{y + 150}"
+            width="44" height="18"
+            rx="9"
+            fill="url(#{metal})"/>
+
+          <text x="{cx}" y="{y + 163}"
+            text-anchor="middle"
+            font-size="11"
+            font-weight="bold"
+            fill="#10182D">{rank}</text>
         </g>
         ''')
 
-    # 隐藏奖杯标题
+    # Secret trophies heading
     parts.append('''
-    <text x="450" y="440" text-anchor="middle"
-      font-size="19" font-weight="bold"
-      fill="url(#trophyTitle)">SECRET TROPHIES</text>
+    <line x1="30" y1="425" x2="870" y2="425"
+      stroke="#34415f" stroke-width="1"/>
+
+    <text x="450" y="456"
+      text-anchor="middle"
+      font-size="19"
+      font-weight="bold"
+      letter-spacing="1.5"
+      fill="url(#trophyTitle)">
+      SECRET TROPHIES
+    </text>
     ''')
 
-    # 隐藏奖杯：四列两行
+    # Secret trophies
     for index, trophy in enumerate(hidden_trophies):
         col = index % 4
         row = index // 4
 
         x = start_x + col * (card_width + gap_x)
-        y = 465 + row * 145
+        y = 475 + row * 145
+
+        cx = x + card_width / 2
 
         unlocked = trophy["unlocked"]
-        color = "#FFD700" if unlocked else "#555F75"
-        symbol = "★" if unlocked else "🔒"
+        metal = "gold" if unlocked else "dark"
+
         status = "UNLOCKED" if unlocked else "LOCKED"
 
         parts.append(f'''
         <g>
           <rect x="{x}" y="{y}"
             width="{card_width}" height="125"
-            rx="14" fill="#151F38"
-            stroke="{color}" stroke-width="2"
-            opacity="{1 if unlocked else 0.7}"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="{ '#D6A72C' if unlocked else '#34415f' }"
+            stroke-width="1.5"
+            opacity="{1 if unlocked else 0.75}"/>
 
-          <text x="{x + card_width / 2}" y="{y + 48}"
-            text-anchor="middle" font-size="34"
-            fill="{color}">{symbol}</text>
+          {trophy_icon(cx, y + 4, metal, locked=not unlocked)}
 
-          <text x="{x + card_width / 2}" y="{y + 79}"
-            text-anchor="middle" font-size="12"
-            font-weight="bold" fill="#DCE6FF">{trophy["name"]}</text>
+          <text x="{cx}" y="{y + 105}"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            fill="{ '#FFE6A0' if unlocked else '#8998B2' }">
+            {trophy["name"]}
+          </text>
 
-          <text x="{x + card_width / 2}" y="{y + 105}"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="{color}">{status}</text>
+          <text x="{cx}" y="{y + 119}"
+            text-anchor="middle"
+            font-size="10"
+            font-weight="bold"
+            letter-spacing="1"
+            fill="{ '#FFD700' if unlocked else '#64718A' }">
+            {status}
+          </text>
         </g>
         ''')
 
     parts.append("</svg>")
+
     return "".join(parts)
 
 def svg_start(title, subtitle, width=900, height=220):
