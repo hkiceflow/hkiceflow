@@ -329,7 +329,7 @@
             text-anchor="middle"
             font-size="15"
             font-weight="bold"
-            fill="#FFFFFF">317</text>
+            fill="#FFFFFF">318</text>
 
            <!-- Rank badge -->
           <rect x="315.5" y="209"
@@ -2070,4 +2070,133 @@
             LOCKED
           </text>
         </g>
-        </svg>
+        
+            <g>
+              <rect x="675" y="620"
+                width="205" height="145"
+                rx="13"
+                fill="url(#trophyCard)"
+                stroke="#D6A72C"
+                stroke-width="1.5"/>
+
+              
+        <g opacity="1" filter="url(#trophyShadow)">
+
+          <!-- Trophy handles -->
+          <path d="
+            M 753.5 637
+            C 724.5 631,
+              726.5 672,
+              754.5 673
+            L 759.5 663
+            C 740.5 662,
+              738.5 646,
+              753.5 649
+            Z"
+            fill="url(#gold)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
+
+          <path d="
+            M 801.5 637
+            C 830.5 631,
+              828.5 672,
+              800.5 673
+            L 795.5 663
+            C 814.5 662,
+              816.5 646,
+              801.5 649
+            Z"
+            fill="url(#gold)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
+
+          <!-- Trophy cup -->
+          <path d="
+            M 751.5 632
+            L 803.5 632
+            L 798.5 663
+            Q 795.5 685 777.5 691
+            Q 759.5 685 756.5 663
+            Z"
+            fill="url(#gold)"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M 760.5 638
+            L 767.5 638
+            L 770.5 667
+            Q 769.5 676 764.5 677
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M 772.5 689
+            L 782.5 689
+            L 785.5 703
+            L 769.5 703
+            Z"
+            fill="url(#gold)"/>
+
+          <!-- Base -->
+          <path d="
+            M 758.5 703
+            L 796.5 703
+            L 800.5 712
+            L 754.5 712
+            Z"
+            fill="url(#gold)"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M 765.5 713
+            L 789.5 713
+            L 792.5 718
+            L 762.5 718
+            Z"
+            fill="url(#gold)"/>
+
+        </g>
+
+        
+        
+
+              <text x="777.5" y="725"
+                text-anchor="middle"
+                fill="#FFFFFF"
+                font-size="10.5"
+                font-weight="600">
+                Lifetime Contributions
+              </text>
+
+              <text x="777.5" y="740"
+                text-anchor="middle"
+                fill="#D6A72C"
+                font-size="11"
+                font-weight="700">
+                400
+              </text>
+
+              <rect x="755.5" y="745"
+                width="44" height="16"
+                rx="8"
+                fill="url(#gold)"/>
+
+              <text x="777.5" y="757"
+                text-anchor="middle"
+                fill="#FFFFFF"
+                font-size="10"
+                font-weight="800">
+                SSS
+              </text>
+            </g>
+            </svg>
