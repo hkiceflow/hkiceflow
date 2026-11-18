@@ -1,369 +1,2073 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="790" viewBox="0 0 900 790">
         <defs>
-          <linearGradient id="trophyBg" x1="0" y1="0" x2="1" y2="1">
+          <linearGradient id="trophyBg"
+            x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stop-color="#10182d"/>
             <stop offset="100%" stop-color="#17112b"/>
           </linearGradient>
-          <linearGradient id="trophyTitle" x1="0" y1="0" x2="1" y2="0">
+
+          <linearGradient id="trophyTitle"
+            x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stop-color="#55C7FF"/>
             <stop offset="50%" stop-color="#A78BFA"/>
             <stop offset="100%" stop-color="#FF75B5"/>
           </linearGradient>
+
+          <linearGradient id="gold"
+            x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FFF2A6"/>
+            <stop offset="35%" stop-color="#FFD700"/>
+            <stop offset="70%" stop-color="#D99A18"/>
+            <stop offset="100%" stop-color="#FFF0A0"/>
+          </linearGradient>
+
+          <linearGradient id="silver"
+            x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FFFFFF"/>
+            <stop offset="35%" stop-color="#DCE5F0"/>
+            <stop offset="70%" stop-color="#8293AA"/>
+            <stop offset="100%" stop-color="#F5F8FF"/>
+          </linearGradient>
+
+          <linearGradient id="bronze"
+            x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FFD0A0"/>
+            <stop offset="35%" stop-color="#CD8750"/>
+            <stop offset="70%" stop-color="#92512E"/>
+            <stop offset="100%" stop-color="#F2B77C"/>
+          </linearGradient>
+
+          <linearGradient id="dark"
+            x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#64718A"/>
+            <stop offset="100%" stop-color="#30394D"/>
+          </linearGradient>
+
+          <linearGradient id="trophyCard"
+            x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1B2945"/>
+            <stop offset="100%" stop-color="#121C32"/>
+          </linearGradient>
+
+          <filter id="trophyShadow"
+            x="-40%" y="-40%" width="180%" height="190%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+            <feOffset dy="3"/>
+            <feComponentTransfer>
+              <feFuncA type="linear" slope="0.35"/>
+            </feComponentTransfer>
+            <feMerge>
+              <feMergeNode/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
         </defs>
-        <rect width="900" height="790" rx="20" fill="url(#trophyBg)"/>
-        <text x="450" y="35" text-anchor="middle"
-          font-size="22" font-weight="bold"
-          fill="url(#trophyTitle)">GITHUB TROPHIES</text>
+
+        <rect width="900" height="790"
+          rx="20" fill="url(#trophyBg)"/>
+
+        <text x="450" y="38"
+          text-anchor="middle"
+          font-size="23"
+          font-weight="bold"
+          letter-spacing="2"
+          fill="url(#trophyTitle)">
+          GITHUB TROPHIES
+        </text>
+
+        <line x1="30" y1="49" x2="870" y2="49"
+          stroke="#34415f" stroke-width="1"/>
         
         <g>
-          <rect x="15" y="55"
+          <!-- Card -->
+          <rect x="15" y="65"
             width="205" height="165"
-            rx="14" fill="#151F38"
-            stroke="#62D99B" stroke-width="2"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="#34415f"
+            stroke-width="1.3"/>
 
-          <circle cx="117.5" cy="103"
-            r="30" fill="#62D99B" opacity="0.14"/>
+          <rect x="16" y="66"
+            width="203" height="3"
+            rx="2"
+            fill="url(#silver)"/>
 
-          <text x="117.5" y="114"
-            text-anchor="middle" font-size="38"
-            font-weight="bold" fill="#62D99B">★</text>
+          <!-- Trophy -->
+          
+        <g opacity="1" filter="url(#trophyShadow)">
 
-          <text x="117.5" y="153"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="#DCE6FF">STARS</text>
+          <!-- Trophy handles -->
+          <path d="
+            M 93.5 87
+            C 64.5 81,
+              66.5 122,
+              94.5 123
+            L 99.5 113
+            C 80.5 112,
+              78.5 96,
+              93.5 99
+            Z"
+            fill="url(#silver)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="117.5" y="178"
-            text-anchor="middle" font-size="16"
-            font-weight="bold" fill="#FFFFFF">56</text>
+          <path d="
+            M 141.5 87
+            C 170.5 81,
+              168.5 122,
+              140.5 123
+            L 135.5 113
+            C 154.5 112,
+              156.5 96,
+              141.5 99
+            Z"
+            fill="url(#silver)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="117.5" y="202"
-            text-anchor="middle" font-size="15"
-            font-weight="bold" fill="#62D99B">AA</text>
+          <!-- Trophy cup -->
+          <path d="
+            M 91.5 82
+            L 143.5 82
+            L 138.5 113
+            Q 135.5 135 117.5 141
+            Q 99.5 135 96.5 113
+            Z"
+            fill="url(#silver)"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M 100.5 88
+            L 107.5 88
+            L 110.5 117
+            Q 109.5 126 104.5 127
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M 112.5 139
+            L 122.5 139
+            L 125.5 153
+            L 109.5 153
+            Z"
+            fill="url(#silver)"/>
+
+          <!-- Base -->
+          <path d="
+            M 98.5 153
+            L 136.5 153
+            L 140.5 162
+            L 94.5 162
+            Z"
+            fill="url(#silver)"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M 105.5 163
+            L 129.5 163
+            L 132.5 168
+            L 102.5 168
+            Z"
+            fill="url(#silver)"/>
+
+        </g>
+
+        
+        
+
+          <!-- Achievement -->
+          <text x="117.5" y="190"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            letter-spacing=".7"
+            fill="#DCE6FF">STARS</text>
+
+          <text x="117.5" y="210"
+            text-anchor="middle"
+            font-size="15"
+            font-weight="bold"
+            fill="#FFFFFF">56</text>
+
+          <!-- Rank badge -->
+          <rect x="95.5" y="215"
+            width="44" height="18"
+            rx="9"
+            fill="url(#silver)"/>
+
+          <text x="117.5" y="228"
+            text-anchor="middle"
+            font-size="11"
+            font-weight="bold"
+            fill="#10182D">AA</text>
         </g>
         
         <g>
-          <rect x="235" y="55"
+          <!-- Card -->
+          <rect x="235" y="65"
             width="205" height="165"
-            rx="14" fill="#151F38"
-            stroke="#62D99B" stroke-width="2"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="#34415f"
+            stroke-width="1.3"/>
 
-          <circle cx="337.5" cy="103"
-            r="30" fill="#62D99B" opacity="0.14"/>
+          <rect x="236" y="66"
+            width="203" height="3"
+            rx="2"
+            fill="url(#silver)"/>
 
-          <text x="337.5" y="114"
-            text-anchor="middle" font-size="38"
-            font-weight="bold" fill="#62D99B">◆</text>
+          <!-- Trophy -->
+          
+        <g opacity="1" filter="url(#trophyShadow)">
 
-          <text x="337.5" y="153"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="#DCE6FF">COMMITS</text>
+          <!-- Trophy handles -->
+          <path d="
+            M 313.5 87
+            C 284.5 81,
+              286.5 122,
+              314.5 123
+            L 319.5 113
+            C 300.5 112,
+              298.5 96,
+              313.5 99
+            Z"
+            fill="url(#silver)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="337.5" y="178"
-            text-anchor="middle" font-size="16"
-            font-weight="bold" fill="#FFFFFF">313</text>
+          <path d="
+            M 361.5 87
+            C 390.5 81,
+              388.5 122,
+              360.5 123
+            L 355.5 113
+            C 374.5 112,
+              376.5 96,
+              361.5 99
+            Z"
+            fill="url(#silver)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="337.5" y="202"
-            text-anchor="middle" font-size="15"
-            font-weight="bold" fill="#62D99B">AA</text>
+          <!-- Trophy cup -->
+          <path d="
+            M 311.5 82
+            L 363.5 82
+            L 358.5 113
+            Q 355.5 135 337.5 141
+            Q 319.5 135 316.5 113
+            Z"
+            fill="url(#silver)"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M 320.5 88
+            L 327.5 88
+            L 330.5 117
+            Q 329.5 126 324.5 127
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M 332.5 139
+            L 342.5 139
+            L 345.5 153
+            L 329.5 153
+            Z"
+            fill="url(#silver)"/>
+
+          <!-- Base -->
+          <path d="
+            M 318.5 153
+            L 356.5 153
+            L 360.5 162
+            L 314.5 162
+            Z"
+            fill="url(#silver)"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M 325.5 163
+            L 349.5 163
+            L 352.5 168
+            L 322.5 168
+            Z"
+            fill="url(#silver)"/>
+
+        </g>
+
+        
+        
+
+          <!-- Achievement -->
+          <text x="337.5" y="190"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            letter-spacing=".7"
+            fill="#DCE6FF">COMMITS</text>
+
+          <text x="337.5" y="210"
+            text-anchor="middle"
+            font-size="15"
+            font-weight="bold"
+            fill="#FFFFFF">314</text>
+
+          <!-- Rank badge -->
+          <rect x="315.5" y="215"
+            width="44" height="18"
+            rx="9"
+            fill="url(#silver)"/>
+
+          <text x="337.5" y="228"
+            text-anchor="middle"
+            font-size="11"
+            font-weight="bold"
+            fill="#10182D">AA</text>
         </g>
         
         <g>
-          <rect x="455" y="55"
+          <!-- Card -->
+          <rect x="455" y="65"
             width="205" height="165"
-            rx="14" fill="#151F38"
-            stroke="#8EA7FF" stroke-width="2"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="#34415f"
+            stroke-width="1.3"/>
 
-          <circle cx="557.5" cy="103"
-            r="30" fill="#8EA7FF" opacity="0.14"/>
+          <rect x="456" y="66"
+            width="203" height="3"
+            rx="2"
+            fill="url(#silver)"/>
 
-          <text x="557.5" y="114"
-            text-anchor="middle" font-size="38"
-            font-weight="bold" fill="#8EA7FF">●</text>
+          <!-- Trophy -->
+          
+        <g opacity="1" filter="url(#trophyShadow)">
 
-          <text x="557.5" y="153"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="#DCE6FF">FOLLOWERS</text>
+          <!-- Trophy handles -->
+          <path d="
+            M 533.5 87
+            C 504.5 81,
+              506.5 122,
+              534.5 123
+            L 539.5 113
+            C 520.5 112,
+              518.5 96,
+              533.5 99
+            Z"
+            fill="url(#silver)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="557.5" y="178"
-            text-anchor="middle" font-size="16"
-            font-weight="bold" fill="#FFFFFF">22</text>
+          <path d="
+            M 581.5 87
+            C 610.5 81,
+              608.5 122,
+              580.5 123
+            L 575.5 113
+            C 594.5 112,
+              596.5 96,
+              581.5 99
+            Z"
+            fill="url(#silver)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="557.5" y="202"
-            text-anchor="middle" font-size="15"
-            font-weight="bold" fill="#8EA7FF">A</text>
+          <!-- Trophy cup -->
+          <path d="
+            M 531.5 82
+            L 583.5 82
+            L 578.5 113
+            Q 575.5 135 557.5 141
+            Q 539.5 135 536.5 113
+            Z"
+            fill="url(#silver)"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M 540.5 88
+            L 547.5 88
+            L 550.5 117
+            Q 549.5 126 544.5 127
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M 552.5 139
+            L 562.5 139
+            L 565.5 153
+            L 549.5 153
+            Z"
+            fill="url(#silver)"/>
+
+          <!-- Base -->
+          <path d="
+            M 538.5 153
+            L 576.5 153
+            L 580.5 162
+            L 534.5 162
+            Z"
+            fill="url(#silver)"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M 545.5 163
+            L 569.5 163
+            L 572.5 168
+            L 542.5 168
+            Z"
+            fill="url(#silver)"/>
+
+        </g>
+
+        
+        
+
+          <!-- Achievement -->
+          <text x="557.5" y="190"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            letter-spacing=".7"
+            fill="#DCE6FF">FOLLOWERS</text>
+
+          <text x="557.5" y="210"
+            text-anchor="middle"
+            font-size="15"
+            font-weight="bold"
+            fill="#FFFFFF">22</text>
+
+          <!-- Rank badge -->
+          <rect x="535.5" y="215"
+            width="44" height="18"
+            rx="9"
+            fill="url(#silver)"/>
+
+          <text x="557.5" y="228"
+            text-anchor="middle"
+            font-size="11"
+            font-weight="bold"
+            fill="#10182D">A</text>
         </g>
         
         <g>
-          <rect x="675" y="55"
+          <!-- Card -->
+          <rect x="675" y="65"
             width="205" height="165"
-            rx="14" fill="#151F38"
-            stroke="#8A93A8" stroke-width="2"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="#34415f"
+            stroke-width="1.3"/>
 
-          <circle cx="777.5" cy="103"
-            r="30" fill="#8A93A8" opacity="0.14"/>
+          <rect x="676" y="66"
+            width="203" height="3"
+            rx="2"
+            fill="url(#bronze)"/>
 
-          <text x="777.5" y="114"
-            text-anchor="middle" font-size="38"
-            font-weight="bold" fill="#8A93A8">!</text>
+          <!-- Trophy -->
+          
+        <g opacity="1" filter="url(#trophyShadow)">
 
-          <text x="777.5" y="153"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="#DCE6FF">ISSUES</text>
+          <!-- Trophy handles -->
+          <path d="
+            M 753.5 87
+            C 724.5 81,
+              726.5 122,
+              754.5 123
+            L 759.5 113
+            C 740.5 112,
+              738.5 96,
+              753.5 99
+            Z"
+            fill="url(#bronze)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="777.5" y="178"
-            text-anchor="middle" font-size="16"
-            font-weight="bold" fill="#FFFFFF">9</text>
+          <path d="
+            M 801.5 87
+            C 830.5 81,
+              828.5 122,
+              800.5 123
+            L 795.5 113
+            C 814.5 112,
+              816.5 96,
+              801.5 99
+            Z"
+            fill="url(#bronze)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="777.5" y="202"
-            text-anchor="middle" font-size="15"
-            font-weight="bold" fill="#8A93A8">C</text>
+          <!-- Trophy cup -->
+          <path d="
+            M 751.5 82
+            L 803.5 82
+            L 798.5 113
+            Q 795.5 135 777.5 141
+            Q 759.5 135 756.5 113
+            Z"
+            fill="url(#bronze)"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M 760.5 88
+            L 767.5 88
+            L 770.5 117
+            Q 769.5 126 764.5 127
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M 772.5 139
+            L 782.5 139
+            L 785.5 153
+            L 769.5 153
+            Z"
+            fill="url(#bronze)"/>
+
+          <!-- Base -->
+          <path d="
+            M 758.5 153
+            L 796.5 153
+            L 800.5 162
+            L 754.5 162
+            Z"
+            fill="url(#bronze)"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M 765.5 163
+            L 789.5 163
+            L 792.5 168
+            L 762.5 168
+            Z"
+            fill="url(#bronze)"/>
+
+        </g>
+
+        
+        
+
+          <!-- Achievement -->
+          <text x="777.5" y="190"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            letter-spacing=".7"
+            fill="#DCE6FF">ISSUES</text>
+
+          <text x="777.5" y="210"
+            text-anchor="middle"
+            font-size="15"
+            font-weight="bold"
+            fill="#FFFFFF">9</text>
+
+          <!-- Rank badge -->
+          <rect x="755.5" y="215"
+            width="44" height="18"
+            rx="9"
+            fill="url(#bronze)"/>
+
+          <text x="777.5" y="228"
+            text-anchor="middle"
+            font-size="11"
+            font-weight="bold"
+            fill="#10182D">C</text>
         </g>
         
         <g>
-          <rect x="15" y="238"
+          <!-- Card -->
+          <rect x="15" y="248"
             width="205" height="165"
-            rx="14" fill="#151F38"
-            stroke="#8A93A8" stroke-width="2"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="#34415f"
+            stroke-width="1.3"/>
 
-          <circle cx="117.5" cy="286"
-            r="30" fill="#8A93A8" opacity="0.14"/>
+          <rect x="16" y="249"
+            width="203" height="3"
+            rx="2"
+            fill="url(#bronze)"/>
 
-          <text x="117.5" y="297"
-            text-anchor="middle" font-size="38"
-            font-weight="bold" fill="#8A93A8">⇧</text>
+          <!-- Trophy -->
+          
+        <g opacity="1" filter="url(#trophyShadow)">
 
-          <text x="117.5" y="336"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="#DCE6FF">PULL REQUESTS</text>
+          <!-- Trophy handles -->
+          <path d="
+            M 93.5 270
+            C 64.5 264,
+              66.5 305,
+              94.5 306
+            L 99.5 296
+            C 80.5 295,
+              78.5 279,
+              93.5 282
+            Z"
+            fill="url(#bronze)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="117.5" y="361"
-            text-anchor="middle" font-size="16"
-            font-weight="bold" fill="#FFFFFF">2</text>
+          <path d="
+            M 141.5 270
+            C 170.5 264,
+              168.5 305,
+              140.5 306
+            L 135.5 296
+            C 154.5 295,
+              156.5 279,
+              141.5 282
+            Z"
+            fill="url(#bronze)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="117.5" y="385"
-            text-anchor="middle" font-size="15"
-            font-weight="bold" fill="#8A93A8">C</text>
+          <!-- Trophy cup -->
+          <path d="
+            M 91.5 265
+            L 143.5 265
+            L 138.5 296
+            Q 135.5 318 117.5 324
+            Q 99.5 318 96.5 296
+            Z"
+            fill="url(#bronze)"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M 100.5 271
+            L 107.5 271
+            L 110.5 300
+            Q 109.5 309 104.5 310
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M 112.5 322
+            L 122.5 322
+            L 125.5 336
+            L 109.5 336
+            Z"
+            fill="url(#bronze)"/>
+
+          <!-- Base -->
+          <path d="
+            M 98.5 336
+            L 136.5 336
+            L 140.5 345
+            L 94.5 345
+            Z"
+            fill="url(#bronze)"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M 105.5 346
+            L 129.5 346
+            L 132.5 351
+            L 102.5 351
+            Z"
+            fill="url(#bronze)"/>
+
+        </g>
+
+        
+        
+
+          <!-- Achievement -->
+          <text x="117.5" y="373"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            letter-spacing=".7"
+            fill="#DCE6FF">PULL REQUESTS</text>
+
+          <text x="117.5" y="393"
+            text-anchor="middle"
+            font-size="15"
+            font-weight="bold"
+            fill="#FFFFFF">2</text>
+
+          <!-- Rank badge -->
+          <rect x="95.5" y="398"
+            width="44" height="18"
+            rx="9"
+            fill="url(#bronze)"/>
+
+          <text x="117.5" y="411"
+            text-anchor="middle"
+            font-size="11"
+            font-weight="bold"
+            fill="#10182D">C</text>
         </g>
         
         <g>
-          <rect x="235" y="238"
+          <!-- Card -->
+          <rect x="235" y="248"
             width="205" height="165"
-            rx="14" fill="#151F38"
-            stroke="#FFD700" stroke-width="2"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="#34415f"
+            stroke-width="1.3"/>
 
-          <circle cx="337.5" cy="286"
-            r="30" fill="#FFD700" opacity="0.14"/>
+          <rect x="236" y="249"
+            width="203" height="3"
+            rx="2"
+            fill="url(#gold)"/>
 
-          <text x="337.5" y="297"
-            text-anchor="middle" font-size="38"
-            font-weight="bold" fill="#FFD700">▣</text>
+          <!-- Trophy -->
+          
+        <g opacity="1" filter="url(#trophyShadow)">
 
-          <text x="337.5" y="336"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="#DCE6FF">REPOSITORIES</text>
+          <!-- Trophy handles -->
+          <path d="
+            M 313.5 270
+            C 284.5 264,
+              286.5 305,
+              314.5 306
+            L 319.5 296
+            C 300.5 295,
+              298.5 279,
+              313.5 282
+            Z"
+            fill="url(#gold)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="337.5" y="361"
-            text-anchor="middle" font-size="16"
-            font-weight="bold" fill="#FFFFFF">77</text>
+          <path d="
+            M 361.5 270
+            C 390.5 264,
+              388.5 305,
+              360.5 306
+            L 355.5 296
+            C 374.5 295,
+              376.5 279,
+              361.5 282
+            Z"
+            fill="url(#gold)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="337.5" y="385"
-            text-anchor="middle" font-size="15"
-            font-weight="bold" fill="#FFD700">SSS</text>
+          <!-- Trophy cup -->
+          <path d="
+            M 311.5 265
+            L 363.5 265
+            L 358.5 296
+            Q 355.5 318 337.5 324
+            Q 319.5 318 316.5 296
+            Z"
+            fill="url(#gold)"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M 320.5 271
+            L 327.5 271
+            L 330.5 300
+            Q 329.5 309 324.5 310
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M 332.5 322
+            L 342.5 322
+            L 345.5 336
+            L 329.5 336
+            Z"
+            fill="url(#gold)"/>
+
+          <!-- Base -->
+          <path d="
+            M 318.5 336
+            L 356.5 336
+            L 360.5 345
+            L 314.5 345
+            Z"
+            fill="url(#gold)"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M 325.5 346
+            L 349.5 346
+            L 352.5 351
+            L 322.5 351
+            Z"
+            fill="url(#gold)"/>
+
+        </g>
+
+        
+        
+
+          <!-- Achievement -->
+          <text x="337.5" y="373"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            letter-spacing=".7"
+            fill="#DCE6FF">REPOSITORIES</text>
+
+          <text x="337.5" y="393"
+            text-anchor="middle"
+            font-size="15"
+            font-weight="bold"
+            fill="#FFFFFF">77</text>
+
+          <!-- Rank badge -->
+          <rect x="315.5" y="398"
+            width="44" height="18"
+            rx="9"
+            fill="url(#gold)"/>
+
+          <text x="337.5" y="411"
+            text-anchor="middle"
+            font-size="11"
+            font-weight="bold"
+            fill="#10182D">SSS</text>
         </g>
         
         <g>
-          <rect x="455" y="238"
+          <!-- Card -->
+          <rect x="455" y="248"
             width="205" height="165"
-            rx="14" fill="#151F38"
-            stroke="#555F75" stroke-width="2"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="#34415f"
+            stroke-width="1.3"/>
 
-          <circle cx="557.5" cy="286"
-            r="30" fill="#555F75" opacity="0.14"/>
+          <rect x="456" y="249"
+            width="203" height="3"
+            rx="2"
+            fill="url(#dark)"/>
 
-          <text x="557.5" y="297"
-            text-anchor="middle" font-size="38"
-            font-weight="bold" fill="#555F75">✓</text>
+          <!-- Trophy -->
+          
+        <g opacity="1" filter="url(#trophyShadow)">
 
-          <text x="557.5" y="336"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="#DCE6FF">REVIEWS</text>
+          <!-- Trophy handles -->
+          <path d="
+            M 533.5 270
+            C 504.5 264,
+              506.5 305,
+              534.5 306
+            L 539.5 296
+            C 520.5 295,
+              518.5 279,
+              533.5 282
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="557.5" y="361"
-            text-anchor="middle" font-size="16"
-            font-weight="bold" fill="#FFFFFF">0</text>
+          <path d="
+            M 581.5 270
+            C 610.5 264,
+              608.5 305,
+              580.5 306
+            L 575.5 296
+            C 594.5 295,
+              596.5 279,
+              581.5 282
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="557.5" y="385"
-            text-anchor="middle" font-size="15"
-            font-weight="bold" fill="#555F75">UNKNOWN</text>
+          <!-- Trophy cup -->
+          <path d="
+            M 531.5 265
+            L 583.5 265
+            L 578.5 296
+            Q 575.5 318 557.5 324
+            Q 539.5 318 536.5 296
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M 540.5 271
+            L 547.5 271
+            L 550.5 300
+            Q 549.5 309 544.5 310
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M 552.5 322
+            L 562.5 322
+            L 565.5 336
+            L 549.5 336
+            Z"
+            fill="url(#dark)"/>
+
+          <!-- Base -->
+          <path d="
+            M 538.5 336
+            L 576.5 336
+            L 580.5 345
+            L 534.5 345
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M 545.5 346
+            L 569.5 346
+            L 572.5 351
+            L 542.5 351
+            Z"
+            fill="url(#dark)"/>
+
+        </g>
+
+        
+        
+
+          <!-- Achievement -->
+          <text x="557.5" y="373"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            letter-spacing=".7"
+            fill="#DCE6FF">REVIEWS</text>
+
+          <text x="557.5" y="393"
+            text-anchor="middle"
+            font-size="15"
+            font-weight="bold"
+            fill="#FFFFFF">0</text>
+
+          <!-- Rank badge -->
+          <rect x="535.5" y="398"
+            width="44" height="18"
+            rx="9"
+            fill="url(#dark)"/>
+
+          <text x="557.5" y="411"
+            text-anchor="middle"
+            font-size="11"
+            font-weight="bold"
+            fill="#10182D">UNKNOWN</text>
         </g>
         
         <g>
-          <rect x="675" y="238"
+          <!-- Card -->
+          <rect x="675" y="248"
             width="205" height="165"
-            rx="14" fill="#151F38"
-            stroke="#8EA7FF" stroke-width="2"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="#34415f"
+            stroke-width="1.3"/>
 
-          <circle cx="777.5" cy="286"
-            r="30" fill="#8EA7FF" opacity="0.14"/>
+          <rect x="676" y="249"
+            width="203" height="3"
+            rx="2"
+            fill="url(#silver)"/>
 
-          <text x="777.5" y="297"
-            text-anchor="middle" font-size="38"
-            font-weight="bold" fill="#8EA7FF">⌛</text>
+          <!-- Trophy -->
+          
+        <g opacity="1" filter="url(#trophyShadow)">
 
-          <text x="777.5" y="336"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="#DCE6FF">EXPERIENCE</text>
+          <!-- Trophy handles -->
+          <path d="
+            M 753.5 270
+            C 724.5 264,
+              726.5 305,
+              754.5 306
+            L 759.5 296
+            C 740.5 295,
+              738.5 279,
+              753.5 282
+            Z"
+            fill="url(#silver)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="777.5" y="361"
-            text-anchor="middle" font-size="16"
-            font-weight="bold" fill="#FFFFFF">4.1 YEARS</text>
+          <path d="
+            M 801.5 270
+            C 830.5 264,
+              828.5 305,
+              800.5 306
+            L 795.5 296
+            C 814.5 295,
+              816.5 279,
+              801.5 282
+            Z"
+            fill="url(#silver)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="777.5" y="385"
-            text-anchor="middle" font-size="15"
-            font-weight="bold" fill="#8EA7FF">A</text>
+          <!-- Trophy cup -->
+          <path d="
+            M 751.5 265
+            L 803.5 265
+            L 798.5 296
+            Q 795.5 318 777.5 324
+            Q 759.5 318 756.5 296
+            Z"
+            fill="url(#silver)"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M 760.5 271
+            L 767.5 271
+            L 770.5 300
+            Q 769.5 309 764.5 310
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M 772.5 322
+            L 782.5 322
+            L 785.5 336
+            L 769.5 336
+            Z"
+            fill="url(#silver)"/>
+
+          <!-- Base -->
+          <path d="
+            M 758.5 336
+            L 796.5 336
+            L 800.5 345
+            L 754.5 345
+            Z"
+            fill="url(#silver)"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M 765.5 346
+            L 789.5 346
+            L 792.5 351
+            L 762.5 351
+            Z"
+            fill="url(#silver)"/>
+
+        </g>
+
+        
+        
+
+          <!-- Achievement -->
+          <text x="777.5" y="373"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            letter-spacing=".7"
+            fill="#DCE6FF">EXPERIENCE</text>
+
+          <text x="777.5" y="393"
+            text-anchor="middle"
+            font-size="15"
+            font-weight="bold"
+            fill="#FFFFFF">4.1 YEARS</text>
+
+          <!-- Rank badge -->
+          <rect x="755.5" y="398"
+            width="44" height="18"
+            rx="9"
+            fill="url(#silver)"/>
+
+          <text x="777.5" y="411"
+            text-anchor="middle"
+            font-size="11"
+            font-weight="bold"
+            fill="#10182D">A</text>
         </g>
         
-    <text x="450" y="440" text-anchor="middle"
-      font-size="19" font-weight="bold"
-      fill="url(#trophyTitle)">SECRET TROPHIES</text>
+    <line x1="30" y1="425" x2="870" y2="425"
+      stroke="#34415f" stroke-width="1"/>
+
+    <text x="450" y="456"
+      text-anchor="middle"
+      font-size="19"
+      font-weight="bold"
+      letter-spacing="1.5"
+      fill="url(#trophyTitle)">
+      SECRET TROPHIES
+    </text>
     
         <g>
-          <rect x="15" y="465"
+          <rect x="15" y="475"
             width="205" height="125"
-            rx="14" fill="#151F38"
-            stroke="#555F75" stroke-width="2"
-            opacity="0.7"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="#34415f"
+            stroke-width="1.5"
+            opacity="0.75"/>
 
-          <text x="117.5" y="513"
-            text-anchor="middle" font-size="34"
-            fill="#555F75">🔒</text>
+          
+        <g opacity="0.48" filter="url(#trophyShadow)">
 
-          <text x="117.5" y="544"
-            text-anchor="middle" font-size="12"
-            font-weight="bold" fill="#DCE6FF">MultiLanguage</text>
+          <!-- Trophy handles -->
+          <path d="
+            M 93.5 492
+            C 64.5 486,
+              66.5 527,
+              94.5 528
+            L 99.5 518
+            C 80.5 517,
+              78.5 501,
+              93.5 504
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="117.5" y="570"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="#555F75">LOCKED</text>
+          <path d="
+            M 141.5 492
+            C 170.5 486,
+              168.5 527,
+              140.5 528
+            L 135.5 518
+            C 154.5 517,
+              156.5 501,
+              141.5 504
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
+
+          <!-- Trophy cup -->
+          <path d="
+            M 91.5 487
+            L 143.5 487
+            L 138.5 518
+            Q 135.5 540 117.5 546
+            Q 99.5 540 96.5 518
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M 100.5 493
+            L 107.5 493
+            L 110.5 522
+            Q 109.5 531 104.5 532
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M 112.5 544
+            L 122.5 544
+            L 125.5 558
+            L 109.5 558
+            Z"
+            fill="url(#dark)"/>
+
+          <!-- Base -->
+          <path d="
+            M 98.5 558
+            L 136.5 558
+            L 140.5 567
+            L 94.5 567
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M 105.5 568
+            L 129.5 568
+            L 132.5 573
+            L 102.5 573
+            Z"
+            fill="url(#dark)"/>
+
+        </g>
+
+        
+        <!-- Lock symbol -->
+        <g transform="translate(132.5 536)">
+          <rect x="-10" y="0" width="23" height="19"
+            rx="4" fill="#202B40"
+            stroke="#9AA7BC" stroke-width="1.5"/>
+          <path d="M -5 0 V -6
+            A 6 6 0 0 1 7 -6 V 0"
+            fill="none" stroke="#9AA7BC"
+            stroke-width="3" stroke-linecap="round"/>
+          <circle cx="1.5" cy="9" r="2"
+            fill="#DCE6FF"/>
+        </g>
+        
+        
+
+          <text x="117.5" y="580"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            fill="#8998B2">
+            MultiLanguage
+          </text>
+
+          <text x="117.5" y="594"
+            text-anchor="middle"
+            font-size="10"
+            font-weight="bold"
+            letter-spacing="1"
+            fill="#64718A">
+            LOCKED
+          </text>
         </g>
         
         <g>
-          <rect x="235" y="465"
+          <rect x="235" y="475"
             width="205" height="125"
-            rx="14" fill="#151F38"
-            stroke="#555F75" stroke-width="2"
-            opacity="0.7"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="#34415f"
+            stroke-width="1.5"
+            opacity="0.75"/>
 
-          <text x="337.5" y="513"
-            text-anchor="middle" font-size="34"
-            fill="#555F75">🔒</text>
+          
+        <g opacity="0.48" filter="url(#trophyShadow)">
 
-          <text x="337.5" y="544"
-            text-anchor="middle" font-size="12"
-            font-weight="bold" fill="#DCE6FF">AllSuperRank</text>
+          <!-- Trophy handles -->
+          <path d="
+            M 313.5 492
+            C 284.5 486,
+              286.5 527,
+              314.5 528
+            L 319.5 518
+            C 300.5 517,
+              298.5 501,
+              313.5 504
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="337.5" y="570"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="#555F75">LOCKED</text>
+          <path d="
+            M 361.5 492
+            C 390.5 486,
+              388.5 527,
+              360.5 528
+            L 355.5 518
+            C 374.5 517,
+              376.5 501,
+              361.5 504
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
+
+          <!-- Trophy cup -->
+          <path d="
+            M 311.5 487
+            L 363.5 487
+            L 358.5 518
+            Q 355.5 540 337.5 546
+            Q 319.5 540 316.5 518
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M 320.5 493
+            L 327.5 493
+            L 330.5 522
+            Q 329.5 531 324.5 532
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M 332.5 544
+            L 342.5 544
+            L 345.5 558
+            L 329.5 558
+            Z"
+            fill="url(#dark)"/>
+
+          <!-- Base -->
+          <path d="
+            M 318.5 558
+            L 356.5 558
+            L 360.5 567
+            L 314.5 567
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M 325.5 568
+            L 349.5 568
+            L 352.5 573
+            L 322.5 573
+            Z"
+            fill="url(#dark)"/>
+
+        </g>
+
+        
+        <!-- Lock symbol -->
+        <g transform="translate(352.5 536)">
+          <rect x="-10" y="0" width="23" height="19"
+            rx="4" fill="#202B40"
+            stroke="#9AA7BC" stroke-width="1.5"/>
+          <path d="M -5 0 V -6
+            A 6 6 0 0 1 7 -6 V 0"
+            fill="none" stroke="#9AA7BC"
+            stroke-width="3" stroke-linecap="round"/>
+          <circle cx="1.5" cy="9" r="2"
+            fill="#DCE6FF"/>
+        </g>
+        
+        
+
+          <text x="337.5" y="580"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            fill="#8998B2">
+            AllSuperRank
+          </text>
+
+          <text x="337.5" y="594"
+            text-anchor="middle"
+            font-size="10"
+            font-weight="bold"
+            letter-spacing="1"
+            fill="#64718A">
+            LOCKED
+          </text>
         </g>
         
         <g>
-          <rect x="455" y="465"
+          <rect x="455" y="475"
             width="205" height="125"
-            rx="14" fill="#151F38"
-            stroke="#555F75" stroke-width="2"
-            opacity="0.7"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="#34415f"
+            stroke-width="1.5"
+            opacity="0.75"/>
 
-          <text x="557.5" y="513"
-            text-anchor="middle" font-size="34"
-            fill="#555F75">🔒</text>
+          
+        <g opacity="0.48" filter="url(#trophyShadow)">
 
-          <text x="557.5" y="544"
-            text-anchor="middle" font-size="12"
-            font-weight="bold" fill="#DCE6FF">Joined2020</text>
+          <!-- Trophy handles -->
+          <path d="
+            M 533.5 492
+            C 504.5 486,
+              506.5 527,
+              534.5 528
+            L 539.5 518
+            C 520.5 517,
+              518.5 501,
+              533.5 504
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="557.5" y="570"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="#555F75">LOCKED</text>
+          <path d="
+            M 581.5 492
+            C 610.5 486,
+              608.5 527,
+              580.5 528
+            L 575.5 518
+            C 594.5 517,
+              596.5 501,
+              581.5 504
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
+
+          <!-- Trophy cup -->
+          <path d="
+            M 531.5 487
+            L 583.5 487
+            L 578.5 518
+            Q 575.5 540 557.5 546
+            Q 539.5 540 536.5 518
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M 540.5 493
+            L 547.5 493
+            L 550.5 522
+            Q 549.5 531 544.5 532
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M 552.5 544
+            L 562.5 544
+            L 565.5 558
+            L 549.5 558
+            Z"
+            fill="url(#dark)"/>
+
+          <!-- Base -->
+          <path d="
+            M 538.5 558
+            L 576.5 558
+            L 580.5 567
+            L 534.5 567
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M 545.5 568
+            L 569.5 568
+            L 572.5 573
+            L 542.5 573
+            Z"
+            fill="url(#dark)"/>
+
+        </g>
+
+        
+        <!-- Lock symbol -->
+        <g transform="translate(572.5 536)">
+          <rect x="-10" y="0" width="23" height="19"
+            rx="4" fill="#202B40"
+            stroke="#9AA7BC" stroke-width="1.5"/>
+          <path d="M -5 0 V -6
+            A 6 6 0 0 1 7 -6 V 0"
+            fill="none" stroke="#9AA7BC"
+            stroke-width="3" stroke-linecap="round"/>
+          <circle cx="1.5" cy="9" r="2"
+            fill="#DCE6FF"/>
+        </g>
+        
+        
+
+          <text x="557.5" y="580"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            fill="#8998B2">
+            Joined2020
+          </text>
+
+          <text x="557.5" y="594"
+            text-anchor="middle"
+            font-size="10"
+            font-weight="bold"
+            letter-spacing="1"
+            fill="#64718A">
+            LOCKED
+          </text>
         </g>
         
         <g>
-          <rect x="675" y="465"
+          <rect x="675" y="475"
             width="205" height="125"
-            rx="14" fill="#151F38"
-            stroke="#555F75" stroke-width="2"
-            opacity="0.7"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="#34415f"
+            stroke-width="1.5"
+            opacity="0.75"/>
 
-          <text x="777.5" y="513"
-            text-anchor="middle" font-size="34"
-            fill="#555F75">🔒</text>
+          
+        <g opacity="0.48" filter="url(#trophyShadow)">
 
-          <text x="777.5" y="544"
-            text-anchor="middle" font-size="12"
-            font-weight="bold" fill="#DCE6FF">AncientUser</text>
+          <!-- Trophy handles -->
+          <path d="
+            M 753.5 492
+            C 724.5 486,
+              726.5 527,
+              754.5 528
+            L 759.5 518
+            C 740.5 517,
+              738.5 501,
+              753.5 504
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="777.5" y="570"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="#555F75">LOCKED</text>
+          <path d="
+            M 801.5 492
+            C 830.5 486,
+              828.5 527,
+              800.5 528
+            L 795.5 518
+            C 814.5 517,
+              816.5 501,
+              801.5 504
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
+
+          <!-- Trophy cup -->
+          <path d="
+            M 751.5 487
+            L 803.5 487
+            L 798.5 518
+            Q 795.5 540 777.5 546
+            Q 759.5 540 756.5 518
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M 760.5 493
+            L 767.5 493
+            L 770.5 522
+            Q 769.5 531 764.5 532
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M 772.5 544
+            L 782.5 544
+            L 785.5 558
+            L 769.5 558
+            Z"
+            fill="url(#dark)"/>
+
+          <!-- Base -->
+          <path d="
+            M 758.5 558
+            L 796.5 558
+            L 800.5 567
+            L 754.5 567
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M 765.5 568
+            L 789.5 568
+            L 792.5 573
+            L 762.5 573
+            Z"
+            fill="url(#dark)"/>
+
+        </g>
+
+        
+        <!-- Lock symbol -->
+        <g transform="translate(792.5 536)">
+          <rect x="-10" y="0" width="23" height="19"
+            rx="4" fill="#202B40"
+            stroke="#9AA7BC" stroke-width="1.5"/>
+          <path d="M -5 0 V -6
+            A 6 6 0 0 1 7 -6 V 0"
+            fill="none" stroke="#9AA7BC"
+            stroke-width="3" stroke-linecap="round"/>
+          <circle cx="1.5" cy="9" r="2"
+            fill="#DCE6FF"/>
+        </g>
+        
+        
+
+          <text x="777.5" y="580"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            fill="#8998B2">
+            AncientUser
+          </text>
+
+          <text x="777.5" y="594"
+            text-anchor="middle"
+            font-size="10"
+            font-weight="bold"
+            letter-spacing="1"
+            fill="#64718A">
+            LOCKED
+          </text>
         </g>
         
         <g>
-          <rect x="15" y="610"
+          <rect x="15" y="620"
             width="205" height="125"
-            rx="14" fill="#151F38"
-            stroke="#555F75" stroke-width="2"
-            opacity="0.7"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="#34415f"
+            stroke-width="1.5"
+            opacity="0.75"/>
 
-          <text x="117.5" y="658"
-            text-anchor="middle" font-size="34"
-            fill="#555F75">🔒</text>
+          
+        <g opacity="0.48" filter="url(#trophyShadow)">
 
-          <text x="117.5" y="689"
-            text-anchor="middle" font-size="12"
-            font-weight="bold" fill="#DCE6FF">LongTimeUser</text>
+          <!-- Trophy handles -->
+          <path d="
+            M 93.5 637
+            C 64.5 631,
+              66.5 672,
+              94.5 673
+            L 99.5 663
+            C 80.5 662,
+              78.5 646,
+              93.5 649
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="117.5" y="715"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="#555F75">LOCKED</text>
+          <path d="
+            M 141.5 637
+            C 170.5 631,
+              168.5 672,
+              140.5 673
+            L 135.5 663
+            C 154.5 662,
+              156.5 646,
+              141.5 649
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
+
+          <!-- Trophy cup -->
+          <path d="
+            M 91.5 632
+            L 143.5 632
+            L 138.5 663
+            Q 135.5 685 117.5 691
+            Q 99.5 685 96.5 663
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M 100.5 638
+            L 107.5 638
+            L 110.5 667
+            Q 109.5 676 104.5 677
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M 112.5 689
+            L 122.5 689
+            L 125.5 703
+            L 109.5 703
+            Z"
+            fill="url(#dark)"/>
+
+          <!-- Base -->
+          <path d="
+            M 98.5 703
+            L 136.5 703
+            L 140.5 712
+            L 94.5 712
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M 105.5 713
+            L 129.5 713
+            L 132.5 718
+            L 102.5 718
+            Z"
+            fill="url(#dark)"/>
+
+        </g>
+
+        
+        <!-- Lock symbol -->
+        <g transform="translate(132.5 681)">
+          <rect x="-10" y="0" width="23" height="19"
+            rx="4" fill="#202B40"
+            stroke="#9AA7BC" stroke-width="1.5"/>
+          <path d="M -5 0 V -6
+            A 6 6 0 0 1 7 -6 V 0"
+            fill="none" stroke="#9AA7BC"
+            stroke-width="3" stroke-linecap="round"/>
+          <circle cx="1.5" cy="9" r="2"
+            fill="#DCE6FF"/>
+        </g>
+        
+        
+
+          <text x="117.5" y="725"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            fill="#8998B2">
+            LongTimeUser
+          </text>
+
+          <text x="117.5" y="739"
+            text-anchor="middle"
+            font-size="10"
+            font-weight="bold"
+            letter-spacing="1"
+            fill="#64718A">
+            LOCKED
+          </text>
         </g>
         
         <g>
-          <rect x="235" y="610"
+          <rect x="235" y="620"
             width="205" height="125"
-            rx="14" fill="#151F38"
-            stroke="#555F75" stroke-width="2"
-            opacity="0.7"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="#34415f"
+            stroke-width="1.5"
+            opacity="0.75"/>
 
-          <text x="337.5" y="658"
-            text-anchor="middle" font-size="34"
-            fill="#555F75">🔒</text>
+          
+        <g opacity="0.48" filter="url(#trophyShadow)">
 
-          <text x="337.5" y="689"
-            text-anchor="middle" font-size="12"
-            font-weight="bold" fill="#DCE6FF">Organizations</text>
+          <!-- Trophy handles -->
+          <path d="
+            M 313.5 637
+            C 284.5 631,
+              286.5 672,
+              314.5 673
+            L 319.5 663
+            C 300.5 662,
+              298.5 646,
+              313.5 649
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="337.5" y="715"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="#555F75">LOCKED</text>
+          <path d="
+            M 361.5 637
+            C 390.5 631,
+              388.5 672,
+              360.5 673
+            L 355.5 663
+            C 374.5 662,
+              376.5 646,
+              361.5 649
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
+
+          <!-- Trophy cup -->
+          <path d="
+            M 311.5 632
+            L 363.5 632
+            L 358.5 663
+            Q 355.5 685 337.5 691
+            Q 319.5 685 316.5 663
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M 320.5 638
+            L 327.5 638
+            L 330.5 667
+            Q 329.5 676 324.5 677
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M 332.5 689
+            L 342.5 689
+            L 345.5 703
+            L 329.5 703
+            Z"
+            fill="url(#dark)"/>
+
+          <!-- Base -->
+          <path d="
+            M 318.5 703
+            L 356.5 703
+            L 360.5 712
+            L 314.5 712
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M 325.5 713
+            L 349.5 713
+            L 352.5 718
+            L 322.5 718
+            Z"
+            fill="url(#dark)"/>
+
+        </g>
+
+        
+        <!-- Lock symbol -->
+        <g transform="translate(352.5 681)">
+          <rect x="-10" y="0" width="23" height="19"
+            rx="4" fill="#202B40"
+            stroke="#9AA7BC" stroke-width="1.5"/>
+          <path d="M -5 0 V -6
+            A 6 6 0 0 1 7 -6 V 0"
+            fill="none" stroke="#9AA7BC"
+            stroke-width="3" stroke-linecap="round"/>
+          <circle cx="1.5" cy="9" r="2"
+            fill="#DCE6FF"/>
+        </g>
+        
+        
+
+          <text x="337.5" y="725"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            fill="#8998B2">
+            Organizations
+          </text>
+
+          <text x="337.5" y="739"
+            text-anchor="middle"
+            font-size="10"
+            font-weight="bold"
+            letter-spacing="1"
+            fill="#64718A">
+            LOCKED
+          </text>
         </g>
         
         <g>
-          <rect x="455" y="610"
+          <rect x="455" y="620"
             width="205" height="125"
-            rx="14" fill="#151F38"
-            stroke="#555F75" stroke-width="2"
-            opacity="0.7"/>
+            rx="13"
+            fill="url(#trophyCard)"
+            stroke="#34415f"
+            stroke-width="1.5"
+            opacity="0.75"/>
 
-          <text x="557.5" y="658"
-            text-anchor="middle" font-size="34"
-            fill="#555F75">🔒</text>
+          
+        <g opacity="0.48" filter="url(#trophyShadow)">
 
-          <text x="557.5" y="689"
-            text-anchor="middle" font-size="12"
-            font-weight="bold" fill="#DCE6FF">OGUser</text>
+          <!-- Trophy handles -->
+          <path d="
+            M 533.5 637
+            C 504.5 631,
+              506.5 672,
+              534.5 673
+            L 539.5 663
+            C 520.5 662,
+              518.5 646,
+              533.5 649
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
 
-          <text x="557.5" y="715"
-            text-anchor="middle" font-size="13"
-            font-weight="bold" fill="#555F75">LOCKED</text>
+          <path d="
+            M 581.5 637
+            C 610.5 631,
+              608.5 672,
+              580.5 673
+            L 575.5 663
+            C 594.5 662,
+              596.5 646,
+              581.5 649
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".25"
+            stroke-width="1"/>
+
+          <!-- Trophy cup -->
+          <path d="
+            M 531.5 632
+            L 583.5 632
+            L 578.5 663
+            Q 575.5 685 557.5 691
+            Q 539.5 685 536.5 663
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".45"
+            stroke-width="1.5"/>
+
+          <!-- Cup highlight -->
+          <path d="
+            M 540.5 638
+            L 547.5 638
+            L 550.5 667
+            Q 549.5 676 544.5 677
+            Z"
+            fill="#FFFFFF"
+            opacity=".22"/>
+
+          <!-- Stem -->
+          <path d="
+            M 552.5 689
+            L 562.5 689
+            L 565.5 703
+            L 549.5 703
+            Z"
+            fill="url(#dark)"/>
+
+          <!-- Base -->
+          <path d="
+            M 538.5 703
+            L 576.5 703
+            L 580.5 712
+            L 534.5 712
+            Z"
+            fill="url(#dark)"
+            stroke="#FFFFFF"
+            stroke-opacity=".3"
+            stroke-width="1"/>
+
+          <path d="
+            M 545.5 713
+            L 569.5 713
+            L 572.5 718
+            L 542.5 718
+            Z"
+            fill="url(#dark)"/>
+
+        </g>
+
+        
+        <!-- Lock symbol -->
+        <g transform="translate(572.5 681)">
+          <rect x="-10" y="0" width="23" height="19"
+            rx="4" fill="#202B40"
+            stroke="#9AA7BC" stroke-width="1.5"/>
+          <path d="M -5 0 V -6
+            A 6 6 0 0 1 7 -6 V 0"
+            fill="none" stroke="#9AA7BC"
+            stroke-width="3" stroke-linecap="round"/>
+          <circle cx="1.5" cy="9" r="2"
+            fill="#DCE6FF"/>
+        </g>
+        
+        
+
+          <text x="557.5" y="725"
+            text-anchor="middle"
+            font-size="12"
+            font-weight="bold"
+            fill="#8998B2">
+            OGUser
+          </text>
+
+          <text x="557.5" y="739"
+            text-anchor="middle"
+            font-size="10"
+            font-weight="bold"
+            letter-spacing="1"
+            fill="#64718A">
+            LOCKED
+          </text>
         </g>
         </svg>
