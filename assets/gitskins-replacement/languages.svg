@@ -149,10 +149,10 @@
     <rect x="48" y="183" width="125" height="5" rx="2.5"
       fill="#293550"/>
 
-    <rect x="48" y="183" width="124.05"
+    <rect x="48" y="183" width="124.00"
       height="5" rx="2.5" fill="url(#accent)">
       <animate attributeName="width"
-        from="0" to="124.05"
+        from="0" to="124.00"
         dur="1.4s" fill="freeze"/>
     </rect>
     
@@ -189,10 +189,10 @@
     <rect x="376" y="183" width="125" height="5" rx="2.5"
       fill="#293550"/>
 
-    <rect x="376" y="183" width="0.35"
+    <rect x="376" y="183" width="0.41"
       height="5" rx="2.5" fill="url(#accent)">
       <animate attributeName="width"
-        from="0" to="0.35"
+        from="0" to="0.41"
         dur="1.4s" fill="freeze"/>
     </rect>
     
