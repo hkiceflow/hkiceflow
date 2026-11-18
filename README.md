@@ -168,9 +168,9 @@
        alt="Animated divider" />
 </p>
 
-## 🏆 GitHub Trophies
+<h3>🏆 GitHub Trophies</h3>
 
-![](https://github-profile-trophy-chi-ten.vercel.app/?username=hkiceflow&theme=darkhub&no-frame=false&no-bg=true&margin-w=4)
+<img src="./assets/gitskins-replacement/trophies.svg" width="100%" loading="lazy" alt="GitHub Trophies">
 
 <p align="center">
   <img src="./assets/gitskins-replacement/divider.svg"
