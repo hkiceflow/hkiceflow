@@ -143,16 +143,16 @@
 
     <text x="48" y="165" fill="#f0f3ff" font-size="25"
       font-family="Segoe UI,Arial" font-weight="600">
-      99.3%
+      99.2%
     </text>
 
     <rect x="48" y="183" width="125" height="5" rx="2.5"
       fill="#293550"/>
 
-    <rect x="48" y="183" width="124.06"
+    <rect x="48" y="183" width="124.05"
       height="5" rx="2.5" fill="url(#accent)">
       <animate attributeName="width"
-        from="0" to="124.06"
+        from="0" to="124.05"
         dur="1.4s" fill="freeze"/>
     </rect>
     
@@ -189,10 +189,10 @@
     <rect x="376" y="183" width="125" height="5" rx="2.5"
       fill="#293550"/>
 
-    <rect x="376" y="183" width="0.34"
+    <rect x="376" y="183" width="0.35"
       height="5" rx="2.5" fill="url(#accent)">
       <animate attributeName="width"
-        from="0" to="0.34"
+        from="0" to="0.35"
         dur="1.4s" fill="freeze"/>
     </rect>
     

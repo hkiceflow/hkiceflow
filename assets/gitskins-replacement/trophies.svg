@@ -1,0 +1,369 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="790" viewBox="0 0 900 790">
+        <defs>
+          <linearGradient id="trophyBg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#10182d"/>
+            <stop offset="100%" stop-color="#17112b"/>
+          </linearGradient>
+          <linearGradient id="trophyTitle" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#55C7FF"/>
+            <stop offset="50%" stop-color="#A78BFA"/>
+            <stop offset="100%" stop-color="#FF75B5"/>
+          </linearGradient>
+        </defs>
+        <rect width="900" height="790" rx="20" fill="url(#trophyBg)"/>
+        <text x="450" y="35" text-anchor="middle"
+          font-size="22" font-weight="bold"
+          fill="url(#trophyTitle)">GITHUB TROPHIES</text>
+        
+        <g>
+          <rect x="15" y="55"
+            width="205" height="165"
+            rx="14" fill="#151F38"
+            stroke="#62D99B" stroke-width="2"/>
+
+          <circle cx="117.5" cy="103"
+            r="30" fill="#62D99B" opacity="0.14"/>
+
+          <text x="117.5" y="114"
+            text-anchor="middle" font-size="38"
+            font-weight="bold" fill="#62D99B">★</text>
+
+          <text x="117.5" y="153"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="#DCE6FF">STARS</text>
+
+          <text x="117.5" y="178"
+            text-anchor="middle" font-size="16"
+            font-weight="bold" fill="#FFFFFF">56</text>
+
+          <text x="117.5" y="202"
+            text-anchor="middle" font-size="15"
+            font-weight="bold" fill="#62D99B">AA</text>
+        </g>
+        
+        <g>
+          <rect x="235" y="55"
+            width="205" height="165"
+            rx="14" fill="#151F38"
+            stroke="#62D99B" stroke-width="2"/>
+
+          <circle cx="337.5" cy="103"
+            r="30" fill="#62D99B" opacity="0.14"/>
+
+          <text x="337.5" y="114"
+            text-anchor="middle" font-size="38"
+            font-weight="bold" fill="#62D99B">◆</text>
+
+          <text x="337.5" y="153"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="#DCE6FF">COMMITS</text>
+
+          <text x="337.5" y="178"
+            text-anchor="middle" font-size="16"
+            font-weight="bold" fill="#FFFFFF">313</text>
+
+          <text x="337.5" y="202"
+            text-anchor="middle" font-size="15"
+            font-weight="bold" fill="#62D99B">AA</text>
+        </g>
+        
+        <g>
+          <rect x="455" y="55"
+            width="205" height="165"
+            rx="14" fill="#151F38"
+            stroke="#8EA7FF" stroke-width="2"/>
+
+          <circle cx="557.5" cy="103"
+            r="30" fill="#8EA7FF" opacity="0.14"/>
+
+          <text x="557.5" y="114"
+            text-anchor="middle" font-size="38"
+            font-weight="bold" fill="#8EA7FF">●</text>
+
+          <text x="557.5" y="153"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="#DCE6FF">FOLLOWERS</text>
+
+          <text x="557.5" y="178"
+            text-anchor="middle" font-size="16"
+            font-weight="bold" fill="#FFFFFF">22</text>
+
+          <text x="557.5" y="202"
+            text-anchor="middle" font-size="15"
+            font-weight="bold" fill="#8EA7FF">A</text>
+        </g>
+        
+        <g>
+          <rect x="675" y="55"
+            width="205" height="165"
+            rx="14" fill="#151F38"
+            stroke="#8A93A8" stroke-width="2"/>
+
+          <circle cx="777.5" cy="103"
+            r="30" fill="#8A93A8" opacity="0.14"/>
+
+          <text x="777.5" y="114"
+            text-anchor="middle" font-size="38"
+            font-weight="bold" fill="#8A93A8">!</text>
+
+          <text x="777.5" y="153"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="#DCE6FF">ISSUES</text>
+
+          <text x="777.5" y="178"
+            text-anchor="middle" font-size="16"
+            font-weight="bold" fill="#FFFFFF">9</text>
+
+          <text x="777.5" y="202"
+            text-anchor="middle" font-size="15"
+            font-weight="bold" fill="#8A93A8">C</text>
+        </g>
+        
+        <g>
+          <rect x="15" y="238"
+            width="205" height="165"
+            rx="14" fill="#151F38"
+            stroke="#8A93A8" stroke-width="2"/>
+
+          <circle cx="117.5" cy="286"
+            r="30" fill="#8A93A8" opacity="0.14"/>
+
+          <text x="117.5" y="297"
+            text-anchor="middle" font-size="38"
+            font-weight="bold" fill="#8A93A8">⇧</text>
+
+          <text x="117.5" y="336"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="#DCE6FF">PULL REQUESTS</text>
+
+          <text x="117.5" y="361"
+            text-anchor="middle" font-size="16"
+            font-weight="bold" fill="#FFFFFF">2</text>
+
+          <text x="117.5" y="385"
+            text-anchor="middle" font-size="15"
+            font-weight="bold" fill="#8A93A8">C</text>
+        </g>
+        
+        <g>
+          <rect x="235" y="238"
+            width="205" height="165"
+            rx="14" fill="#151F38"
+            stroke="#FFD700" stroke-width="2"/>
+
+          <circle cx="337.5" cy="286"
+            r="30" fill="#FFD700" opacity="0.14"/>
+
+          <text x="337.5" y="297"
+            text-anchor="middle" font-size="38"
+            font-weight="bold" fill="#FFD700">▣</text>
+
+          <text x="337.5" y="336"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="#DCE6FF">REPOSITORIES</text>
+
+          <text x="337.5" y="361"
+            text-anchor="middle" font-size="16"
+            font-weight="bold" fill="#FFFFFF">77</text>
+
+          <text x="337.5" y="385"
+            text-anchor="middle" font-size="15"
+            font-weight="bold" fill="#FFD700">SSS</text>
+        </g>
+        
+        <g>
+          <rect x="455" y="238"
+            width="205" height="165"
+            rx="14" fill="#151F38"
+            stroke="#555F75" stroke-width="2"/>
+
+          <circle cx="557.5" cy="286"
+            r="30" fill="#555F75" opacity="0.14"/>
+
+          <text x="557.5" y="297"
+            text-anchor="middle" font-size="38"
+            font-weight="bold" fill="#555F75">✓</text>
+
+          <text x="557.5" y="336"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="#DCE6FF">REVIEWS</text>
+
+          <text x="557.5" y="361"
+            text-anchor="middle" font-size="16"
+            font-weight="bold" fill="#FFFFFF">0</text>
+
+          <text x="557.5" y="385"
+            text-anchor="middle" font-size="15"
+            font-weight="bold" fill="#555F75">UNKNOWN</text>
+        </g>
+        
+        <g>
+          <rect x="675" y="238"
+            width="205" height="165"
+            rx="14" fill="#151F38"
+            stroke="#8EA7FF" stroke-width="2"/>
+
+          <circle cx="777.5" cy="286"
+            r="30" fill="#8EA7FF" opacity="0.14"/>
+
+          <text x="777.5" y="297"
+            text-anchor="middle" font-size="38"
+            font-weight="bold" fill="#8EA7FF">⌛</text>
+
+          <text x="777.5" y="336"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="#DCE6FF">EXPERIENCE</text>
+
+          <text x="777.5" y="361"
+            text-anchor="middle" font-size="16"
+            font-weight="bold" fill="#FFFFFF">4.1 YEARS</text>
+
+          <text x="777.5" y="385"
+            text-anchor="middle" font-size="15"
+            font-weight="bold" fill="#8EA7FF">A</text>
+        </g>
+        
+    <text x="450" y="440" text-anchor="middle"
+      font-size="19" font-weight="bold"
+      fill="url(#trophyTitle)">SECRET TROPHIES</text>
+    
+        <g>
+          <rect x="15" y="465"
+            width="205" height="125"
+            rx="14" fill="#151F38"
+            stroke="#555F75" stroke-width="2"
+            opacity="0.7"/>
+
+          <text x="117.5" y="513"
+            text-anchor="middle" font-size="34"
+            fill="#555F75">🔒</text>
+
+          <text x="117.5" y="544"
+            text-anchor="middle" font-size="12"
+            font-weight="bold" fill="#DCE6FF">MultiLanguage</text>
+
+          <text x="117.5" y="570"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="#555F75">LOCKED</text>
+        </g>
+        
+        <g>
+          <rect x="235" y="465"
+            width="205" height="125"
+            rx="14" fill="#151F38"
+            stroke="#555F75" stroke-width="2"
+            opacity="0.7"/>
+
+          <text x="337.5" y="513"
+            text-anchor="middle" font-size="34"
+            fill="#555F75">🔒</text>
+
+          <text x="337.5" y="544"
+            text-anchor="middle" font-size="12"
+            font-weight="bold" fill="#DCE6FF">AllSuperRank</text>
+
+          <text x="337.5" y="570"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="#555F75">LOCKED</text>
+        </g>
+        
+        <g>
+          <rect x="455" y="465"
+            width="205" height="125"
+            rx="14" fill="#151F38"
+            stroke="#555F75" stroke-width="2"
+            opacity="0.7"/>
+
+          <text x="557.5" y="513"
+            text-anchor="middle" font-size="34"
+            fill="#555F75">🔒</text>
+
+          <text x="557.5" y="544"
+            text-anchor="middle" font-size="12"
+            font-weight="bold" fill="#DCE6FF">Joined2020</text>
+
+          <text x="557.5" y="570"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="#555F75">LOCKED</text>
+        </g>
+        
+        <g>
+          <rect x="675" y="465"
+            width="205" height="125"
+            rx="14" fill="#151F38"
+            stroke="#555F75" stroke-width="2"
+            opacity="0.7"/>
+
+          <text x="777.5" y="513"
+            text-anchor="middle" font-size="34"
+            fill="#555F75">🔒</text>
+
+          <text x="777.5" y="544"
+            text-anchor="middle" font-size="12"
+            font-weight="bold" fill="#DCE6FF">AncientUser</text>
+
+          <text x="777.5" y="570"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="#555F75">LOCKED</text>
+        </g>
+        
+        <g>
+          <rect x="15" y="610"
+            width="205" height="125"
+            rx="14" fill="#151F38"
+            stroke="#555F75" stroke-width="2"
+            opacity="0.7"/>
+
+          <text x="117.5" y="658"
+            text-anchor="middle" font-size="34"
+            fill="#555F75">🔒</text>
+
+          <text x="117.5" y="689"
+            text-anchor="middle" font-size="12"
+            font-weight="bold" fill="#DCE6FF">LongTimeUser</text>
+
+          <text x="117.5" y="715"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="#555F75">LOCKED</text>
+        </g>
+        
+        <g>
+          <rect x="235" y="610"
+            width="205" height="125"
+            rx="14" fill="#151F38"
+            stroke="#555F75" stroke-width="2"
+            opacity="0.7"/>
+
+          <text x="337.5" y="658"
+            text-anchor="middle" font-size="34"
+            fill="#555F75">🔒</text>
+
+          <text x="337.5" y="689"
+            text-anchor="middle" font-size="12"
+            font-weight="bold" fill="#DCE6FF">Organizations</text>
+
+          <text x="337.5" y="715"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="#555F75">LOCKED</text>
+        </g>
+        
+        <g>
+          <rect x="455" y="610"
+            width="205" height="125"
+            rx="14" fill="#151F38"
+            stroke="#555F75" stroke-width="2"
+            opacity="0.7"/>
+
+          <text x="557.5" y="658"
+            text-anchor="middle" font-size="34"
+            fill="#555F75">🔒</text>
+
+          <text x="557.5" y="689"
+            text-anchor="middle" font-size="12"
+            font-weight="bold" fill="#DCE6FF">OGUser</text>
+
+          <text x="557.5" y="715"
+            text-anchor="middle" font-size="13"
+            font-weight="bold" fill="#555F75">LOCKED</text>
+        </g>
+        </svg>
