@@ -2229,10 +2229,11 @@ trophies_svg = generate_trophies_svg(
 write_svg("trophies.svg", trophies_svg)
 
 # 9. Personal introduction card
+
 intro_svg = '''
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="900" height="340"
-     viewBox="0 0 900 340">
+     width="900" height="390"
+     viewBox="0 0 900 390">
 
   <defs>
     <linearGradient id="introBg" x1="0" y1="0" x2="1" y2="1">
@@ -2247,11 +2248,10 @@ intro_svg = '''
     </linearGradient>
 
     <linearGradient id="introBorder" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FF0000"/>
-      <stop offset="33%" stop-color="#00FF00"/>
-      <stop offset="67%" stop-color="#0000FF"/>
-      <stop offset="100%" stop-color="#FF0000"/>
-
+      <stop offset="0%" stop-color="#62a8ff"/>
+      <stop offset="33%" stop-color="#9b7bff"/>
+      <stop offset="67%" stop-color="#e18bff"/>
+      <stop offset="100%" stop-color="#62a8ff"/>
       <animateTransform
         attributeName="gradientTransform"
         type="rotate"
@@ -2263,99 +2263,101 @@ intro_svg = '''
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="320"
-        rx="18" fill="url(#introBg)"
+  <rect width="900" height="390" rx="18"
+        fill="url(#introBg)"
         stroke="#34415f" stroke-width="1"/>
 
   <!-- Ambient light -->
-  <circle cx="450" cy="80" r="180"
-          fill="#765cff" opacity=".055"/>
+  <circle cx="450" cy="145" r="230"
+          fill="#765cff" opacity=".045"/>
 
   <!-- Section label -->
-  <text x="450" y="28"
+  <text x="450" y="43"
         text-anchor="middle"
-        fill="#8FA3C9"
-        font-family="Segoe UI,Arial"
-        font-size="13"
-        letter-spacing="2">
+        fill="#91A5CB"
+        font-family="Segoe UI,Arial,sans-serif"
+        font-size="15"
+        letter-spacing="3">
     人员简报 · hkiceflow
   </text>
+
   <!-- Username -->
-  <text x="450" y="82"
+  <text x="450" y="112"
         text-anchor="middle"
         fill="#FFFFFF"
-        font-family="Segoe UI,Arial"
-        font-size="42"
+        font-family="Segoe UI,Arial,sans-serif"
+        font-size="48"
         font-weight="700"
-        letter-spacing="1.5">
+        letter-spacing="2">
     iceflow
   </text>
 
   <!-- Greeting -->
-  <text x="450" y="122"
+  <text x="450" y="158"
         text-anchor="middle"
         fill="url(#introAccent)"
-        font-family="Segoe UI,Arial"
-        font-size="23"
+        font-family="Segoe UI,Arial,sans-serif"
+        font-size="25"
         font-weight="600">
     👋 : HI！ This's ICEFLOW
   </text>
 
   <!-- Personal statement -->
-  <text x="450" y="154"
+  <text x="450" y="197"
         text-anchor="middle"
         fill="#C5D1EA"
-        font-family="Segoe UI,Arial"
-        font-size="17">
+        font-family="Segoe UI,Arial,sans-serif"
+        font-size="18">
     Obviously, I am Chinese. 😎
   </text>
 
   <!-- Divider -->
-  <rect x="340" y="174"
-        width="220" height="2"
-        rx="1" fill="url(#introAccent)"/>
+  <rect x="330" y="222"
+        width="240" height="2"
+        rx="1"
+        fill="url(#introAccent)"/>
 
-  <!-- Roles -->
-  <text x="450" y="209"
+  <!-- Professional roles -->
+  <text x="450" y="264"
         text-anchor="middle"
         fill="#DCE6FF"
-        font-family="Segoe UI,Arial"
+        font-family="Segoe UI,Arial,sans-serif"
         font-size="19">
     VR软硬件开发工程师 · 测试工程师 · 交互设计师
   </text>
 
-  <text x="450" y="239"
+  <text x="450" y="296"
         text-anchor="middle"
         fill="#DCE6FF"
-        font-family="Segoe UI,Arial"
+        font-family="Segoe UI,Arial,sans-serif"
         font-size="19">
     数据分析师 · 产品经理 · OPC · CEO · 集团顾问
   </text>
 
-  <text x="450" y="269"
+  <text x="450" y="328"
         text-anchor="middle"
         fill="#DCE6FF"
-        font-family="Segoe UI,Arial"
+        font-family="Segoe UI,Arial,sans-serif"
         font-size="19">
     剪辑师 · 调色师【其余可查看下方列表】
   </text>
 
-  <!-- Developer -->
-  <text x="450" y="303"
+  <!-- Developer identity -->
+  <text x="450" y="363"
         text-anchor="middle"
         fill="#A9B8D8"
-        font-family="Segoe UI,Arial"
+        font-family="Segoe UI,Arial,sans-serif"
         font-size="16">
     MPV（mpv-net）、Stablediffusion（sd项目已弃用）开发者
   </text>
 
-  <!-- RGB Border -->
+  <!-- RGB animated border -->
   <rect x="2" y="2"
-        width="896" height="336"
+        width="896" height="386"
         rx="16"
         fill="none"
         stroke="url(#introBorder)"
-        stroke-width="6"/>
+        stroke-width="4"/>
 
 </svg>
 '''
