@@ -2231,8 +2231,8 @@ write_svg("trophies.svg", trophies_svg)
 # 9. Personal introduction card
 intro_svg = '''
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="900" height="320"
-     viewBox="0 0 900 320">
+     width="900" height="340"
+     viewBox="0 0 900 340">
 
   <defs>
     <linearGradient id="introBg" x1="0" y1="0" x2="1" y2="1">
@@ -2272,7 +2272,7 @@ intro_svg = '''
           fill="#765cff" opacity=".055"/>
 
   <!-- Section label -->
-  <text x="450" y="30"
+  <text x="450" y="28"
         text-anchor="middle"
         fill="#8FA3C9"
         font-family="Segoe UI,Arial"
@@ -2281,7 +2281,7 @@ intro_svg = '''
     人员简报 · hkiceflow
   </text>
   <!-- Username -->
-  <text x="450" y="65"
+  <text x="450" y="82"
         text-anchor="middle"
         fill="#FFFFFF"
         font-family="Segoe UI,Arial"
@@ -2292,7 +2292,7 @@ intro_svg = '''
   </text>
 
   <!-- Greeting -->
-  <text x="450" y="105"
+  <text x="450" y="122"
         text-anchor="middle"
         fill="url(#introAccent)"
         font-family="Segoe UI,Arial"
@@ -2302,7 +2302,7 @@ intro_svg = '''
   </text>
 
   <!-- Personal statement -->
-  <text x="450" y="137"
+  <text x="450" y="154"
         text-anchor="middle"
         fill="#C5D1EA"
         font-family="Segoe UI,Arial"
@@ -2311,12 +2311,12 @@ intro_svg = '''
   </text>
 
   <!-- Divider -->
-  <rect x="340" y="157"
+  <rect x="340" y="174"
         width="220" height="2"
         rx="1" fill="url(#introAccent)"/>
 
   <!-- Roles -->
-  <text x="450" y="192"
+  <text x="450" y="209"
         text-anchor="middle"
         fill="#DCE6FF"
         font-family="Segoe UI,Arial"
@@ -2324,7 +2324,7 @@ intro_svg = '''
     VR软硬件开发工程师 · 测试工程师 · 交互设计师
   </text>
 
-  <text x="450" y="222"
+  <text x="450" y="239"
         text-anchor="middle"
         fill="#DCE6FF"
         font-family="Segoe UI,Arial"
@@ -2332,7 +2332,7 @@ intro_svg = '''
     数据分析师 · 产品经理 · OPC · CEO · 集团顾问
   </text>
 
-  <text x="450" y="252"
+  <text x="450" y="269"
         text-anchor="middle"
         fill="#DCE6FF"
         font-family="Segoe UI,Arial"
@@ -2341,7 +2341,7 @@ intro_svg = '''
   </text>
 
   <!-- Developer -->
-  <text x="450" y="286"
+  <text x="450" y="303"
         text-anchor="middle"
         fill="#A9B8D8"
         font-family="Segoe UI,Arial"
@@ -2351,7 +2351,7 @@ intro_svg = '''
 
   <!-- RGB Border -->
   <rect x="2" y="2"
-        width="896" height="316"
+        width="896" height="336"
         rx="16"
         fill="none"
         stroke="url(#introBorder)"
