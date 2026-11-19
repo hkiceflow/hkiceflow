@@ -1,7 +1,7 @@
 
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="900" height="390"
-     viewBox="0 0 900 390">
+     width="900" height="460"
+     viewBox="0 0 900 460">
 
   <defs>
     <linearGradient id="introBg" x1="0" y1="0" x2="1" y2="1">
@@ -31,97 +31,98 @@
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="390" rx="18"
+  <rect width="900" height="460" rx="18"
         fill="url(#introBg)"
         stroke="#34415f" stroke-width="1"/>
 
   <!-- Ambient light -->
-  <circle cx="450" cy="145" r="230"
-          fill="#765cff" opacity=".045"/>
+  <circle cx="450" cy="180" r="260"
+          fill="#765cff" opacity=".05"/>
 
   <!-- Section label -->
-  <text x="450" y="43"
+  <text x="450" y="52"
         text-anchor="middle"
         fill="#91A5CB"
         font-family="Segoe UI,Arial,sans-serif"
-        font-size="15"
+        font-size="19"
+        font-weight="600"
         letter-spacing="3">
     人员简报 · hkiceflow
   </text>
 
   <!-- Username -->
-  <text x="450" y="112"
+  <text x="450" y="132"
         text-anchor="middle"
         fill="#FFFFFF"
         font-family="Segoe UI,Arial,sans-serif"
-        font-size="48"
+        font-size="60"
         font-weight="700"
         letter-spacing="2">
     iceflow
   </text>
 
   <!-- Greeting -->
-  <text x="450" y="158"
+  <text x="450" y="187"
         text-anchor="middle"
         fill="url(#introAccent)"
         font-family="Segoe UI,Arial,sans-serif"
-        font-size="25"
+        font-size="30"
         font-weight="600">
     👋 : HI！ This's ICEFLOW
   </text>
 
   <!-- Personal statement -->
-  <text x="450" y="197"
+  <text x="450" y="232"
         text-anchor="middle"
         fill="#C5D1EA"
         font-family="Segoe UI,Arial,sans-serif"
-        font-size="18">
+        font-size="23">
     Obviously, I am Chinese. 😎
   </text>
 
   <!-- Divider -->
-  <rect x="330" y="222"
-        width="240" height="2"
-        rx="1"
+  <rect x="320" y="258"
+        width="260" height="3"
+        rx="1.5"
         fill="url(#introAccent)"/>
 
   <!-- Professional roles -->
-  <text x="450" y="264"
+  <text x="450" y="310"
         text-anchor="middle"
         fill="#DCE6FF"
         font-family="Segoe UI,Arial,sans-serif"
-        font-size="19">
+        font-size="23">
     VR软硬件开发工程师 · 测试工程师 · 交互设计师
   </text>
 
-  <text x="450" y="296"
+  <text x="450" y="348"
         text-anchor="middle"
         fill="#DCE6FF"
         font-family="Segoe UI,Arial,sans-serif"
-        font-size="19">
+        font-size="23">
     数据分析师 · 产品经理 · OPC · CEO · 集团顾问
   </text>
 
-  <text x="450" y="328"
+  <text x="450" y="386"
         text-anchor="middle"
         fill="#DCE6FF"
         font-family="Segoe UI,Arial,sans-serif"
-        font-size="19">
+        font-size="23">
     剪辑师 · 调色师【其余可查看下方列表】
   </text>
 
   <!-- Developer identity -->
-  <text x="450" y="363"
+  <text x="450" y="427"
         text-anchor="middle"
         fill="#A9B8D8"
         font-family="Segoe UI,Arial,sans-serif"
-        font-size="16">
+        font-size="20">
     MPV（mpv-net）、Stablediffusion（sd项目已弃用）开发者
   </text>
 
   <!-- RGB animated border -->
   <rect x="2" y="2"
-        width="896" height="386"
+        width="896" height="456"
         rx="16"
         fill="none"
         stroke="url(#introBorder)"
