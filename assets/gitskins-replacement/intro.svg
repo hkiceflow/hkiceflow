@@ -40,6 +40,15 @@
   <circle cx="450" cy="80" r="180"
           fill="#765cff" opacity=".055"/>
 
+  <!-- Section label -->
+  <text x="450" y="30"
+        text-anchor="middle"
+        fill="#8FA3C9"
+        font-family="Segoe UI,Arial"
+        font-size="13"
+        letter-spacing="2">
+    人员简报 · hkiceflow
+  </text>
   <!-- Username -->
   <text x="450" y="65"
         text-anchor="middle"
