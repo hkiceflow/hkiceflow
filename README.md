@@ -12,13 +12,9 @@
 <table width="100%">
 <tr>
 <td width="64%" valign="middle" align="center">
-<div><sub>人员简报 · hkiceflow</sub></div>
-<h1>iceflow</h1>
-<h2>:wave: : HI！ This's ICEFLOW</h2>
-<p>Obviously, I am Chinese. :sunglasses:</p>
-<p>VR软硬件开发工程师、测试工程师、交互设计师、数据分析师、产品经理、OPC、CEO、集团顾问、剪辑师、调色师【其余可查看下方列表】 ;
- MPV（mpv-net）、Stablediffusion（sd项目已弃用）开发者。</p>
-<p><strong>● Building and sharing work in public</strong></p>
+<img src="./assets/gitskins-replacement/intro.svg"
+     width="100%"
+     alt="iceflow introduction" />
  
  [![bilibili](https://img.shields.io/badge/bilibili-iceflow_official-pink?logo=bilibili)](https://space.bilibili.com/368780828)<img src="https://img.shields.io/badge/fans-1.3k+-pink?style=social"></code></a>
 
