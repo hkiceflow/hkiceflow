@@ -164,7 +164,11 @@
 
 <table width="100%">
 <tr>
-<td width="62%" valign="middle"><h2>期待与你共同打造下一个作品</h2><p>期待与有深度的团队、有抱负的产品和有实际价值的工程项目合作。</p></td>
+<td width="62%" valign="middle">
+<img src="./assets/gitskins-replacement/collaboration.svg"
+     width="100%"
+     alt="期待与你共同打造下一个作品" />
+</td>
 <td width="38%" valign="middle" align="right">
 <h3 align="left">Connect with me:</h3>
 <p align="left">
