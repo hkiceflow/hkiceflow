@@ -30,25 +30,8 @@
 ![](https://img.shields.io/badge/性格-开放-orange) 
 ![](https://img.shields.io/badge/爱好-二次元-red)
 </div>
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://x.com/hkiceflow" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="hkiceflow" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/iceflow" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="iceflow" height="30" width="40" /></a>
-<a href="https://fb.com/iceflow" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="iceflow" height="30" width="40" /></a>
-<a href="https://instagram.com/iceflow" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="iceflow" height="30" width="40" /></a>
-<a href="https://www.youtube.com/c/@iceflow7311" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="@iceflow7311" height="30" width="40" /></a>
-<br />
-<br />
-<a href="mailto:hkiceflow@gmail.com"><img src="https://img.shields.io/badge/Gmail-hkiceflow%40gmail.com-white?style=social&logo=gmail" alt="Gmail"></a>
-</p>
  
 <p><sub>Buildings that were once located at Florida State University, Florida, USA</sub></p>
-<p>
-<a href="https://github.com/hkiceflow"><img src="https://img.shields.io/badge/Github-black?logo=github" alt="Github"></a>
-<a href="https://space.bilibili.com/368780828"><img src="https://img.shields.io/badge/Bilibili-pink?logo=bilibili" alt="Bilibili"></a>
-<a href="https://x.com/hkiceflow"><img src="https://img.shields.io/badge/X-black?logo=x" alt="X"></a>
-</p>
 </td>
 <td width="36%" valign="middle" align="center">
 <img src="./assets/gitskins-replacement/profile.svg"
@@ -182,10 +165,20 @@
 <tr>
 <td width="62%" valign="middle"><h2>期待与你共同打造下一个作品</h2><p>期待与有深度的团队、有抱负的产品和有实际价值的工程项目合作。</p></td>
 <td width="38%" valign="middle" align="right">
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://x.com/hkiceflow" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="hkiceflow" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/iceflow" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="iceflow" height="30" width="40" /></a>
+<a href="https://fb.com/iceflow" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="iceflow" height="30" width="40" /></a>
+<a href="https://instagram.com/iceflow" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="iceflow" height="30" width="40" /></a>
+<a href="https://www.youtube.com/c/@iceflow7311" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="@iceflow7311" height="30" width="40" /></a>
+<br />
+<br />
+<a href="mailto:hkiceflow@gmail.com"><img src="https://img.shields.io/badge/Gmail-hkiceflow%40gmail.com-white?style=social&logo=gmail" alt="Gmail"></a>
+</p>
 <a href="https://github.com/hkiceflow"><img src="https://img.shields.io/badge/Github-black?logo=github" alt="Github"></a><br />
 <a href="https://space.bilibili.com/368780828"><img src="https://img.shields.io/badge/Bilibili-pink?logo=bilibili" alt="Bilibili"></a><br />
 <a href="https://x.com/hkiceflow"><img src="https://img.shields.io/badge/X-black?logo=x" alt="X"></a><br />
-<a href="mailto:hkiceflow@gmail.com"><img src="https://img.shields.io/badge/Gmail-hkiceflow%40gmail.com-white?style=social&logo=gmail" alt="Gmail"></a>
 </td>
 </tr>
 </table>
