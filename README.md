@@ -30,8 +30,7 @@
 ![](https://img.shields.io/badge/性格-开放-orange) 
 ![](https://img.shields.io/badge/爱好-二次元-red)
 </div>
- 
-<p><sub>Buildings that were once located at Florida State University, Florida, USA</sub></p>
+<div><sub>Buildings that were once located at Florida State University, Florida, USA</sub></div>
 </td>
 <td width="36%" valign="middle" align="center">
 <img src="./assets/gitskins-replacement/profile.svg"
