@@ -22,15 +22,14 @@
 
 ![Modern C++ template][github-sub-title:img]
 
+[github-sub-title:img]: https://readme-typing-svg.herokuapp.com?font=Segoe+Script&center=true&height=29&lines=hkiceflow.
+
 [![MPV-net](https://img.shields.io/badge/code-MPV_net-blue?logo=mpv)]([https://www.bilibili.com/video/BV1am421M7rH](https://github.com/hkiceflow/mpv_video)) 
 
 ![](https://img.shields.io/badge/专注-学习-yellow) 
 ![](https://img.shields.io/badge/性格-开放-orange) 
 ![](https://img.shields.io/badge/爱好-二次元-red)
-
 </div>
-
-[github-sub-title:img]: https://readme-typing-svg.herokuapp.com?font=Segoe+Script&center=true&lines=hkiceflow.
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
