@@ -767,6 +767,7 @@ def write_svg(filename, content):
         "stack.svg",
         "languages.svg",
         "heatmap.svg",
+        "trophies.svg",
     }
 
     if filename in rgb_cards:
