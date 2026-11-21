@@ -165,7 +165,7 @@
 <table width="100%">
 <tr>
 <td width="62%" valign="middle">
-<img src="./assets/collaboration.svg"
+<img src="./assets/gitskins-replacement/collaboration.svg"
      width="100%"
      alt="期待与你共同打造下一个作品" />
 </td>
