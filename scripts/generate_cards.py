@@ -708,13 +708,77 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
         </g>
         ''')
 
+
+    # Shooting Stars
+    parts.append('''
+    <g clip-path="url(#meteorClip)">
+
+      <!-- Meteor 1 -->
+      <g opacity="0.9">
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="5" stroke-linecap="round" opacity="0.25"/>
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
+        <animateMotion path="M 1000 -100 L 250 650"
+                       dur="7s" begin="0s" repeatCount="indefinite"/>
+      </g>
+
+      <!-- Meteor 2 -->
+      <g opacity="0.8">
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="5" stroke-linecap="round" opacity="0.25"/>
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
+        <animateMotion path="M 850 -150 L 200 500"
+                       dur="9s" begin="2.5s" repeatCount="indefinite"/>
+      </g>
+
+      <!-- Meteor 3 -->
+      <g opacity="0.85">
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="5" stroke-linecap="round" opacity="0.25"/>
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
+        <animateMotion path="M 1100 100 L 600 600"
+                       dur="11s" begin="5s" repeatCount="indefinite"/>
+      </g>
+
+      <!-- Meteor 4 -->
+      <g opacity="0.85">
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="5" stroke-linecap="round" opacity="0.25"/>
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
+        <animateMotion path="M 950 -120 L 300 530"
+                       dur="8s" begin="1.5s" repeatCount="indefinite"/>
+      </g>
+
+      <!-- Meteor 5 -->
+      <g opacity="0.8">
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="5" stroke-linecap="round" opacity="0.25"/>
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
+        <animateMotion path="M 1050 -80 L 450 520"
+                       dur="10s" begin="6.5s" repeatCount="indefinite"/>
+      </g>
+
+    </g>
+    ''')
+
+    # RGB Border
     parts.append('''
     <rect x="2" y="2"
-      width="896" height="786"
-      rx="16"
-      fill="none"
-      stroke="url(#rgbBorder)"
-      stroke-width="6"/>
+          width="896" height="786"
+          rx="16"
+          fill="none"
+          stroke="url(#rgbBorder)"
+          stroke-width="6"/>
     ''')
 
     parts.append("</svg>")
@@ -2265,6 +2329,23 @@ def generate_collaboration_svg():
   <desc id="desc">深空主题的合作邀请卡片，表达期待与有深度的团队、有抱负的产品和有实际价值的工程项目合作。</desc>
 
   <defs>
+
+    <!-- 流星裁切区域 -->
+    <clipPath id="meteorClip">
+      <rect x="0" y="0" width="900" height="400" rx="16"/>
+    </clipPath>
+    
+    <!-- 流星尾迹渐变 -->
+    <linearGradient id="meteorGradient"
+                    gradientUnits="userSpaceOnUse"
+                    x1="0" y1="0"
+                    x2="55" y2="-55">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="25%" stop-color="#A5EFFF" stop-opacity="0.8"/>
+      <stop offset="65%" stop-color="#8B7CFF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#8B7CFF" stop-opacity="0"/>
+    </linearGradient>
+  
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#10182d"/>
       <stop offset="0.52" stop-color="#17132d"/>
