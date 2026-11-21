@@ -720,8 +720,8 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
         <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
               stroke-width="1.6" stroke-linecap="round"/>
         <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
-        <animateMotion path="M 950 -80 L 250 620"
-                       dur="7s" begin="0s" repeatCount="indefinite"/>
+        <animateMotion path="M 760 35 L 180 615"
+               dur="8s" begin="1.2s" repeatCount="indefinite"/>
       </g>
 
       <!-- Meteor 2 -->
@@ -731,8 +731,8 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
         <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
               stroke-width="1.6" stroke-linecap="round"/>
         <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
-        <animateMotion path="M 650 -100 L 100 450"
-                       dur="9s" begin="2.5s" repeatCount="indefinite"/>
+        <animateMotion path="M 420 65 L -120 605"
+               dur="10s" begin="4.7s" repeatCount="indefinite"/>
       </g>
 
       <!-- Meteor 3 -->
@@ -742,8 +742,9 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
         <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
               stroke-width="1.6" stroke-linecap="round"/>
         <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
-        <animateMotion path="M 1050 100 L 450 600"
-                       dur="11s" begin="5s" repeatCount="indefinite"/>
+        <animateMotion path="M 890 120 L 310 700"
+               dur="11s" begin="2.1s" repeatCount="indefinite"/>
+
       </g>
 
       <!-- Meteor 4 -->
@@ -753,8 +754,8 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
         <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
               stroke-width="1.6" stroke-linecap="round"/>
         <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
-        <animateMotion path="M 800 -120 L 200 480"
-                       dur="8s" begin="1.5s" repeatCount="indefinite"/>
+        <animateMotion path="M 610 145 L 90 665"
+               dur="9s" begin="6.3s" repeatCount="indefinite"/>
       </g>
 
       <!-- Meteor 5 -->
@@ -764,8 +765,8 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
         <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
               stroke-width="1.6" stroke-linecap="round"/>
         <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
-        <animateMotion path="M 550 -80 L 50 420"
-                       dur="10s" begin="6.5s" repeatCount="indefinite"/>
+        <animateMotion path="M 510 20 L -70 600"
+               dur="7s" begin="3.8s" repeatCount="indefinite"/>
       </g>
 
         <!-- Meteor 6: Center -->
@@ -781,11 +782,8 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
                 stroke-linecap="round"/>
           <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
     
-          <animateMotion
-            path="M 560 -80 L 80 400"
-            dur="9s"
-            begin="3.5s"
-            repeatCount="indefinite"/>
+          <animateMotion path="M 830 75 L 250 655"
+               dur="9s" begin="5.4s" repeatCount="indefinite"/>
         </g>
     
         <!-- Meteor 7: Left Upper -->
@@ -801,11 +799,8 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
                 stroke-linecap="round"/>
           <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
     
-          <animateMotion
-            path="M 400 -100 L -80 380"
-            dur="8s"
-            begin="4.5s"
-            repeatCount="indefinite"/>
+          <animateMotion path="M 390 135 L -190 715"
+               dur="8s" begin="0.6s" repeatCount="indefinite"/>
         </g>
     
         <!-- Meteor 8: Left Middle -->
@@ -821,11 +816,8 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
                 stroke-linecap="round"/>
           <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
     
-          <animateMotion
-            path="M 300 80 L -180 560"
-            dur="10s"
-            begin="7s"
-            repeatCount="indefinite"/>
+          <animateMotion path="M 700 180 L 160 720"
+               dur="10s" begin="7.1s" repeatCount="indefinite"/>
         </g>
 
     </g>
