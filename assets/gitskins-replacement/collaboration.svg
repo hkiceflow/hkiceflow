@@ -120,7 +120,7 @@
   <circle cx="450" cy="275" r="2.5" fill="#c6b6ff"/>
 
   <!-- RGB flowing border -->
-  <rect x="2" y="2" width="898" height="620"
+  <rect x="1" y="-110" width="898" height="620"
         rx="17" fill="none"
         stroke="url(#rgbBorder)" stroke-width="6"/>
 
