@@ -720,7 +720,7 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
         <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
               stroke-width="1.6" stroke-linecap="round"/>
         <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
-        <animateMotion path="M 1000 -100 L 250 650"
+        <animateMotion path="M 950 -80 L 250 620"
                        dur="7s" begin="0s" repeatCount="indefinite"/>
       </g>
 
@@ -731,7 +731,7 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
         <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
               stroke-width="1.6" stroke-linecap="round"/>
         <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
-        <animateMotion path="M 850 -150 L 200 500"
+        <animateMotion path="M 650 -100 L 100 450"
                        dur="9s" begin="2.5s" repeatCount="indefinite"/>
       </g>
 
@@ -742,7 +742,7 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
         <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
               stroke-width="1.6" stroke-linecap="round"/>
         <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
-        <animateMotion path="M 1100 100 L 600 600"
+        <animateMotion path="M 1050 100 L 450 600"
                        dur="11s" begin="5s" repeatCount="indefinite"/>
       </g>
 
@@ -753,7 +753,7 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
         <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
               stroke-width="1.6" stroke-linecap="round"/>
         <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
-        <animateMotion path="M 950 -120 L 300 530"
+        <animateMotion path="M 800 -120 L 200 480"
                        dur="8s" begin="1.5s" repeatCount="indefinite"/>
       </g>
 
@@ -764,7 +764,7 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
         <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
               stroke-width="1.6" stroke-linecap="round"/>
         <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
-        <animateMotion path="M 1050 -80 L 450 520"
+        <animateMotion path="M 550 -80 L 50 420"
                        dur="10s" begin="6.5s" repeatCount="indefinite"/>
       </g>
 
