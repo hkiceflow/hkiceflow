@@ -768,6 +768,66 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
                        dur="10s" begin="6.5s" repeatCount="indefinite"/>
       </g>
 
+        <!-- Meteor 6: Center -->
+        <g opacity="0.85">
+          <path d="M0 0 L55 -55"
+                stroke="url(#meteorGradient)"
+                stroke-width="5"
+                stroke-linecap="round"
+                opacity="0.25"/>
+          <path d="M0 0 L55 -55"
+                stroke="url(#meteorGradient)"
+                stroke-width="1.6"
+                stroke-linecap="round"/>
+          <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
+    
+          <animateMotion
+            path="M 560 -80 L 80 400"
+            dur="9s"
+            begin="3.5s"
+            repeatCount="indefinite"/>
+        </g>
+    
+        <!-- Meteor 7: Left Upper -->
+        <g opacity="0.85">
+          <path d="M0 0 L55 -55"
+                stroke="url(#meteorGradient)"
+                stroke-width="5"
+                stroke-linecap="round"
+                opacity="0.25"/>
+          <path d="M0 0 L55 -55"
+                stroke="url(#meteorGradient)"
+                stroke-width="1.6"
+                stroke-linecap="round"/>
+          <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
+    
+          <animateMotion
+            path="M 400 -100 L -80 380"
+            dur="8s"
+            begin="4.5s"
+            repeatCount="indefinite"/>
+        </g>
+    
+        <!-- Meteor 8: Left Middle -->
+        <g opacity="0.8">
+          <path d="M0 0 L55 -55"
+                stroke="url(#meteorGradient)"
+                stroke-width="5"
+                stroke-linecap="round"
+                opacity="0.25"/>
+          <path d="M0 0 L55 -55"
+                stroke="url(#meteorGradient)"
+                stroke-width="1.6"
+                stroke-linecap="round"/>
+          <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
+    
+          <animateMotion
+            path="M 300 80 L -180 560"
+            dur="10s"
+            begin="7s"
+            repeatCount="indefinite"/>
+        </g>
+
     </g>
     ''')
 
