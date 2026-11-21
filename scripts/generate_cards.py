@@ -394,6 +394,21 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
               <feMergeNode in="SourceGraphic"/>
             </feMerge>
           </filter>
+           <linearGradient id="rgbBorder"
+            x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FF0000"/>
+            <stop offset="33%" stop-color="#00FF00"/>
+            <stop offset="67%" stop-color="#0000FF"/>
+            <stop offset="100%" stop-color="#FF0000"/>
+
+            <animateTransform
+              attributeName="gradientTransform"
+              type="rotate"
+              from="0 0.5 0.5"
+              to="360 0.5 0.5"
+              dur="12s"
+              repeatCount="indefinite"/>
+          </linearGradient>
         </defs>
 
         <rect width="900" height="790"
@@ -692,6 +707,15 @@ def generate_trophies_svg(stats, ranks, hidden_trophies):
           </text>
         </g>
         ''')
+
+    parts.append('''
+    <rect x="2" y="2"
+      width="896" height="786"
+      rx="16"
+      fill="none"
+      stroke="url(#rgbBorder)"
+      stroke-width="6"/>
+    ''')
 
     parts.append("</svg>")
 
