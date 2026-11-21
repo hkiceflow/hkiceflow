@@ -2521,4 +2521,8 @@ intro_svg = '''
 
 write_svg("intro.svg", intro_svg)
 
+# Generate collaboration card
+collaboration_svg = generate_collaboration_svg()
+write_svg("collaboration.svg", collaboration_svg)
+
 print("Generated SVG cards successfully.")
