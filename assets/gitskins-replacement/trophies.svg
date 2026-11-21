@@ -344,7 +344,7 @@
             text-anchor="middle"
             font-size="15"
             font-weight="bold"
-            fill="#FFFFFF">343</text>
+            fill="#FFFFFF">346</text>
 
            <!-- Rank badge -->
           <rect x="315.5" y="209"
@@ -2198,7 +2198,7 @@
                 fill="#D6A72C"
                 font-size="11"
                 font-weight="700">
-                425
+                428
               </text>
 
               <rect x="755.5" y="745"
@@ -2215,12 +2215,71 @@
               </text>
             </g>
             
+    <g clip-path="url(#meteorClip)">
+
+      <!-- Meteor 1 -->
+      <g opacity="0.9">
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="5" stroke-linecap="round" opacity="0.25"/>
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
+        <animateMotion path="M 1000 -100 L 250 650"
+                       dur="7s" begin="0s" repeatCount="indefinite"/>
+      </g>
+
+      <!-- Meteor 2 -->
+      <g opacity="0.8">
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="5" stroke-linecap="round" opacity="0.25"/>
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
+        <animateMotion path="M 850 -150 L 200 500"
+                       dur="9s" begin="2.5s" repeatCount="indefinite"/>
+      </g>
+
+      <!-- Meteor 3 -->
+      <g opacity="0.85">
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="5" stroke-linecap="round" opacity="0.25"/>
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
+        <animateMotion path="M 1100 100 L 600 600"
+                       dur="11s" begin="5s" repeatCount="indefinite"/>
+      </g>
+
+      <!-- Meteor 4 -->
+      <g opacity="0.85">
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="5" stroke-linecap="round" opacity="0.25"/>
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
+        <animateMotion path="M 950 -120 L 300 530"
+                       dur="8s" begin="1.5s" repeatCount="indefinite"/>
+      </g>
+
+      <!-- Meteor 5 -->
+      <g opacity="0.8">
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="5" stroke-linecap="round" opacity="0.25"/>
+        <path d="M0 0 L55 -55" stroke="url(#meteorGradient)"
+              stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="1.5" fill="#FFFFFF"/>
+        <animateMotion path="M 1050 -80 L 450 520"
+                       dur="10s" begin="6.5s" repeatCount="indefinite"/>
+      </g>
+
+    </g>
+    
     <rect x="2" y="2"
-      width="896" height="786"
-      rx="16"
-      fill="none"
-      stroke="url(#rgbBorder)"
-      stroke-width="6"/>
+          width="896" height="786"
+          rx="16"
+          fill="none"
+          stroke="url(#rgbBorder)"
+          stroke-width="6"/>
     
     <rect x="2" y="2"
       width="896" height="786"

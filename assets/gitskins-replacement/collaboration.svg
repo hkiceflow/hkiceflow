@@ -9,6 +9,23 @@
   <desc id="desc">深空主题的合作邀请卡片，表达期待与有深度的团队、有抱负的产品和有实际价值的工程项目合作。</desc>
 
   <defs>
+
+    <!-- 流星裁切区域 -->
+    <clipPath id="meteorClip">
+      <rect x="0" y="0" width="900" height="400" rx="16"/>
+    </clipPath>
+    
+    <!-- 流星尾迹渐变 -->
+    <linearGradient id="meteorGradient"
+                    gradientUnits="userSpaceOnUse"
+                    x1="0" y1="0"
+                    x2="55" y2="-55">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="25%" stop-color="#A5EFFF" stop-opacity="0.8"/>
+      <stop offset="65%" stop-color="#8B7CFF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#8B7CFF" stop-opacity="0"/>
+    </linearGradient>
+  
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#10182d"/>
       <stop offset="0.52" stop-color="#17132d"/>
