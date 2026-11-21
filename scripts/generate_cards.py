@@ -2274,10 +2274,10 @@ intro_svg = '''
     </linearGradient>
 
     <linearGradient id="introBorder" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#62a8ff"/>
-      <stop offset="33%" stop-color="#9b7bff"/>
-      <stop offset="67%" stop-color="#e18bff"/>
-      <stop offset="100%" stop-color="#62a8ff"/>
+      <stop offset="0%" stop-color="#FF0000"/>
+      <stop offset="33%" stop-color="#00FF00"/>
+      <stop offset="67%" stop-color="#0000FF"/>
+      <stop offset="100%" stop-color="#FF0000"/>
       <animateTransform
         attributeName="gradientTransform"
         type="rotate"
