@@ -743,7 +743,7 @@
             text-anchor="middle"
             font-size="15"
             font-weight="bold"
-            fill="#FFFFFF">2</text>
+            fill="#FFFFFF">7</text>
 
            <!-- Rank badge -->
           <rect x="95.5" y="392"
@@ -876,7 +876,7 @@
             text-anchor="middle"
             font-size="15"
             font-weight="bold"
-            fill="#FFFFFF">77</text>
+            fill="#FFFFFF">79</text>
 
            <!-- Rank badge -->
           <rect x="315.5" y="392"
@@ -1174,12 +1174,12 @@
             width="205" height="125"
             rx="13"
             fill="url(#trophyCard)"
-            stroke="#34415f"
+            stroke="#D6A72C"
             stroke-width="1.5"
-            opacity="0.75"/>
+            opacity="1"/>
 
           
-        <g opacity="0.48" filter="url(#trophyShadow)">
+        <g opacity="1" filter="url(#trophyShadow)">
 
           <!-- Trophy handles -->
           <path d="
@@ -1192,7 +1192,7 @@
               78.5 501,
               93.5 504
             Z"
-            fill="url(#dark)"
+            fill="url(#gold)"
             stroke="#FFFFFF"
             stroke-opacity=".25"
             stroke-width="1"/>
@@ -1207,7 +1207,7 @@
               156.5 501,
               141.5 504
             Z"
-            fill="url(#dark)"
+            fill="url(#gold)"
             stroke="#FFFFFF"
             stroke-opacity=".25"
             stroke-width="1"/>
@@ -1220,7 +1220,7 @@
             Q 135.5 540 117.5 546
             Q 99.5 540 96.5 518
             Z"
-            fill="url(#dark)"
+            fill="url(#gold)"
             stroke="#FFFFFF"
             stroke-opacity=".45"
             stroke-width="1.5"/>
@@ -1242,7 +1242,7 @@
             L 125.5 558
             L 109.5 558
             Z"
-            fill="url(#dark)"/>
+            fill="url(#gold)"/>
 
           <!-- Base -->
           <path d="
@@ -1251,7 +1251,7 @@
             L 140.5 567
             L 94.5 567
             Z"
-            fill="url(#dark)"
+            fill="url(#gold)"
             stroke="#FFFFFF"
             stroke-opacity=".3"
             stroke-width="1"/>
@@ -1262,23 +1262,10 @@
             L 132.5 573
             L 102.5 573
             Z"
-            fill="url(#dark)"/>
+            fill="url(#gold)"/>
 
         </g>
 
-        
-        <!-- Lock symbol -->
-        <g transform="translate(132.5 536)">
-          <rect x="-10" y="0" width="23" height="19"
-            rx="4" fill="#202B40"
-            stroke="#9AA7BC" stroke-width="1.5"/>
-          <path d="M -5 0 V -6
-            A 6 6 0 0 1 7 -6 V 0"
-            fill="none" stroke="#9AA7BC"
-            stroke-width="3" stroke-linecap="round"/>
-          <circle cx="1.5" cy="9" r="2"
-            fill="#DCE6FF"/>
-        </g>
         
         
 
@@ -1286,7 +1273,7 @@
             text-anchor="middle"
             font-size="12"
             font-weight="bold"
-            fill="#8998B2">
+            fill="#FFE6A0">
             MultiLanguage
           </text>
 
@@ -1295,8 +1282,8 @@
             font-size="10"
             font-weight="bold"
             letter-spacing="1"
-            fill="#64718A">
-            LOCKED
+            fill="#FFD700">
+            UNLOCKED
           </text>
         </g>
         
@@ -2198,7 +2185,7 @@
                 fill="#D6A72C"
                 font-size="11"
                 font-weight="700">
-                433
+                440
               </text>
 
               <rect x="755.5" y="745"
