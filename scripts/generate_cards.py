@@ -2890,7 +2890,7 @@ intro_svg = '''
         fill="#A9B8D8"
         font-family="Segoe UI,Arial,sans-serif"
         font-size="20">
-    MPV（mpv-net）、Stablediffusion（sd项目已弃用）开发者
+    MPV（mpv-net）、Stablediffusion（sd项目已弃用）开发者、GTA6移植开发者
   </text>
 
   <!-- RGB animated border -->
