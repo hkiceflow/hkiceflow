@@ -97,10 +97,10 @@
               stroke="#26334e" stroke-width="1"/>
             
         <text x="48" y="231" fill="#dce5ff" font-size="14"
-          font-family="Segoe UI,Arial" font-weight="600">hkiceflow.github.io</text>
+          font-family="Segoe UI,Arial" font-weight="600">VIctory-anyGPU</text>
 
         <text x="48" y="248" fill="#8493b2" font-size="10"
-          font-family="Segoe UI,Arial">No description</text>
+          font-family="Segoe UI,Arial">An Xbox-to-PC porting project, not an emulator. Targeting 4K with</text>
 
         <text x="850" y="231" text-anchor="end" fill="#a9baff"
           font-size="12" font-family="Segoe UI,Arial">
