@@ -211,7 +211,7 @@
             text-anchor="middle"
             font-size="15"
             font-weight="bold"
-            fill="#FFFFFF">57</text>
+            fill="#FFFFFF">58</text>
 
            <!-- Rank badge -->
           <rect x="95.5" y="209"
@@ -743,7 +743,7 @@
             text-anchor="middle"
             font-size="15"
             font-weight="bold"
-            fill="#FFFFFF">7</text>
+            fill="#FFFFFF">6</text>
 
            <!-- Rank badge -->
           <rect x="95.5" y="392"
